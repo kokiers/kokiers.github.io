@@ -3,17 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Archives | kokiers</title>
+  <title>gulp | kokiers</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="kokier">
-<meta property="og:type" content="website">
-<meta property="og:title" content="kokiers">
-<meta property="og:url" content="https://kokiers.github.io/archives/index.html">
+  <meta name="description" content="This is an gulp docs. var gulp = require(&amp;apos;gulp&amp;apos;); var uglify = require(&amp;apos;gulp-uglify&amp;apos;)  /* 使用方法 安装压缩js gulp-uglify gulp.task(&amp;apos;ugpop&amp;apos;） 调用这个 task ： gulp ugpop 即可。 一般有 gulp.t">
+<meta name="keywords" content="gulp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gulp">
+<meta property="og:url" content="https://kokiers.github.io/2018/07/26/tang/index.html">
 <meta property="og:site_name" content="kokiers">
-<meta property="og:description" content="kokier">
+<meta property="og:description" content="This is an gulp docs. var gulp = require(&amp;apos;gulp&amp;apos;); var uglify = require(&amp;apos;gulp-uglify&amp;apos;)  /* 使用方法 安装压缩js gulp-uglify gulp.task(&amp;apos;ugpop&amp;apos;） 调用这个 task ： gulp ugpop 即可。 一般有 gulp.t">
+<meta property="og:updated_time" content="2018-07-27T07:58:23.723Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kokiers">
-<meta name="twitter:description" content="kokier">
+<meta name="twitter:title" content="gulp">
+<meta name="twitter:description" content="This is an gulp docs. var gulp = require(&amp;apos;gulp&amp;apos;); var uglify = require(&amp;apos;gulp-uglify&amp;apos;)  /* 使用方法 安装压缩js gulp-uglify gulp.task(&amp;apos;ugpop&amp;apos;） 调用这个 task ： gulp ugpop 即可。 一般有 gulp.t">
   
     <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
   
@@ -66,87 +68,69 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2018/07/26/tang/" class="archive-article-date">
-  <time datetime="2018-07-26T08:26:25.000Z" itemprop="datePublished">Jul 26</time>
+        <section id="main"><article id="post-tang" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/26/tang/" class="article-date">
+  <time datetime="2018-07-26T08:26:25.000Z" itemprop="datePublished">2018-07-26</time>
 </a>
-      
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/26/tang/">gulp</a>
+    <h1 class="article-title" itemprop="name">
+      gulp
     </h1>
   
 
-    </header>
-  </div>
-</article>
-  
+      </header>
     
-    
+    <div class="article-entry" itemprop="articleBody">
       
-        </div></section>
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/18/my-new-post/" class="archive-article-date">
-  <time datetime="2017-09-18T06:42:27.000Z" itemprop="datePublished">Sep 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/my-new-post/">new-post</a>
-    </h1>
-  
+        <p>This is an <a href="https://github.com/gulpjs/gulp/blob/master/docs/API.md" target="_blank" rel="external">gulp docs</a>.</p>
+<pre><code>var gulp = require(&apos;gulp&apos;);
+var uglify = require(&apos;gulp-uglify&apos;)
 
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2017/09/18/hello-world/" class="archive-article-date">
-  <time datetime="2017-09-18T03:43:47.233Z" itemprop="datePublished">Sep 18</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/09/18/hello-world/">Hello World</a>
-    </h1>
-  
+/*
+使用方法
+安装压缩js gulp-uglify
+gulp.task(&apos;ugpop&apos;） 调用这个 task ： gulp ugpop 即可。
+一般有 gulp.task(&apos;default&apos;） 可以执行 ：gulp 即可
+*/
 
-    </header>
+gulp.task(&apos;default&apos;, function() {
+  gulp.src(&apos;js/*.js&apos;)
+  .pipe(uglify())
+  .pipe(gulp.dest(&apos;build/&apos;));
+});
+</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://kokiers.github.io/2018/07/26/tang/" data-id="cjkatsfuj0002yspmffu2hhqb" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/gulp/">gulp</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/18/my-new-post/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">new-post</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
 
 </section>
         
