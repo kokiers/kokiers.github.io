@@ -1,4 +1,4 @@
-.article
+  .article
   margin: block-margin 0
 
 .article-inner
@@ -7,23 +7,27 @@
 
 .article-meta
   clearfix()
+  padding: 20px 
 
 .article-date
   @extend $block-caption
   float: left
+  
+.article-view
+  @extend $block-caption
+  float: left
+  margin-left:10px;
 
 .article-category
   float: left
   line-height: 1em
-  color: #ccc
+  color: color-sidebar-text
   text-shadow: 0 1px #fff
-  margin-left: 8px
-  &:before
-    content: "\2022"
+  margin-left: 20px
 
 .article-category-link
   @extend $block-caption
-  margin: 0 12px 1em
+  margin: 0 12px 1em 2px
 
 .article-header
   padding: article-padding article-padding 0
@@ -42,7 +46,7 @@
   @extend $base-style
   clearfix()
   color: color-default
-  padding: 0 article-padding
+  padding: 0 article-padding article-padding
   p, table
     line-height: line-height
     margin: line-height 0
@@ -322,36 +326,3 @@ $article-share-link
     display: block
     max-width: 100%
     margin: 0 auto
-/*
-$article-gallery-ctrl
-  position: absolute
-  top: 0
-  height: 100%
-  width: 60px
-  color: #fff
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
-  opacity: 0.3
-  transition: opacity 0.2s
-  cursor: pointer
-  &:hover
-    opacity: 0.8
-  &:before
-    font-size: 30px
-    font-family: font-icon
-    position: absolute
-    top: 50%
-    margin-top: @font-size * -0.5
-
-.article-gallery-prev
-  @extend $article-gallery-ctrl
-  left: 0
-  &:before
-    content: "\f053"
-    left: 15px
-
-.article-gallery-next
-  @extend $article-gallery-ctrl
-  right: 0
-  &:before
-    content: "\f054"
-    right: 15px*/

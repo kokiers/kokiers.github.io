@@ -8,4 +8,7 @@
       <%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
+  <%if (theme.counter) { %>
+  <%- js('//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js') %>
+  <% } %>
 </footer>
