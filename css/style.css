@@ -179,6 +179,9 @@ body {
 .mobile-nav-on #wrap {
   left: 280px;
 }
+#main {
+  min-height: 600px;
+}
 @media screen and (min-width: 768px) {
   #main {
     display: inline;
@@ -307,6 +310,7 @@ body {
   max-width: 700px;
   margin: 3em auto;
   position: relative;
+  padding-left: 20px;
 }
 #logo {
   background-image: url("images/kok.jpg");
@@ -317,7 +321,7 @@ body {
   height: 60px;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 20px;
 }
 .subtitle {
   text-decoration: none;
@@ -347,7 +351,7 @@ body {
   margin-right: 10px;
 }
 .article {
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 .article-inner {
   overflow: hidden;
@@ -800,7 +804,7 @@ a.article-title:hover {
   color: #258fb8;
 }
 .archives-wrap {
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 .archives:before,
 .archives:after {
@@ -1133,7 +1137,7 @@ pre .javascript .function {
   }
 }
 .widget-wrap {
-  margin: 50px 0;
+  margin-bottom: 50px;
 }
 .widget-title {
   margin-bottom: 1em;
