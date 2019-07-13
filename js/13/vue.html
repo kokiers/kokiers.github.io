@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>vue | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="vue 生命周期beforeCreate类型：Function 详细： 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。 created类型：Function 详细： 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段">
+<meta name="keywords" content="vuejs">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue">
+<meta property="og:url" content="https://kokiers.github.io/js/13/vue.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="vue 生命周期beforeCreate类型：Function 详细： 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。 created类型：Function 详细： 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-13T14:57:40.800Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="vue">
+<meta name="twitter:description" content="vue 生命周期beforeCreate类型：Function 详细： 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。 created类型：Function 详细： 在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-vue" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      vue
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/13/vue.html" class="article-date">
+  <time datetime="2019-07-13T14:42:29.000Z" itemprop="datePublished">2019-07-13</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="vue-生命周期"><a href="#vue-生命周期" class="headerlink" title="vue 生命周期"></a>vue <a href="https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA" target="_blank" rel="noopener">生命周期</a></h4><h5 id="beforeCreate"><a href="#beforeCreate" class="headerlink" title="beforeCreate"></a>beforeCreate</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。</p>
+<h5 id="created"><a href="#created" class="headerlink" title="created"></a>created</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>在实例创建完成后被立即调用。在这一步，实例已完成以下的配置：数据观测 (data observer)，属性和方法的运算，watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。</p>
+<h5 id="beforeMount"><a href="#beforeMount" class="headerlink" title="beforeMount"></a>beforeMount</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>在挂载开始之前被调用：相关的 render 函数首次被调用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<h5 id="mounted"><a href="#mounted" class="headerlink" title="mounted"></a>mounted</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</p>
+<p>注意 mounted 不会承诺所有的子组件也都一起被挂载。如果你希望等到整个视图都渲染完毕，可以用 vm.$nextTick 替换掉 mounted：</p>
+<p>mounted: function () {<br>  this.$nextTick(function () {<br>    // Code that will run only after the<br>    // entire view has been rendered<br>  })<br>}<br>该钩子在服务器端渲染期间不被调用。</p>
+<h5 id="beforeUpdate"><a href="#beforeUpdate" class="headerlink" title="beforeUpdate"></a>beforeUpdate</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>数据更新时调用，发生在虚拟 DOM 打补丁之前。这里适合在更新之前访问现有的 DOM，比如手动移除已添加的事件监听器。</p>
+<p>该钩子在服务器端渲染期间不被调用，因为只有初次渲染会在服务端进行。</p>
+<p>参考：生命周期图示</p>
+<h5 id="updated"><a href="#updated" class="headerlink" title="updated"></a>updated</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。</p>
+<p>当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。然而在大多数情况下，你应该避免在此期间更改状态。如果要相应状态改变，通常最好使用计算属性或 watcher 取而代之。</p>
+<p>注意 updated 不会承诺所有的子组件也都一起被重绘。如果你希望等到整个视图都重绘完毕，可以用 vm.$nextTick 替换掉 updated：</p>
+<p>updated: function () {<br>  this.$nextTick(function () {<br>    // Code that will run only after the<br>    // entire view has been re-rendered<br>  })<br>}<br>该钩子在服务器端渲染期间不被调用。</p>
+<h5 id="activated"><a href="#activated" class="headerlink" title="activated"></a>activated</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>keep-alive 组件激活时调用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<p>参考：</p>
+<p>构建组件 - keep-alive<br>动态组件 - keep-alive</p>
+<h5 id="deactivated"><a href="#deactivated" class="headerlink" title="deactivated"></a>deactivated</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>keep-alive 组件停用时调用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<p>参考：</p>
+<p>构建组件 - keep-alive<br>动态组件 - keep-alive</p>
+<h5 id="beforeDestroy"><a href="#beforeDestroy" class="headerlink" title="beforeDestroy"></a>beforeDestroy</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>实例销毁之前调用。在这一步，实例仍然完全可用。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<h5 id="destroyed"><a href="#destroyed" class="headerlink" title="destroyed"></a>destroyed</h5><p>类型：Function</p>
+<p>详细：</p>
+<p>Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</p>
+<p>该钩子在服务器端渲染期间不被调用。</p>
+<h5 id="errorCaptured"><a href="#errorCaptured" class="headerlink" title="errorCaptured"></a>errorCaptured</h5><p>2.5.0+ 新增</p>
+<p>类型：(err: Error, vm: Component, info: string) =&gt; ?boolean</p>
+<p>详细：</p>
+<p>当捕获一个来自子孙组件的错误时被调用。此钩子会收到三个参数：错误对象、发生错误的组件实例以及一个包含错误来源信息的字符串。此钩子可以返回 false 以阻止该错误继续向上传播。</p>
+<p>你可以在此钩子中修改组件的状态。因此在模板或渲染函数中设置其它内容的短路条件非常重要，它可以防止当一个错误被捕获时该组件进入一个无限的渲染循环。</p>
+<p>错误传播规则</p>
+<p>默认情况下，如果全局的 config.errorHandler 被定义，所有的错误仍会发送它，因此这些错误仍然会向单一的分析服务的地方进行汇报。</p>
+<p>如果一个组件的继承或父级从属链路中存在多个 errorCaptured 钩子，则它们将会被相同的错误逐个唤起。</p>
+<p>如果此 errorCaptured 钩子自身抛出了一个错误，则这个新错误和原本被捕获的错误都会发送给全局的 config.errorHandler。</p>
+<p>一个 errorCaptured 钩子能够返回 false 以阻止错误继续向上传播。本质上是说“这个错误已经被搞定了且应该被忽略”。它会阻止其它任何会被这个错误唤起的 errorCaptured 钩子和全局的 config.errorHandler。</p>
+
+      
+    </div>
+  </div>
+</article>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/js/">js</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/plugin/">plugin</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/tool/">tool</a></li></ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
