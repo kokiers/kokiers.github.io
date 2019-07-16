@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>实用正则合集 | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs  匹配中文1var str = /[^\u4E00-\u9FA5]/g  空格1var str = /^ +| +$/g;  空格1var str = /^1[34578][0-9]&amp;#123;9&amp;#125;$/;   邮箱1var str = /">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实用正则合集">
+<meta property="og:url" content="https://kokiers.github.io/js/7deedbc9.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs  匹配中文1var str = /[^\u4E00-\u9FA5]/g  空格1var str = /^ +| +$/g;  空格1var str = /^1[34578][0-9]&amp;#123;9&amp;#125;$/;   邮箱1var str = /">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-16T10:27:14.864Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="实用正则合集">
+<meta name="twitter:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs  匹配中文1var str = /[^\u4E00-\u9FA5]/g  空格1var str = /^ +| +$/g;  空格1var str = /^1[34578][0-9]&amp;#123;9&amp;#125;$/;   邮箱1var str = /">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-zhengze" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      实用正则合集
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/7deedbc9.html" class="article-date">
+  <time datetime="2019-07-16T09:18:54.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="匹配英文"><a href="#匹配英文" class="headerlink" title="匹配英文"></a>匹配英文</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = /[^a-zA-Z]/g;</span><br><span class="line">var <span class="built_in">test</span> = <span class="string">'77hhs'</span>;</span><br><span class="line">test.replace(str,<span class="string">''</span>);//hhs</span><br></pre></td></tr></table></figure>
+
+<h3 id="匹配中文"><a href="#匹配中文" class="headerlink" title="匹配中文"></a>匹配中文</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /[^\u4E00-\u9FA5]/g</span><br></pre></td></tr></table></figure>
+
+<h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /^ +| +$/g;</span><br></pre></td></tr></table></figure>
+
+<h3 id="空格-1"><a href="#空格-1" class="headerlink" title="空格"></a>空格</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /^1[34578][0-9]&#123;9&#125;$/;</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]&#123;2,4&#125;)+$/;</span><br></pre></td></tr></table></figure>
+
+<h3 id="身份证"><a href="#身份证" class="headerlink" title="身份证"></a>身份证</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">var preg = /^(^[1-9]\d&#123;7&#125;((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d&#123;3&#125;$)|(^[1-9]\d&#123;5&#125;[1-9]\d&#123;3&#125;((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d&#123;4&#125;)|\d&#123;3&#125;[Xx])$)$/;</span><br><span class="line"><span class="keyword">if</span> (!preg.test(idCard)) &#123;</span><br><span class="line">    console.log(<span class="string">'不合格'</span> + idCard);</span><br><span class="line">    <span class="built_in">return</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (idCard.length == 18) &#123;</span><br><span class="line">        var idCardWi = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2); </span><br><span class="line">        var idCardY = new Array( 1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2 ); </span><br><span class="line">        var idCardWiSum=0; //用来保存前17位各自乖以加权因子后的总和 </span><br><span class="line">        <span class="keyword">for</span>(var i=0;i&lt;17;i++) &#123; </span><br><span class="line">        	idCardWiSum += idCard.substring(i,i+1)*idCardWi[i]; </span><br><span class="line">        &#125; </span><br><span class="line">        var idCardMod = idCardWiSum%11;</span><br><span class="line">        var idCardLast = idCard.substring(17);//得到最后一位身份证号码 //如果等于2，则说明校验码是10，身份证号码最后一位应该是X </span><br><span class="line">        <span class="keyword">if</span>(idCardMod==2)&#123; </span><br><span class="line">        	<span class="keyword">if</span>(idCardLast==<span class="string">"X"</span> ||idCardLast==<span class="string">"x"</span> )&#123;</span><br><span class="line">        	 alert(<span class="string">"恭喜通过验证啦！"</span>); </span><br><span class="line">        	&#125;<span class="keyword">else</span>&#123; </span><br><span class="line">        		alert(<span class="string">"身份证号码错误！"</span>); </span><br><span class="line">        	&#125; </span><br><span class="line">        &#125;<span class="keyword">else</span>&#123; //用计算出的验证码与最后一位身份证号码匹配，如果一致，说明通过，否则是无效的身份证号码 </span><br><span class="line">        	<span class="keyword">if</span>(idCardLast==idCardY[idCardMod])&#123; </span><br><span class="line">        		alert(<span class="string">"恭喜通过验证啦！"</span>); </span><br><span class="line">        	&#125;<span class="keyword">else</span>&#123; </span><br><span class="line">        		alert(<span class="string">"身份证号码错误！"</span>); </span><br><span class="line">        	&#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">    	alert(<span class="string">"身份证格式不正确!"</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

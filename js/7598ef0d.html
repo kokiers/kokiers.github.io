@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>url 分割 | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="url 分割query123456789function splitParam(href) &amp;#123;    href = href || location.search;    var arr=&amp;#123;&amp;#125;,    reg = new RegExp( &quot;([^?=&amp;amp;]+)(=([^&amp;amp;]*))?&quot;, &quot;g&quot; );    href &amp;amp;&amp;amp; href.rep">
+<meta property="og:type" content="article">
+<meta property="og:title" content="url 分割">
+<meta property="og:url" content="https://kokiers.github.io/js/7598ef0d.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="url 分割query123456789function splitParam(href) &amp;#123;    href = href || location.search;    var arr=&amp;#123;&amp;#125;,    reg = new RegExp( &quot;([^?=&amp;amp;]+)(=([^&amp;amp;]*))?&quot;, &quot;g&quot; );    href &amp;amp;&amp;amp; href.rep">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-16T09:14:50.953Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="url 分割">
+<meta name="twitter:description" content="url 分割query123456789function splitParam(href) &amp;#123;    href = href || location.search;    var arr=&amp;#123;&amp;#125;,    reg = new RegExp( &quot;([^?=&amp;amp;]+)(=([^&amp;amp;]*))?&quot;, &quot;g&quot; );    href &amp;amp;&amp;amp; href.rep">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-alink" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      url 分割
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/7598ef0d.html" class="article-date">
+  <time datetime="2019-07-16T07:17:46.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="url-分割query"><a href="#url-分割query" class="headerlink" title="url 分割query"></a>url 分割query</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> splitParam(href) &#123;</span><br><span class="line">    href = href || location.search;</span><br><span class="line">    var arr=&#123;&#125;,</span><br><span class="line">    reg = new RegExp( <span class="string">"([^?=&amp;]+)(=([^&amp;]*))?"</span>, <span class="string">"g"</span> );</span><br><span class="line">    href &amp;&amp; href.replace(reg,<span class="keyword">function</span>( <span class="variable">$0</span>, <span class="variable">$1</span>, <span class="variable">$2</span>, <span class="variable">$3</span> )&#123;</span><br><span class="line">        arr[<span class="variable">$1</span>] = <span class="variable">$3</span>;    </span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="url-分割query-1"><a href="#url-分割query-1" class="headerlink" title="url 分割query"></a>url 分割query</h3><p>保留部分参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> addParam(href) &#123;</span><br><span class="line">    href = href || location.search;</span><br><span class="line">    var name = [<span class="string">'f'</span>,<span class="string">'ref'</span>,<span class="string">'isapp'</span>,<span class="string">'ssc'</span>,<span class="string">'usc'</span>,<span class="string">'td'</span>,<span class="string">'dgfromsource'</span>,<span class="string">'_vs'</span>],</span><br><span class="line">    str=<span class="string">''</span>,</span><br><span class="line">    arr=&#123;&#125;,</span><br><span class="line">    reg = new RegExp( <span class="string">"([^?=&amp;]+)(=([^&amp;]*))?"</span>, <span class="string">"g"</span> );</span><br><span class="line">    href &amp;&amp; href.replace(reg,<span class="keyword">function</span>( <span class="variable">$0</span>, <span class="variable">$1</span>, <span class="variable">$2</span>, <span class="variable">$3</span> )&#123;</span><br><span class="line">        <span class="keyword">if</span> (name.includes(<span class="variable">$1</span>)) &#123;            </span><br><span class="line">            arr[<span class="variable">$1</span>] = <span class="variable">$3</span>;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">for</span>(var i <span class="keyword">in</span> arr)&#123;</span><br><span class="line">        str +=  i + <span class="string">'='</span> + arr[i] + <span class="string">'&amp;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (str.length) &#123;</span><br><span class="line">        str = str.substring(0, str.length-1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="a标签-解析-url"><a href="#a标签-解析-url" class="headerlink" title="a标签 解析 url"></a>a标签 解析 url</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> parseURL(url) &#123;</span><br><span class="line">    var a = document.createElement(<span class="string">'a'</span>);</span><br><span class="line">    a.href = url;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        <span class="built_in">source</span>: url,</span><br><span class="line">        protocol: a.protocol.replace(<span class="string">':'</span>, <span class="string">''</span>),</span><br><span class="line">        host: a.hostname,</span><br><span class="line">        port: a.port || <span class="string">'80'</span>,</span><br><span class="line">        query: a.search,</span><br><span class="line">        params: (<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            var ret = &#123;&#125;,</span><br><span class="line">                seg = a.search.replace(/^\?/, <span class="string">''</span>).split(<span class="string">'&amp;'</span>),</span><br><span class="line">                len = seg.length,</span><br><span class="line">                i = 0,</span><br><span class="line">                s;</span><br><span class="line">            <span class="keyword">for</span> (; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!seg[i]) &#123; <span class="built_in">continue</span>; &#125; s = seg[i].split(<span class="string">'='</span>);</span><br><span class="line">                ret[s[0]] = s[1];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">return</span> ret;</span><br><span class="line">        &#125;)(),</span><br><span class="line">        file: (a.pathname.match(/\/([^\/?<span class="comment">#]+)$/i) || [, ''])[1],</span></span><br><span class="line">        <span class="built_in">hash</span>: a.hash.replace(<span class="string">' #'</span>, <span class="string">''</span>),</span><br><span class="line">        path: a.pathname.replace(/^([^\/])/, <span class="string">'/$1'</span>),</span><br><span class="line">        relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [, <span class="string">''</span>])[1],</span><br><span class="line">        segments: a.pathname.replace(/^\//, <span class="string">''</span>).split(<span class="string">'/'</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

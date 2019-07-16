@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>gulp | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="详情请戳 官网前提需要安装 node npm install1npm install --global gulp-cli  Create a gulpfile使用方法安装压缩js gulp-uglifygulp.task(‘ugpop’） 调用这个 task ： gulp ugpop 即可。一般有 gulp.task(‘default’） 可以执行 ：gulp 即可 123456789var gu">
+<meta name="keywords" content="gulp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="gulp">
+<meta property="og:url" content="https://kokiers.github.io/tool/4cc2ef8a.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="详情请戳 官网前提需要安装 node npm install1npm install --global gulp-cli  Create a gulpfile使用方法安装压缩js gulp-uglifygulp.task(‘ugpop’） 调用这个 task ： gulp ugpop 即可。一般有 gulp.task(‘default’） 可以执行 ：gulp 即可 123456789var gu">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-07-16T06:50:41.544Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="gulp">
+<meta name="twitter:description" content="详情请戳 官网前提需要安装 node npm install1npm install --global gulp-cli  Create a gulpfile使用方法安装压缩js gulp-uglifygulp.task(‘ugpop’） 调用这个 task ： gulp ugpop 即可。一般有 gulp.task(‘default’） 可以执行 ：gulp 即可 123456789var gu">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-gulp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      gulp
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/tool/4cc2ef8a.html" class="article-date">
+  <time datetime="2018-08-01T03:08:41.000Z" itemprop="datePublished">2018-08-01</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/tool/">tool</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="详情请戳-官网"><a href="#详情请戳-官网" class="headerlink" title="详情请戳 官网"></a>详情请戳 <a href="https://gulpjs.com/" target="_blank" rel="noopener">官网</a></h4><p>前提需要安装 node npm</p>
+<h5 id="install"><a href="#install" class="headerlink" title="install"></a>install</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --global gulp-cli</span><br></pre></td></tr></table></figure>
+
+<h4 id="Create-a-gulpfile"><a href="#Create-a-gulpfile" class="headerlink" title="Create a gulpfile"></a>Create a gulpfile</h4><p>使用方法<br>安装压缩js gulp-uglify<br>gulp.task(‘ugpop’） 调用这个 task ： gulp ugpop 即可。<br>一般有 gulp.task(‘default’） 可以执行 ：gulp 即可</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">var gulp = require(<span class="string">'gulp'</span>);</span><br><span class="line">var uglify = require(<span class="string">'gulp-uglify'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gulp.task(<span class="string">'default'</span>, <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">  gulp.src(<span class="string">'js/*.js'</span>)</span><br><span class="line">  .pipe(uglify())</span><br><span class="line">  .pipe(gulp.dest(<span class="string">'build/'</span>));</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

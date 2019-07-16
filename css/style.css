@@ -100,6 +100,10 @@ td {
 a img {
   border: none;
 }
+* {
+  margin: 0;
+  padding: 0;
+}
 input,
 button {
   margin: 0;
@@ -140,6 +144,19 @@ body {
 .outer:after {
   clear: both;
 }
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.content:before,
+.content:after {
+  content: "";
+  display: table;
+}
+.content:after {
+  clear: both;
+}
 .inner {
   display: inline;
   float: left;
@@ -159,6 +176,8 @@ body {
 }
 #container {
   position: relative;
+  max-width: 700px;
+  margin: auto;
 }
 .mobile-nav-on {
   overflow: hidden;
@@ -178,6 +197,9 @@ body {
 }
 .mobile-nav-on #wrap {
   left: 280px;
+}
+.fa {
+  color: #2ea644;
 }
 #main {
   min-height: 600px;
@@ -204,7 +226,6 @@ body {
 }
 .article-inner,
 .archives {
-  background: #fff;
   border-radius: 3px;
 }
 .article-entry h1,
@@ -307,10 +328,10 @@ body {
 }
 #header {
   height: auto;
-  max-width: 700px;
+  width: 100%;
   margin: 3em auto;
-  position: relative;
   padding-left: 20px;
+  position: relative;
 }
 #logo {
   background-image: url("images/kok.jpg");
@@ -916,7 +937,6 @@ a.article-title:hover {
   color: #ddd;
 }
 #footer {
-  background: #262a30;
   padding: 20px 0;
   border-top: 1px solid #ddd;
   color: #999;
