@@ -1,10 +1,11 @@
 ---
 title: ajax
-date: 2019-07-07 11:02:08
-categories: 
-- js
+categories:
+  - js
 tags:
-- javascript
+  - javascript
+abbrlink: c5a6a264
+date: 2019-07-06 11:02:08
 ---
 
 ### Create a ajax

@@ -1,10 +1,11 @@
 ---
 title: gulp
-date: 2019-07-07 11:08:41
 categories:
-- tool
+  - tool
 tags:
-- gulp
+  - gulp
+abbrlink: 4cc2ef8a
+date: 2018-08-01 11:08:41
 ---
 
 #### 详情请戳 [官网](https://gulpjs.com/)
