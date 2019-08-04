@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>canvas Api | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="绘制矩形绘制一个填充的矩形 1fillRect(x, y, width, height)  绘制一个矩形的边框 1strokeRect(x, y, width, height)  清除指定矩形区域，让清除部分完全透明。 1clearRect(x, y, width, height)  绘制路径节新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。 1234beginPath()closeP">
+<meta name="keywords" content="canvas">
+<meta property="og:type" content="article">
+<meta property="og:title" content="canvas Api">
+<meta property="og:url" content="https://kokiers.github.io/js/6f7abb59.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="绘制矩形绘制一个填充的矩形 1fillRect(x, y, width, height)  绘制一个矩形的边框 1strokeRect(x, y, width, height)  清除指定矩形区域，让清除部分完全透明。 1clearRect(x, y, width, height)  绘制路径节新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。 1234beginPath()closeP">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-04T06:27:11.219Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="canvas Api">
+<meta name="twitter:description" content="绘制矩形绘制一个填充的矩形 1fillRect(x, y, width, height)  绘制一个矩形的边框 1strokeRect(x, y, width, height)  清除指定矩形区域，让清除部分完全透明。 1clearRect(x, y, width, height)  绘制路径节新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。 1234beginPath()closeP">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="uncategorized/b5f422e3.html">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-canvas基本Api" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      canvas Api
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/6f7abb59.html" class="article-date">
+  <time datetime="2019-08-04T01:48:43.000Z" itemprop="datePublished">2019-08-04</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="绘制矩形"><a href="#绘制矩形" class="headerlink" title="绘制矩形"></a>绘制矩形</h5><p>绘制一个填充的矩形</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fillRect(x, y, width, height)</span><br></pre></td></tr></table></figure>
+
+<p>绘制一个矩形的边框</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">strokeRect(x, y, width, height)</span><br></pre></td></tr></table></figure>
+
+<p>清除指定矩形区域，让清除部分完全透明。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clearRect(x, y, width, height)</span><br></pre></td></tr></table></figure>
+
+<h5 id="绘制路径节"><a href="#绘制路径节" class="headerlink" title="绘制路径节"></a>绘制路径节</h5><p>新建一条路径，生成之后，图形绘制命令被指向到路径上生成路径。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">beginPath()</span><br><span class="line">closePath()</span><br><span class="line">stroke()</span><br><span class="line">fill()</span><br></pre></td></tr></table></figure>
+
+<p>将笔触移动到指定的坐标x以及y上。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">moveTo(x, y)</span><br></pre></td></tr></table></figure>
+
+<p>绘制一条从当前位置到指定x以及y位置的直线。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">lineTo(x, y)</span><br></pre></td></tr></table></figure>
+
+<p>圆弧</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arc(x, y, radius, startAngle, endAngle, anticlockwise)</span><br></pre></td></tr></table></figure>
+
+<p>画一个以（x,y）为圆心的以radius为半径的圆弧（圆），从startAngle开始到endAngle结束，按照anticlockwise给定的方向（默认为顺时针）来生成。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arcTo(x1, y1, x2, y2, radius)</span><br></pre></td></tr></table></figure>
+
+<p>这里详细介绍一下arc方法，该方法有六个参数：x,y为绘制圆弧所在圆上的圆心坐标。radius为半径。startAngle以及endAngle参数用弧度定义了开始以及结束的弧度。这些都是以x轴为基准。参数anticlockwise为一个布尔值。为true时，是逆时针方向，否则顺时针方向。</p>
+<p>注意：arc()函数中表示角的单位是弧度，不是角度。角度与弧度的js表达式:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">弧度=(Math.PI/180)*角度。</span><br></pre></td></tr></table></figure>
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

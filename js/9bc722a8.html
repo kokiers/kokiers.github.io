@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Storage | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758var myPerson = &amp;#123;    set: function (str) &amp;#123;        var isIn = false,            pers">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Storage">
+<meta property="og:url" content="https://kokiers.github.io/js/9bc722a8.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758var myPerson = &amp;#123;    set: function (str) &amp;#123;        var isIn = false,            pers">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-02T10:24:39.995Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Storage">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758var myPerson = &amp;#123;    set: function (str) &amp;#123;        var isIn = false,            pers">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="uncategorized/b5f422e3.html">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-Storage" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Storage
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/9bc722a8.html" class="article-date">
+  <time datetime="2019-07-17T06:59:52.000Z" itemprop="datePublished">2019-07-17</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">var myPerson = &#123;</span><br><span class="line">    <span class="built_in">set</span>: <span class="keyword">function</span> (str) &#123;</span><br><span class="line">        var isIn = <span class="literal">false</span>,</span><br><span class="line">            pers = window.localStorage.firList,</span><br><span class="line">            perList = [];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (pers != undefined) &#123;</span><br><span class="line"></span><br><span class="line">            perList = JSON.parse(pers);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(var i = 0,perLen = perList.length; i &lt; perLen; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (JSON.stringify(str) == JSON.stringify(perList[i])) &#123;</span><br><span class="line">                    isIn = <span class="literal">true</span>;</span><br><span class="line">                    <span class="built_in">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!isIn) &#123;</span><br><span class="line">            perList.push(str);</span><br><span class="line">            window.localStorage.removeItem(<span class="string">'firList'</span>);</span><br><span class="line">            window.localStorage.firList = JSON.stringify(perList);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    get: <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">        var perList = [],</span><br><span class="line">            uLists = [],</span><br><span class="line">            pers = window.localStorage.firList;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (pers != undefined) &#123;</span><br><span class="line"></span><br><span class="line">            perList = JSON.parse(pers);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(var i = 0; i &lt; perList.length; i++)&#123;</span><br><span class="line">                uLists[perList[i].user_id] = perList[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> uLists;</span><br><span class="line">    &#125;,</span><br><span class="line">    remove: <span class="keyword">function</span> (strId) &#123;</span><br><span class="line">        var isDel = <span class="literal">false</span>,pers = window.localStorage.firList,perList = [];</span><br><span class="line">        <span class="keyword">if</span> (pers != undefined) &#123;</span><br><span class="line"></span><br><span class="line">            perList = JSON.parse(pers);</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span>(var i = 0,perLen = perList.length; i &lt; perLen; i++)&#123;</span><br><span class="line">                <span class="keyword">if</span> (strId == perList[i].user_id) &#123;</span><br><span class="line">                    perList.splice(i,1);</span><br><span class="line">                    isDel = <span class="literal">true</span>;</span><br><span class="line">                    window.localStorage.removeItem(<span class="string">'firList'</span>);</span><br><span class="line">                    window.localStorage.firList = JSON.stringify(perList);</span><br><span class="line">                    <span class="built_in">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> isDel;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
