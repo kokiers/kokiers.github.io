@@ -57,3 +57,12 @@ page_pv: true
 page_pv_header: <i class="fa fa-file-o"></i>
 page_pv_footer:
 
+  
+gitment:
+  enable: true
+  githubID: kokiers
+  repo: https://github.com/kokiers/kokiers.github.io
+  ClientID: b321c666ee2dc3d013d5
+  ClientSecret: b82698fb7e68c8afc92aa265c8cafab285b2e93b
+  lazy: true
+

@@ -7,7 +7,7 @@ date: 2019-07-08 23:12:35
 tags:
 ---
 
-####  [SwipeDou](https://github.com/kokiers/trans-pic)
+####  [SwipeDou GitHub](https://github.com/kokiers/trans-pic)
 
 options
 
