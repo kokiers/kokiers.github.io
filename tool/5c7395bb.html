@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>d3 树形图 | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="文档请戳 文档 https://d3js.org.cn/document 123456789101112131415161718192021222324252627282930313233343536373839// 把数据 转为层次结构数据:let root = d3.stratify()  .id((d) =&amp;gt; &amp;#123;    return d.id;  &amp;#125;)  .pare">
+<meta property="og:type" content="article">
+<meta property="og:title" content="d3 树形图">
+<meta property="og:url" content="https://kokiers.github.io/tool/5c7395bb.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="文档请戳 文档 https://d3js.org.cn/document 123456789101112131415161718192021222324252627282930313233343536373839// 把数据 转为层次结构数据:let root = d3.stratify()  .id((d) =&amp;gt; &amp;#123;    return d.id;  &amp;#125;)  .pare">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://kokiers.github.io/images/tree_20191023120111.png">
+<meta property="og:updated_time" content="2019-10-23T04:02:18.635Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="d3 树形图">
+<meta name="twitter:description" content="文档请戳 文档 https://d3js.org.cn/document 123456789101112131415161718192021222324252627282930313233343536373839// 把数据 转为层次结构数据:let root = d3.stratify()  .id((d) =&amp;gt; &amp;#123;    return d.id;  &amp;#125;)  .pare">
+<meta name="twitter:image" content="https://kokiers.github.io/images/tree_20191023120111.png">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="/uncategorized/b5f422e3.html">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-d3-树形图" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      d3 树形图
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/tool/5c7395bb.html" class="article-date">
+  <time datetime="2019-10-23T02:49:45.000Z" itemprop="datePublished">2019-10-23</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/tool/">tool</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="文档请戳-文档-https-d3js-org-cn-document"><a href="#文档请戳-文档-https-d3js-org-cn-document" class="headerlink" title="文档请戳 文档 https://d3js.org.cn/document"></a>文档请戳 <a href="https://d3js.org.cn/document" target="_blank" rel="noopener">文档 https://d3js.org.cn/document</a></h4><p><img src="../../images/tree_20191023120111.png" alt="环形饼图"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">// 把数据 转为层次结构数据:</span><br><span class="line"><span class="built_in">let</span> root = d3.stratify()</span><br><span class="line">  .id((d) =&gt; &#123;</span><br><span class="line">    <span class="built_in">return</span> d.id;</span><br><span class="line">  &#125;)</span><br><span class="line">  .parentId((d) =&gt; &#123;</span><br><span class="line">    <span class="built_in">return</span> d.parentId;</span><br><span class="line">  &#125;)(this.nodes);</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> depth = 0;</span><br><span class="line">this.hierarchyData = d3.hierarchy(root)</span><br><span class="line">  .sum((d) =&gt; &#123;</span><br><span class="line">    depth = d.depth &gt; depth ? d.depth : depth</span><br><span class="line">    <span class="built_in">return</span> d.value</span><br><span class="line">  &#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> tree = d3.tree().size([this.width, this.height])</span><br><span class="line"><span class="built_in">let</span> treeData = tree(this.hierarchyData)</span><br><span class="line"></span><br><span class="line">this.zoom = d3.zoom()</span><br><span class="line">  .scaleExtent(this.scale)</span><br><span class="line">  .translateExtent([</span><br><span class="line">    [0, 0],</span><br><span class="line">    [this.width, this.height]</span><br><span class="line">  ])</span><br><span class="line">  .extent([</span><br><span class="line">    [0, 0],</span><br><span class="line">    [this.width, this.height]</span><br><span class="line">  ])</span><br><span class="line">  .on(<span class="string">'zoom'</span>, this.zoomed)</span><br><span class="line"></span><br><span class="line">this.g = this.svg.append(<span class="string">'g'</span>)</span><br><span class="line"></span><br><span class="line">this.drawNodes(treeData.descendants())</span><br><span class="line">this.drawLinks(treeData.links())</span><br><span class="line">this.drawText();</span><br><span class="line">// zoom</span><br><span class="line">this.svg.call(d3.zoom().on(<span class="string">"zoom"</span>, this.zoomed))</span><br><span class="line">  .on(<span class="string">"dblclick.zoom"</span>, null);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Wed Oct 23 2019 10:49:45 GMT+0800',
+        owner: 'kokiers',
+        repo: 'https://github.com/kokiers/kokiers.github.io',
+        oauth: {
+            client_id: 'b321c666ee2dc3d013d5',
+            client_secret: 'b82698fb7e68c8afc92aa265c8cafab285b2e93b',
+        },
+    });
+    gitment.render('gitmentContainer')
+</script>
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>分割字符串 | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="字符串分隔空格12345678910function andleSplit(str)&amp;#123;    var temp = str.split(/[\s+,]/g);    for (var i = 0; i &amp;lt; temp.length; i++) &amp;#123;        if (temp[i] == &quot;&quot;) &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="分割字符串">
+<meta property="og:url" content="https://kokiers.github.io/js/1459c89f.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="字符串分隔空格12345678910function andleSplit(str)&amp;#123;    var temp = str.split(/[\s+,]/g);    for (var i = 0; i &amp;lt; temp.length; i++) &amp;#123;        if (temp[i] == &quot;&quot;) &amp;#123;">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-23T02:27:19.245Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="分割字符串">
+<meta name="twitter:description" content="字符串分隔空格12345678910function andleSplit(str)&amp;#123;    var temp = str.split(/[\s+,]/g);    for (var i = 0; i &amp;lt; temp.length; i++) &amp;#123;        if (temp[i] == &quot;&quot;) &amp;#123;">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="/uncategorized/b5f422e3.html">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-str-handle" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      分割字符串
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/1459c89f.html" class="article-date">
+  <time datetime="2019-07-16T09:11:52.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="字符串分隔空格"><a href="#字符串分隔空格" class="headerlink" title="字符串分隔空格"></a>字符串分隔空格</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> andleSplit(str)&#123;</span><br><span class="line">    var temp = str.split(/[\s+,]/g);</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; temp.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (temp[i] == <span class="string">""</span>) &#123;                    </span><br><span class="line">            temp.splice(i, 1);</span><br><span class="line">            i--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="string-替换"><a href="#string-替换" class="headerlink" title="string 替换"></a>string 替换</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.format = String.prototype.f = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    var s = this,</span><br><span class="line">        i = arguments.length;</span><br><span class="line">    <span class="keyword">while</span> (i--) &#123;</span><br><span class="line">        s = s.replace(new RegExp(<span class="string">'\\&#123;'</span> + i + <span class="string">'\\&#125;'</span>, <span class="string">'gm'</span>), arguments[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> s;</span><br><span class="line">&#125;;</span><br><span class="line">var template1=<span class="string">"我是&#123;0&#125;，今年&#123;1&#125;了,biubiubiu&#123;2&#125;"</span>;</span><br><span class="line">var result1=template1.format(<span class="string">"loogn"</span>,22,9090);</span><br></pre></td></tr></table></figure>
+
+<h3 id="数字千分位格式化"><a href="#数字千分位格式化" class="headerlink" title="数字千分位格式化"></a>数字千分位格式化</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> toThousands(num) &#123;</span><br><span class="line">    var num = (num || 0).toString(), result = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">while</span> (num.length &gt; 3) &#123;</span><br><span class="line">        result = <span class="string">','</span> + num.slice(-3) + result;</span><br><span class="line">        num = num.slice(0, num.length - 3);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (num) &#123; result = num + result; &#125;</span><br><span class="line">    <span class="built_in">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Tue Jul 16 2019 17:11:52 GMT+0800',
+        owner: 'kokiers',
+        repo: 'https://github.com/kokiers/kokiers.github.io',
+        oauth: {
+            client_id: 'b321c666ee2dc3d013d5',
+            client_secret: 'b82698fb7e68c8afc92aa265c8cafab285b2e93b',
+        },
+    });
+    gitment.render('gitmentContainer')
+</script>
+
+
+  </div>
+</body>
+</html>

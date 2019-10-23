@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>js 合集 | kokiers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="数组存在 1234567891011function inArray(val,arr) &amp;#123;	let arlen = arr.length;		let test = &apos;&apos;;		    for (let s = 0; s &amp;lt; arlen; s++) &amp;#123;        test = arr[s].toString();        if (test == val) &amp;#123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="js 合集">
+<meta property="og:url" content="https://kokiers.github.io/js/4d191d65.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="数组存在 1234567891011function inArray(val,arr) &amp;#123;	let arlen = arr.length;		let test = &apos;&apos;;		    for (let s = 0; s &amp;lt; arlen; s++) &amp;#123;        test = arr[s].toString();        if (test == val) &amp;#123">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-10-23T02:27:19.245Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="js 合集">
+<meta name="twitter:description" content="数组存在 1234567891011function inArray(val,arr) &amp;#123;	let arlen = arr.length;		let test = &apos;&apos;;		    for (let s = 0; s &amp;lt; arlen; s++) &amp;#123;        test = arr[s].toString();        if (test == val) &amp;#123">
+  
+    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
+  
+  <!-- 
+    <link rel="icon" href="/favicon.png">
+   -->
+ <!--  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+   -->
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+  
+  <a href="/" class="subtitle">kokiers</a>
+  <a href="/" id="logo"></a>
+  <ul class="sublink">
+  
+    <li>
+    <a class="main-nav-link" href="/">Home</a>
+    </li>
+  
+    <li>
+    <a class="main-nav-link" href="/archives">Archives</a>
+    </li>
+  
+  <li>
+    <a class="main-nav-link" href="/uncategorized/b5f422e3.html">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>
+      <div class="content">
+        <article id="post-jsList" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      js 合集
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/js/4d191d65.html" class="article-date">
+  <time datetime="2019-07-16T10:24:42.000Z" itemprop="datePublished">2019-07-16</time>
+</a>
+      
+  <div class="article-category">
+  	<i class="fa fa-tag"></i>
+    <a class="article-category-link" href="/categories/js/">js</a>
+  </div>
+
+      
+      <div class="article-view">
+      <i class="fa fa-eye" aria-hidden="true"></i>
+      <span id="busuanzi_value_page_pv"></span>
+      </div>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>数组存在</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> inArray(val,arr) &#123;</span><br><span class="line">	<span class="built_in">let</span> arlen = arr.length;	</span><br><span class="line">	<span class="built_in">let</span> <span class="built_in">test</span> = <span class="string">''</span>;		</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> s = 0; s &lt; arlen; s++) &#123;</span><br><span class="line">        <span class="built_in">test</span> = arr[s].toString();</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">test</span> == val) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>对象拷贝</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopyObj(obj) &#123; </span><br><span class="line"></span><br><span class="line">	<span class="built_in">let</span> str, result = obj.constructor === Array ? [] : &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(typeof obj !== <span class="string">'object'</span>)&#123;</span><br><span class="line">        <span class="built_in">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(window.JSON)&#123;</span><br><span class="line">        str = JSON.stringify(obj), </span><br><span class="line">        result = JSON.parse(str); </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> i <span class="keyword">in</span> obj)&#123;</span><br><span class="line">            result[i] = typeof obj[i] === <span class="string">'object'</span> ? deepCopyObj(obj[i]) : obj[i]; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> result; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+  </div>
+</article>
+
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 kokiers<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+  
+  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+</footer>
+
+    
+
+<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+    var gitment = new Gitment({
+        id: 'Tue Jul 16 2019 18:24:42 GMT+0800',
+        owner: 'kokiers',
+        repo: 'https://github.com/kokiers/kokiers.github.io',
+        oauth: {
+            client_id: 'b321c666ee2dc3d013d5',
+            client_secret: 'b82698fb7e68c8afc92aa265c8cafab285b2e93b',
+        },
+    });
+    gitment.render('gitmentContainer')
+</script>
+
+
+  </div>
+</body>
+</html>
