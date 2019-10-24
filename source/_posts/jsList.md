@@ -7,7 +7,7 @@ date: 2019-07-16 18:24:42
 tags:
 ---
 
-数组存在
+## 数组存在
 ```bash
 function inArray(val,arr) {
 	let arlen = arr.length;	
@@ -22,7 +22,7 @@ function inArray(val,arr) {
 };
 ```
 
-对象拷贝
+## 对象拷贝
 ```bash
 function deepCopyObj(obj) { 
 
