@@ -1,93 +1,358 @@
 <!DOCTYPE html>
-<html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
 <head><meta name="generator" content="Hexo 3.9.0">
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
 
-  
-  <title>实用正则合集 | kokiers</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs  匹配中文1var str = /[^\u4E00-\u9FA5]/g  空格1var str = /^ +| +$/g;  空格1var str = /^1[34578][0-9]&amp;#123;9&amp;#125;$/;   邮箱1var str = /">
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="文档请戳 文档 https://d3js.org.cn/document 123456789101112131415161718192021222324252627282930313233343536373839// 把数据 转为层次结构数据:let root = d3.stratify()  .id((d) =&amp;gt; &amp;#123;    return d.id;  &amp;#125;)  .pare">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实用正则合集">
-<meta property="og:url" content="https://kokiers.github.io/js/7deedbc9.html">
+<meta property="og:title" content="d3 树形图">
+<meta property="og:url" content="https://kokiers.github.io/tool/5c7395bb.html">
 <meta property="og:site_name" content="kokiers">
-<meta property="og:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs  匹配中文1var str = /[^\u4E00-\u9FA5]/g  空格1var str = /^ +| +$/g;  空格1var str = /^1[34578][0-9]&amp;#123;9&amp;#125;$/;   邮箱1var str = /">
-<meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-23T02:27:19.245Z">
+<meta property="og:description" content="文档请戳 文档 https://d3js.org.cn/document 123456789101112131415161718192021222324252627282930313233343536373839// 把数据 转为层次结构数据:let root = d3.stratify()  .id((d) =&amp;gt; &amp;#123;    return d.id;  &amp;#125;)  .pare">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://kokiers.github.io/images/tree_20191023120111.png">
+<meta property="og:updated_time" content="2019-10-24T01:22:53.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实用正则合集">
-<meta name="twitter:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs  匹配中文1var str = /[^\u4E00-\u9FA5]/g  空格1var str = /^ +| +$/g;  空格1var str = /^1[34578][0-9]&amp;#123;9&amp;#125;$/;   邮箱1var str = /">
-  
-    <link rel="alternate" href="/atom.xml" title="kokiers" type="application/atom+xml">
-  
-  <!-- 
-    <link rel="icon" href="/favicon.png">
-   -->
- <!--  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-   -->
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-</html>
-<body>
-  <div id="container">
-      <header id="header">
-  
-  <a href="/" class="subtitle">kokiers</a>
-  <a href="/" id="logo"></a>
-  <ul class="sublink">
-  
-    <li>
-    <a class="main-nav-link" href="/">Home</a>
-    </li>
-  
-    <li>
-    <a class="main-nav-link" href="/archives">Archives</a>
-    </li>
-  
-  <li>
-    <a class="main-nav-link" href="/uncategorized/b5f422e3.html">About</a>
-  </li>
-  <li>
-    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
-  </li>
-  </ul>
-</header>
-      <div class="content">
-        <article id="post-zhengze" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      实用正则合集
-    </h1>
+<meta name="twitter:title" content="d3 树形图">
+<meta name="twitter:description" content="文档请戳 文档 https://d3js.org.cn/document 123456789101112131415161718192021222324252627282930313233343536373839// 把数据 转为层次结构数据:let root = d3.stratify()  .id((d) =&amp;gt; &amp;#123;    return d.id;  &amp;#125;)  .pare">
+<meta name="twitter:image" content="https://kokiers.github.io/images/tree_20191023120111.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://kokiers.github.io/tool/5c7395bb.html">
+
+
+
+
+
+  <title>实用正则合集 | kokiers</title>
   
 
-      </header>
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
     
-    <div class="article-meta">
-      <a href="/js/7deedbc9.html" class="article-date">
-  <time datetime="2019-07-16T09:18:54.000Z" itemprop="datePublished">2019-07-16</time>
-</a>
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">kokiers</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
       
-  <div class="article-category">
-  	<i class="fa fa-tag"></i>
-    <a class="article-category-link" href="/categories/js/">js</a>
+        <p class="site-subtitle"></p>
+      
   </div>
 
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
       
-      <div class="article-view">
-      <i class="fa fa-eye" aria-hidden="true"></i>
-      <span id="busuanzi_value_page_pv"></span>
-      </div>
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
       
-    </div>
-    <div class="article-entry" itemprop="articleBody">
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/js/7deedbc9.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">实用正则合集</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-16T17:18:54+08:00">2019-07-16</time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
       
         <h3 id="匹配英文"><a href="#匹配英文" class="headerlink" title="匹配英文"></a>匹配英文</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = /[^a-zA-Z]/g;</span><br><span class="line">var <span class="built_in">test</span> = <span class="string">'77hhs'</span>;</span><br><span class="line">test.replace(str,<span class="string">''</span>);//hhs</span><br></pre></td></tr></table></figure>
 
@@ -97,60 +362,431 @@
 
 <h3 id="空格-1"><a href="#空格-1" class="headerlink" title="空格"></a>空格</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /^1[34578][0-9]&#123;9&#125;$/;</span><br></pre></td></tr></table></figure>
 
-
 <h3 id="邮箱"><a href="#邮箱" class="headerlink" title="邮箱"></a>邮箱</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]&#123;2,4&#125;)+$/;</span><br></pre></td></tr></table></figure>
 
 <h3 id="身份证"><a href="#身份证" class="headerlink" title="身份证"></a>身份证</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">var preg = /^(^[1-9]\d&#123;7&#125;((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d&#123;3&#125;$)|(^[1-9]\d&#123;5&#125;[1-9]\d&#123;3&#125;((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d&#123;4&#125;)|\d&#123;3&#125;[Xx])$)$/;</span><br><span class="line"><span class="keyword">if</span> (!preg.test(idCard)) &#123;</span><br><span class="line">    console.log(<span class="string">'不合格'</span> + idCard);</span><br><span class="line">    <span class="built_in">return</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (idCard.length == 18) &#123;</span><br><span class="line">        var idCardWi = new Array(7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2); </span><br><span class="line">        var idCardY = new Array( 1, 0, 10, 9, 8, 7, 6, 5, 4, 3, 2 ); </span><br><span class="line">        var idCardWiSum=0; //用来保存前17位各自乖以加权因子后的总和 </span><br><span class="line">        <span class="keyword">for</span>(var i=0;i&lt;17;i++) &#123; </span><br><span class="line">        	idCardWiSum += idCard.substring(i,i+1)*idCardWi[i]; </span><br><span class="line">        &#125; </span><br><span class="line">        var idCardMod = idCardWiSum%11;</span><br><span class="line">        var idCardLast = idCard.substring(17);//得到最后一位身份证号码 //如果等于2，则说明校验码是10，身份证号码最后一位应该是X </span><br><span class="line">        <span class="keyword">if</span>(idCardMod==2)&#123; </span><br><span class="line">        	<span class="keyword">if</span>(idCardLast==<span class="string">"X"</span> ||idCardLast==<span class="string">"x"</span> )&#123;</span><br><span class="line">        	 alert(<span class="string">"恭喜通过验证啦！"</span>); </span><br><span class="line">        	&#125;<span class="keyword">else</span>&#123; </span><br><span class="line">        		alert(<span class="string">"身份证号码错误！"</span>); </span><br><span class="line">        	&#125; </span><br><span class="line">        &#125;<span class="keyword">else</span>&#123; //用计算出的验证码与最后一位身份证号码匹配，如果一致，说明通过，否则是无效的身份证号码 </span><br><span class="line">        	<span class="keyword">if</span>(idCardLast==idCardY[idCardMod])&#123; </span><br><span class="line">        		alert(<span class="string">"恭喜通过验证啦！"</span>); </span><br><span class="line">        	&#125;<span class="keyword">else</span>&#123; </span><br><span class="line">        		alert(<span class="string">"身份证号码错误！"</span>); </span><br><span class="line">        	&#125;</span><br><span class="line">        &#125; </span><br><span class="line">    &#125;<span class="keyword">else</span>&#123; </span><br><span class="line">    	alert(<span class="string">"身份证格式不正确!"</span>); </span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="只允许输入数字"><a href="#只允许输入数字" class="headerlink" title="只允许输入数字"></a>只允许输入数字</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = v.replace(/[^\d]/g,<span class="string">''</span>);</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/js/1459c89f.html" rel="next" title="分割字符串">
+                <i class="fa fa-chevron-left"></i> 分割字符串
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/js/4d191d65.html" rel="prev" title="js 合集">
+                js 合集 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
       
     </div>
   </div>
-</article>
 
-      </div>
-      <footer id="footer">
+
+          </div>
+          
+
+
+          
+
   
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2019 kokiers<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    <div class="comments" id="comments">
+      
+        <div onclick="showGitment()" id="gitment-display-button">显示 Gitment 评论</div>
+        <div id="gitment-container" style="display:none"></div>
+      
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
   </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/kok.jpg" alt="kokiers">
+            
+              <p class="site-author-name" itemprop="name">kokiers</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配英文"><span class="nav-number">1.</span> <span class="nav-text">匹配英文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配中文"><span class="nav-number">2.</span> <span class="nav-text">匹配中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空格"><span class="nav-number">3.</span> <span class="nav-text">空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空格-1"><span class="nav-number">4.</span> <span class="nav-text">空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮箱"><span class="nav-number">5.</span> <span class="nav-text">邮箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#身份证"><span class="nav-number">6.</span> <span class="nav-text">身份证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只允许输入数字"><span class="nav-number">7.</span> <span class="nav-text">只允许输入数字</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kokiers</span>
+
   
-  <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
   
-</footer>
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
 
     
 
-<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+  </div>
 
+  
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
-
-
-
-    
-<div id="gitmentContainer"></div>
-<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-<script>
-    var gitment = new Gitment({
-        id: 'Tue Jul 16 2019 17:18:54 GMT+0800',
-        owner: 'kokiers',
-        repo: 'git@github.com:kokiers/kokiers.github.io.git',
-        oauth: {
-            client_id: 'b321c666ee2dc3d013d5',
-            client_secret: 'b82698fb7e68c8afc92aa265c8cafab285b2e93b',
-        },
-    });
-    gitment.render('gitmentContainer')
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
 </script>
 
 
-  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+        <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitment({
+            id: window.location.pathname, 
+            owner: 'kokiers',
+            repo: 'gitcoment',
+            
+            oauth: {
+            
+            
+                client_secret: 'b82698fb7e68c8afc92aa265c8cafab285b2e93b',
+            
+                client_id: 'b321c666ee2dc3d013d5'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      function showGitment(){
+        document.getElementById("gitment-display-button").style.display = "none";
+        document.getElementById("gitment-container").style.display = "block";
+        renderGitment();
+      }
+      
+      </script>
+    
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
 </body>
 </html>
