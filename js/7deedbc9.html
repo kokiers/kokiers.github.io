@@ -49,22 +49,20 @@
 <link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/kokier.png?v=6.0.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/kokier.png?v=6.0.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/kokier.png?v=6.0.0">
 
 
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+
+  <meta name="keywords" content="正则,">
 
 
 
@@ -75,19 +73,18 @@
 
 
 
-<meta name="description" content="color渐变 d3.interpolateBlues defs linearGradient 做渐变背景   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758let defs = this.svg.append(&quot;defs&quot;);l">
+<meta name="description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs">
+<meta name="keywords" content="正则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="d3 渐变图例">
-<meta property="og:url" content="https://kokiers.github.io/uncategorized/6dbbd728.html">
+<meta property="og:title" content="实用正则合集">
+<meta property="og:url" content="https://kokiers.github.io/js/7deedbc9.html">
 <meta property="og:site_name" content="kokiers">
-<meta property="og:description" content="color渐变 d3.interpolateBlues defs linearGradient 做渐变背景   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758let defs = this.svg.append(&quot;defs&quot;);l">
+<meta property="og:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://kokiers.github.io/images/20191023162644.png">
-<meta property="og:updated_time" content="2019-10-24T01:22:53.296Z">
+<meta property="og:updated_time" content="2019-10-25T03:06:21.336Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="d3 渐变图例">
-<meta name="twitter:description" content="color渐变 d3.interpolateBlues defs linearGradient 做渐变背景   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758let defs = this.svg.append(&quot;defs&quot;);l">
-<meta name="twitter:image" content="https://kokiers.github.io/images/20191023162644.png">
+<meta name="twitter:title" content="实用正则合集">
+<meta name="twitter:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs">
 
 
 
@@ -119,7 +116,7 @@
 
 
 
-  <link rel="canonical" href="https://kokiers.github.io/uncategorized/6dbbd728.html">
+  <link rel="canonical" href="https://kokiers.github.io/js/7deedbc9.html">
 
 
 
@@ -191,11 +188,31 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/uncategorized/b5f422e3.html" rel="section">
+          <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
           </a>
         </li>
       
@@ -346,6 +363,7 @@
       
         <h3 id="匹配英文"><a href="#匹配英文" class="headerlink" title="匹配英文"></a>匹配英文</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var str = /[^a-zA-Z]/g;</span><br><span class="line">var <span class="built_in">test</span> = <span class="string">'77hhs'</span>;</span><br><span class="line">test.replace(str,<span class="string">''</span>);//hhs</span><br></pre></td></tr></table></figure>
 
+<a id="more"></a>
 <h3 id="匹配中文"><a href="#匹配中文" class="headerlink" title="匹配中文"></a>匹配中文</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /[^\u4E00-\u9FA5]/g</span><br></pre></td></tr></table></figure>
 
 <h3 id="空格"><a href="#空格" class="headerlink" title="空格"></a>空格</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var str = /^ +| +$/g;</span><br></pre></td></tr></table></figure>
@@ -373,6 +391,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/正则/" rel="tag"># 正则</a>
+          
+        </div>
+      
 
       
       
@@ -382,8 +406,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/js/1459c89f.html" rel="next" title="分割字符串">
-                <i class="fa fa-chevron-left"></i> 分割字符串
+              <a href="/js/c0add594.html" rel="next" title="vue">
+                <i class="fa fa-chevron-left"></i> vue
               </a>
             
           </div>
@@ -392,8 +416,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/js/4d191d65.html" rel="prev" title="js 合集">
-                js 合集 <i class="fa fa-chevron-right"></i>
+              <a href="/js/4d191d65.html" rel="prev" title="js 小方法">
+                js 小方法 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -480,7 +504,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -490,10 +514,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">4</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -501,10 +525,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">3</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -512,6 +536,16 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kokiers" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           

@@ -49,22 +49,20 @@
 <link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.0.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/kokier.png?v=6.0.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.0.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/kokier.png?v=6.0.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.0.0">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=6.0.0" color="#222">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/kokier.png?v=6.0.0">
 
 
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+
+  <meta name="keywords" content="正则,">
 
 
 
@@ -75,19 +73,18 @@
 
 
 
-<meta name="description" content="color渐变 d3.interpolateBlues defs linearGradient 做渐变背景   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758let defs = this.svg.append(&quot;defs&quot;);l">
+<meta name="description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs">
+<meta name="keywords" content="正则">
 <meta property="og:type" content="article">
-<meta property="og:title" content="d3 渐变图例">
-<meta property="og:url" content="https://kokiers.github.io/uncategorized/6dbbd728.html">
+<meta property="og:title" content="实用正则合集">
+<meta property="og:url" content="https://kokiers.github.io/js/7deedbc9.html">
 <meta property="og:site_name" content="kokiers">
-<meta property="og:description" content="color渐变 d3.interpolateBlues defs linearGradient 做渐变背景   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758let defs = this.svg.append(&quot;defs&quot;);l">
+<meta property="og:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://kokiers.github.io/images/20191023162644.png">
-<meta property="og:updated_time" content="2019-10-24T01:22:53.296Z">
+<meta property="og:updated_time" content="2019-10-25T03:06:21.336Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="d3 渐变图例">
-<meta name="twitter:description" content="color渐变 d3.interpolateBlues defs linearGradient 做渐变背景   12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758let defs = this.svg.append(&quot;defs&quot;);l">
-<meta name="twitter:image" content="https://kokiers.github.io/images/20191023162644.png">
+<meta name="twitter:title" content="实用正则合集">
+<meta name="twitter:description" content="匹配英文123var str = /[^a-zA-Z]/g;var test = &apos;77hhs&apos;;test.replace(str,&apos;&apos;);//hhs">
 
 
 
@@ -119,13 +116,13 @@
 
 
 
-  <link rel="canonical" href="https://kokiers.github.io/uncategorized/6dbbd728.html">
+  <link rel="canonical" href="https://kokiers.github.io/js/7deedbc9.html">
 
 
 
 
 
-  <title>js 合集 | kokiers</title>
+  <title>js 小方法 | kokiers</title>
   
 
 
@@ -191,11 +188,31 @@
       
         
         <li class="menu-item menu-item-about">
-          <a href="/uncategorized/b5f422e3.html" rel="section">
+          <a href="/about" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
             
             关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
           </a>
         </li>
       
@@ -259,7 +276,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">js 合集</h1>
+          <h1 class="post-title" itemprop="name headline">js 小方法</h1>
         
 
         <div class="post-meta">
@@ -344,9 +361,27 @@
       
 
       
-        <h2 id="数组存在"><a href="#数组存在" class="headerlink" title="数组存在"></a>数组存在</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> inArray(val,arr) &#123;</span><br><span class="line">	<span class="built_in">let</span> arlen = arr.length;	</span><br><span class="line">	<span class="built_in">let</span> <span class="built_in">test</span> = <span class="string">''</span>;		</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> s = 0; s &lt; arlen; s++) &#123;</span><br><span class="line">        <span class="built_in">test</span> = arr[s].toString();</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">test</span> == val) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+        <p>不定期更新一些js小方法</p>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><h5 id="数组存在"><a href="#数组存在" class="headerlink" title="数组存在"></a>数组存在</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> inArray(val,arr) &#123;</span><br><span class="line">	<span class="built_in">let</span> arlen = arr.length;	</span><br><span class="line">	<span class="built_in">let</span> <span class="built_in">test</span> = <span class="string">''</span>;		</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> s = 0; s &lt; arlen; s++) &#123;</span><br><span class="line">        <span class="built_in">test</span> = arr[s].toString();</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">test</span> == val) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
 
-<h2 id="对象拷贝"><a href="#对象拷贝" class="headerlink" title="对象拷贝"></a>对象拷贝</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopyObj(obj) &#123; </span><br><span class="line"></span><br><span class="line">	<span class="built_in">let</span> str, result = obj.constructor === Array ? [] : &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(typeof obj !== <span class="string">'object'</span>)&#123;</span><br><span class="line">        <span class="built_in">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(window.JSON)&#123;</span><br><span class="line">        str = JSON.stringify(obj), </span><br><span class="line">        result = JSON.parse(str); </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> i <span class="keyword">in</span> obj)&#123;</span><br><span class="line">            result[i] = typeof obj[i] === <span class="string">'object'</span> ? deepCopyObj(obj[i]) : obj[i]; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> result; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
+<h5 id="对象拷贝"><a href="#对象拷贝" class="headerlink" title="对象拷贝"></a>对象拷贝</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> deepCopyObj(obj) &#123; </span><br><span class="line"></span><br><span class="line">	<span class="built_in">let</span> str, result = obj.constructor === Array ? [] : &#123;&#125;;</span><br><span class="line">    <span class="keyword">if</span>(typeof obj !== <span class="string">'object'</span>)&#123;</span><br><span class="line">        <span class="built_in">return</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span>(window.JSON)&#123;</span><br><span class="line">        str = JSON.stringify(obj), </span><br><span class="line">        result = JSON.parse(str); </span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="built_in">let</span> i <span class="keyword">in</span> obj)&#123;</span><br><span class="line">            result[i] = typeof obj[i] === <span class="string">'object'</span> ? deepCopyObj(obj[i]) : obj[i]; </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">return</span> result; </span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="日期"><a href="#日期" class="headerlink" title="日期"></a>日期</h4><h5 id="日期格式化"><a href="#日期格式化" class="headerlink" title="日期格式化"></a>日期格式化</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> formatTime(time,fmt) &#123;</span><br><span class="line">  fmt = fmt || <span class="string">'yyyy-MM-dd'</span></span><br><span class="line">  time = new Date(time)</span><br><span class="line">  <span class="built_in">let</span> o = &#123;</span><br><span class="line">    <span class="string">"M+"</span>: time.getMonth() + 1,</span><br><span class="line">    <span class="string">"d+"</span>: time.getDate(),</span><br><span class="line">    <span class="string">"H+"</span>: time.getHours(),</span><br><span class="line">    <span class="string">"m+"</span>: time.getMinutes(),</span><br><span class="line">    <span class="string">"s+"</span>: time.getSeconds(),</span><br><span class="line">    <span class="string">"S+"</span>: time.getMilliseconds()</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">if</span> (/(y+)/.<span class="built_in">test</span>(fmt)) &#123;</span><br><span class="line">    fmt = fmt.replace(RegExp.<span class="variable">$1</span>, (time.getFullYear() + <span class="string">""</span>).substr(4 - RegExp.<span class="variable">$1</span>.length));</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">for</span> (<span class="built_in">let</span> k <span class="keyword">in</span> o) &#123;</span><br><span class="line">    <span class="keyword">if</span> (new RegExp(<span class="string">"("</span> + k + <span class="string">")"</span>).<span class="built_in">test</span>(fmt)) &#123;</span><br><span class="line">      fmt = fmt.replace(RegExp.<span class="variable">$1</span>, (RegExp.<span class="variable">$1</span>.length == 1) ? (o[k]) : ((<span class="string">"00"</span> + o[k]).substr(String(o[k]).length)));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">return</span> fmt;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="字符串String"><a href="#字符串String" class="headerlink" title="字符串String"></a>字符串String</h4><h5 id="字符串分隔空格"><a href="#字符串分隔空格" class="headerlink" title="字符串分隔空格"></a>字符串分隔空格</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> andleSplit(str)&#123;</span><br><span class="line">    var temp = str.split(/[\s+,]/g);</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; temp.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (temp[i] == <span class="string">""</span>) &#123;                    </span><br><span class="line">            temp.splice(i, 1);</span><br><span class="line">            i--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="string-替换"><a href="#string-替换" class="headerlink" title="string 替换"></a>string 替换</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">String.prototype.format = String.prototype.f = <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    var s = this,</span><br><span class="line">        i = arguments.length;</span><br><span class="line">    <span class="keyword">while</span> (i--) &#123;</span><br><span class="line">        s = s.replace(new RegExp(<span class="string">'\\&#123;'</span> + i + <span class="string">'\\&#125;'</span>, <span class="string">'gm'</span>), arguments[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> s;</span><br><span class="line">&#125;;</span><br><span class="line">var template1=<span class="string">"我是&#123;0&#125;，今年&#123;1&#125;了,biubiubiu&#123;2&#125;"</span>;</span><br><span class="line">var result1=template1.format(<span class="string">"loogn"</span>,22,9090);</span><br></pre></td></tr></table></figure>
+
+<h4 id="数字Number"><a href="#数字Number" class="headerlink" title="数字Number"></a>数字Number</h4><h5 id="数字千分位格式化"><a href="#数字千分位格式化" class="headerlink" title="数字千分位格式化"></a>数字千分位格式化</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> toThousands(num) &#123;</span><br><span class="line">    var num = (num || 0).toString(), result = <span class="string">''</span>;</span><br><span class="line">    <span class="keyword">while</span> (num.length &gt; 3) &#123;</span><br><span class="line">        result = <span class="string">','</span> + num.slice(-3) + result;</span><br><span class="line">        num = num.slice(0, num.length - 3);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (num) &#123; result = num + result; &#125;</span><br><span class="line">    <span class="built_in">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="url"><a href="#url" class="headerlink" title="url"></a>url</h4><h5 id="url-分割query"><a href="#url-分割query" class="headerlink" title="url 分割query"></a>url 分割query</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> splitParam(href) &#123;</span><br><span class="line">    href = href || location.search;</span><br><span class="line">    var arr=&#123;&#125;,</span><br><span class="line">    reg = new RegExp( <span class="string">"([^?=&amp;]+)(=([^&amp;]*))?"</span>, <span class="string">"g"</span> );</span><br><span class="line">    href &amp;&amp; href.replace(reg,<span class="keyword">function</span>( <span class="variable">$0</span>, <span class="variable">$1</span>, <span class="variable">$2</span>, <span class="variable">$3</span> )&#123;</span><br><span class="line">        arr[<span class="variable">$1</span>] = <span class="variable">$3</span>;    </span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="built_in">return</span> arr;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="url-分割query-1"><a href="#url-分割query-1" class="headerlink" title="url 分割query"></a>url 分割query</h5><p>保留部分参数</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> addParam(href) &#123;</span><br><span class="line">    href = href || location.search;</span><br><span class="line">    var name = [<span class="string">'f'</span>,<span class="string">'ref'</span>,<span class="string">'isapp'</span>,<span class="string">'ssc'</span>,<span class="string">'usc'</span>,<span class="string">'td'</span>,<span class="string">'dgfromsource'</span>,<span class="string">'_vs'</span>],</span><br><span class="line">    str=<span class="string">''</span>,</span><br><span class="line">    arr=&#123;&#125;,</span><br><span class="line">    reg = new RegExp( <span class="string">"([^?=&amp;]+)(=([^&amp;]*))?"</span>, <span class="string">"g"</span> );</span><br><span class="line">    href &amp;&amp; href.replace(reg,<span class="keyword">function</span>( <span class="variable">$0</span>, <span class="variable">$1</span>, <span class="variable">$2</span>, <span class="variable">$3</span> )&#123;</span><br><span class="line">        <span class="keyword">if</span> (name.includes(<span class="variable">$1</span>)) &#123;            </span><br><span class="line">            arr[<span class="variable">$1</span>] = <span class="variable">$3</span>;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="keyword">for</span>(var i <span class="keyword">in</span> arr)&#123;</span><br><span class="line">        str +=  i + <span class="string">'='</span> + arr[i] + <span class="string">'&amp;'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (str.length) &#123;</span><br><span class="line">        str = str.substring(0, str.length-1);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="a标签-解析-url"><a href="#a标签-解析-url" class="headerlink" title="a标签 解析 url"></a>a标签 解析 url</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> parseURL(url) &#123;</span><br><span class="line">    var a = document.createElement(<span class="string">'a'</span>);</span><br><span class="line">    a.href = url;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">        <span class="built_in">source</span>: url,</span><br><span class="line">        protocol: a.protocol.replace(<span class="string">':'</span>, <span class="string">''</span>),</span><br><span class="line">        host: a.hostname,</span><br><span class="line">        port: a.port || <span class="string">'80'</span>,</span><br><span class="line">        query: a.search,</span><br><span class="line">        params: (<span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">            var ret = &#123;&#125;,</span><br><span class="line">                seg = a.search.replace(/^\?/, <span class="string">''</span>).split(<span class="string">'&amp;'</span>),</span><br><span class="line">                len = seg.length,</span><br><span class="line">                i = 0,</span><br><span class="line">                s;</span><br><span class="line">            <span class="keyword">for</span> (; i &lt; len; i++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (!seg[i]) &#123; <span class="built_in">continue</span>; &#125; s = seg[i].split(<span class="string">'='</span>);</span><br><span class="line">                ret[s[0]] = s[1];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="built_in">return</span> ret;</span><br><span class="line">        &#125;)(),</span><br><span class="line">        file: (a.pathname.match(/\/([^\/?<span class="comment">#]+)$/i) || [, ''])[1],</span></span><br><span class="line">        <span class="built_in">hash</span>: a.hash.replace(<span class="string">' #'</span>, <span class="string">''</span>),</span><br><span class="line">        path: a.pathname.replace(/^([^\/])/, <span class="string">'/$1'</span>),</span><br><span class="line">        relative: (a.href.match(/tps?:\/\/[^\/]+(.+)/) || [, <span class="string">''</span>])[1],</span><br><span class="line">        segments: a.pathname.replace(/^\//, <span class="string">''</span>).split(<span class="string">'/'</span>)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -360,6 +395,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/js/" rel="tag"># js</a>
+          
+        </div>
       
 
       
@@ -380,8 +421,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uncategorized/ec14dd9b.html" rel="prev" title="d3 饼图">
-                d3 饼图 <i class="fa fa-chevron-right"></i>
+              <a href="/tool/ec14dd9b.html" rel="prev" title="d3 可视化图表">
+                d3 可视化图表 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -468,7 +509,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -478,10 +519,10 @@
               
               
               <div class="site-state-item site-state-categories">
-                
-                  <span class="site-state-item-count">4</span>
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -489,10 +530,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">3</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -500,6 +541,16 @@
 
           
 
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kokiers" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
           
 
           
@@ -523,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组存在"><span class="nav-number">1.</span> <span class="nav-text">数组存在</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对象拷贝"><span class="nav-number">2.</span> <span class="nav-text">对象拷贝</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#数组"><span class="nav-number">1.</span> <span class="nav-text">数组</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数组存在"><span class="nav-number">1.1.</span> <span class="nav-text">数组存在</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#对象拷贝"><span class="nav-number">1.2.</span> <span class="nav-text">对象拷贝</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#日期"><span class="nav-number">2.</span> <span class="nav-text">日期</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#日期格式化"><span class="nav-number">2.1.</span> <span class="nav-text">日期格式化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#字符串String"><span class="nav-number">3.</span> <span class="nav-text">字符串String</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#字符串分隔空格"><span class="nav-number">3.1.</span> <span class="nav-text">字符串分隔空格</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#string-替换"><span class="nav-number">3.2.</span> <span class="nav-text">string 替换</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#数字Number"><span class="nav-number">4.</span> <span class="nav-text">数字Number</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#数字千分位格式化"><span class="nav-number">4.1.</span> <span class="nav-text">数字千分位格式化</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#url"><span class="nav-number">5.</span> <span class="nav-text">url</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#url-分割query"><span class="nav-number">5.1.</span> <span class="nav-text">url 分割query</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#url-分割query-1"><span class="nav-number">5.2.</span> <span class="nav-text">url 分割query</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#a标签-解析-url"><span class="nav-number">5.3.</span> <span class="nav-text">a标签 解析 url</span></a></li></ol></li></ol></div>
             
 
           </div>
