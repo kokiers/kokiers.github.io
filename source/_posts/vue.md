@@ -1,17 +1,19 @@
 ---
-title: vue
+title: vue 
 categories:
   - js
 tags:
-  - vuejs
+  - vue
 abbrlink: c0add594
 date: 2019-07-13 22:42:29
 ---
-#### vue [生命周期](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
+#### vue 生命周期
+[生命周期](https://cn.vuejs.org/v2/guide/instance.html#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F%E5%9B%BE%E7%A4%BA)
 
 ##### beforeCreate
 类型：Function
 在实例初始化之后，数据观测 (data observer) 和 event/watcher 事件配置之前被调用。
+<!--more-->
 
 ##### created
 类型：Function

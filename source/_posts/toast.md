@@ -3,31 +3,33 @@ title: toast
 categories:
   - plugin
 tags:
-  - null
+  - 弹窗
 abbrlink: b35a6840
 date: 2019-07-07 18:51:21
 ---
 
-[gitHub](https://github.com/kokiers/toast-confirm)
+[弹窗小插件 gitHub](https://github.com/kokiers/toast-confirm)
 
-#### Toast
+### Toast
 
+#### options参数列表
 + clas: "toast-wrap",
 + text: "",
+<!--more-->
 + outTime: 1500,
 + fadeTime: 600,
 + type: 'toast',
 + btn: '好的',
 + callback: null,
 
-默认 提示 ，1500s 自动关闭
+eg1:默认 提示 ，1500s 自动关闭
 ```
 var toast = new Toast({text:'确定要继续吗？'});
 toast.create();
 ```
  
 
- 默认 提示 ，1500s 自动关闭
+ eg2:默认 提示 ，1500s 自动关闭
 ```
 var toast = new Toast({text:'确定要继续吗？',type:'noToast',callback:afterToast});
 toast.create();
@@ -39,6 +41,7 @@ function afterToast () {
  
 
 ### Confirm
+#### options参数列表
 
 + clas: 'confirm-wrap',
 + cover: true,
@@ -51,7 +54,8 @@ function afterToast () {
 + cancelCall: null,
 + subCall: null,
 
- ```
+eg1:
+ ```bash
 var confim = new Confirm({
     content:'您已经中奖了',
     title:'中奖通知',
@@ -71,4 +75,4 @@ function subTap () {
 }
  ```
 
- [gitHub](https://github.com/kokiers/toast-confirm)
+ 有问题欢迎issue [戳 gitHub](https://github.com/kokiers/toast-confirm)

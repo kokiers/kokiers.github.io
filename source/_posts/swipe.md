@@ -5,19 +5,21 @@ categories:
 abbrlink: db59e9a9
 date: 2019-07-08 23:12:35
 tags:
+  - 轮播
 ---
 
-####  [SwipeDou GitHub](https://github.com/kokiers/trans-pic)
+[github 链接](https://github.com/kokiers/trans-pic)
 
-options
-
+##### options 参数
 + id
 + maxCount
 + auto autoplay default false
+<!--more-->
 + autotime: default 3000ms
 + clas childs class
 + callback 
 
+eg：
 ```
 var swipe = SwipeDou(id,max,auto,autoTime,clas,width,callback);
 

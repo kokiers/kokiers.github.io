@@ -10,16 +10,18 @@ date: 2018-08-01 11:08:41
 
 #### 详情请戳 [官网](https://gulpjs.com/)
 
-前提需要安装 node npm
+#### 必要装备：
++ nodejs 
++ npm
 
 ##### install
+<!--more-->
 
 ``` bash
 npm install --global gulp-cli
 ```
 
-
-#### Create a gulpfile
+##### Create a gulpfile
 使用方法 
 安装压缩js gulp-uglify
 gulp.task('ugpop'） 调用这个 task ： gulp ugpop 即可。

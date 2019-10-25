@@ -1,10 +1,11 @@
 ---
-title: git
+title: git 
 categories:
   - tool
 abbrlink: 518e617c
 date: 2019-07-07 19:35:32
 tags:
+  - git
 ---
 
 
@@ -14,7 +15,8 @@ $ git config --global user.name "Your Name"
 $ git config --global user.email "email@example.com"
 连接 ssh git@github.com
 ```
-
+<!--more-->
+### 提交
 #### 添加文件
 ```
 git add 
@@ -42,7 +44,7 @@ git pull  更新到本地并且自动merge
 git commit -m "备注内容"
 ```
 
-# 推送
+#### 推送
 ```
 git push -u origin master
 ```

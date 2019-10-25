@@ -1,8 +1,7 @@
 ---
 title: 关于我
-abbrlink: b5f422e3
 date: 2019-07-07 13:38:51
-tags:
+type: 'about'
 ---
 
 ### 个人信息
@@ -14,3 +13,4 @@ tags:
 ### 联系方式
 
 + Email: kokier11@outlook.com
++ Github: [kokiers](https://github.com/kokiers)

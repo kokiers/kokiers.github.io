@@ -5,6 +5,7 @@ categories:
 abbrlink: 7deedbc9
 date: 2019-07-16 17:18:54
 tags:
+  - 正则
 ---
 
 ### 匹配英文
@@ -13,6 +14,7 @@ var str = /[^a-zA-Z]/g;
 var test = '77hhs';
 test.replace(str,'');//hhs
 ```
+<!--more-->
 ### 匹配中文
 ```bash
 var str = /[^\u4E00-\u9FA5]/g
