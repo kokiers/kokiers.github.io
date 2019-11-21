@@ -121,7 +121,7 @@
 
 
 
-  <title>toast | kokiers</title>
+  <title>css loading 动画 | kokiers</title>
   
 
 
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/plugin/b35a6840.html">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/css/83b1b72a.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kokiers">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">toast</h1>
+          <h1 class="post-title" itemprop="name headline">css loading 动画</h1>
         
 
         <div class="post-meta">
@@ -287,7 +287,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-07T18:51:21+08:00">2019-07-07</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-21T09:26:12+08:00">2019-11-21</time>
             
 
             
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-10-25T10:36:32+08:00">2019-10-25</time>
+              <time title="更新于" itemprop="dateModified" datetime="2019-11-21T17:32:44+08:00">2019-11-21</time>
             
           </span>
 
@@ -318,8 +318,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/plugin/" itemprop="url" rel="index">
-                    <span itemprop="name">plugin</span>
+                  <a href="/categories/css/" itemprop="url" rel="index">
+                    <span itemprop="name">css</span>
                   </a>
                 </span>
 
@@ -360,41 +360,10 @@
       
 
       
-        <p><a href="https://github.com/kokiers/toast-confirm" target="_blank" rel="noopener">弹窗小插件 gitHub</a></p>
-<h3 id="Toast"><a href="#Toast" class="headerlink" title="Toast"></a>Toast</h3><h4 id="options参数列表"><a href="#options参数列表" class="headerlink" title="options参数列表"></a>options参数列表</h4><ul>
-<li>clas: “toast-wrap”,</li>
-<li>text: “”,<a id="more"></a></li>
-<li>outTime: 1500,</li>
-<li>fadeTime: 600,</li>
-<li>type: ‘toast’,</li>
-<li>btn: ‘好的’,</li>
-<li>callback: null,</li>
-</ul>
-<p>eg1:默认 提示 ，1500s 自动关闭</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var toast = new Toast(&#123;text:&apos;确定要继续吗？&apos;&#125;);</span><br><span class="line">toast.create();</span><br></pre></td></tr></table></figure>
-
-
-
-<p> eg2:默认 提示 ，1500s 自动关闭</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var toast = new Toast(&#123;text:&apos;确定要继续吗？&apos;,type:&apos;noToast&apos;,callback:afterToast&#125;);</span><br><span class="line">toast.create();</span><br><span class="line"></span><br><span class="line">function afterToast () &#123;</span><br><span class="line">    console.log(&apos;yes&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="Confirm"><a href="#Confirm" class="headerlink" title="Confirm"></a>Confirm</h3><h4 id="options参数列表-1"><a href="#options参数列表-1" class="headerlink" title="options参数列表"></a>options参数列表</h4><ul>
-<li>clas: ‘confirm-wrap’,</li>
-<li>cover: true,</li>
-<li>title: ‘标题’,</li>
-<li>content: ‘正文’,</li>
-<li>cancel: ‘cancel’,</li>
-<li>sub: ‘ok’,</li>
-<li>html: ‘’,</li>
-<li>wrap: ‘modal-cover’,</li>
-<li>cancelCall: null,</li>
-<li>subCall: null,</li>
-</ul>
-<p>eg1:<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">var confim = new Confirm(&#123;</span><br><span class="line">    content:<span class="string">'您已经中奖了'</span>,</span><br><span class="line">    title:<span class="string">'中奖通知'</span>,</span><br><span class="line">    cancel:<span class="string">'放弃'</span>,</span><br><span class="line">    sub:<span class="string">'领奖'</span>,</span><br><span class="line">    cancelCall:cancelTap,</span><br><span class="line">    subCall:subTap</span><br><span class="line">    &#125;)</span><br><span class="line">    confim.create();</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">cancelTap</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'no'</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">subTap</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'yes'</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p> 有问题欢迎issue <a href="https://github.com/kokiers/toast-confirm" target="_blank" rel="noopener">戳 gitHub</a></p>
-
+        <p>css 实现加载中点点点动画。</p>
+<a id="more"></a>
+<p>用stylus写的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$text</span>-color = <span class="comment">#2D3040</span></span><br><span class="line"> .clip</span><br><span class="line">    background-color:<span class="variable">$text</span>-color</span><br><span class="line">    display: inline-block; </span><br><span class="line">    width:4px;</span><br><span class="line">    height:4px;</span><br><span class="line">    border-radius:4px;</span><br><span class="line">    vertical-align:middle;</span><br><span class="line">    position:relative;</span><br><span class="line">    margin-left:2px;</span><br><span class="line">    animation: dot1 2s infinite step-start both;</span><br><span class="line">    &amp;:before</span><br><span class="line">      content:<span class="string">''</span></span><br><span class="line">      background-color:<span class="variable">$text</span>-color</span><br><span class="line">      display: inline-block; </span><br><span class="line">      width:4px;</span><br><span class="line">      height:4px;</span><br><span class="line">      border-radius:4px;</span><br><span class="line">      position:absolute;</span><br><span class="line">      left: 8px;</span><br><span class="line">      visibility:hidden</span><br><span class="line">      animation: dot2 2s infinite step-start both;</span><br><span class="line">    &amp;:after</span><br><span class="line">      content:<span class="string">''</span></span><br><span class="line">      background-color:<span class="variable">$text</span>-color</span><br><span class="line">      display: inline-block; </span><br><span class="line">      width:4px;</span><br><span class="line">      height:4px;</span><br><span class="line">      border-radius:4px;</span><br><span class="line">      position:absolute;</span><br><span class="line">      left: 16px;</span><br><span class="line">      visibility:hidden</span><br><span class="line">      animation: dot3 2s infinite step-start both;</span><br><span class="line">@keyframes dot1</span><br><span class="line">  0%,100%</span><br><span class="line">    visibility:hidden; </span><br><span class="line">  50%</span><br><span class="line">    visibility:visible;</span><br><span class="line">  80%</span><br><span class="line">    visibility:visible;</span><br><span class="line">@keyframes dot2</span><br><span class="line">  0%,25% </span><br><span class="line">    visibility:hidden; </span><br><span class="line">  75% </span><br><span class="line">    visibility:visible; </span><br><span class="line">  90%</span><br><span class="line">    visibility:hidden;</span><br><span class="line">@keyframes dot3</span><br><span class="line">  0%,50% </span><br><span class="line">    visibility:hidden; </span><br><span class="line">  75% </span><br><span class="line">    visibility:visible; </span><br><span class="line">  90%</span><br><span class="line">    visibility:hidden;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -411,7 +380,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/弹窗/" rel="tag"># 弹窗</a>
+            <a href="/tags/css-动画/" rel="tag"># css 动画</a>
           
         </div>
       
@@ -424,8 +393,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/js/c5a6a264.html" rel="next" title="原生ajax">
-                <i class="fa fa-chevron-left"></i> 原生ajax
+              <a href="/tool/1875b830.html" rel="next" title="express">
+                <i class="fa fa-chevron-left"></i> express
               </a>
             
           </div>
@@ -433,10 +402,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/tool/518e617c.html" rel="prev" title="git">
-                git <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -488,17 +453,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -570,22 +526,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Toast"><span class="nav-number">1.</span> <span class="nav-text">Toast</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#options参数列表"><span class="nav-number">1.1.</span> <span class="nav-text">options参数列表</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Confirm"><span class="nav-number">2.</span> <span class="nav-text">Confirm</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#options参数列表-1"><span class="nav-number">2.1.</span> <span class="nav-text">options参数列表</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
