@@ -1,4 +1,5 @@
 ---
+lang: plugin
 title: toast
 categories:
   - plugin

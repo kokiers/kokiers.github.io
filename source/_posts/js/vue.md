@@ -1,4 +1,5 @@
 ---
+lang: js
 title: vue 
 categories:
   - js

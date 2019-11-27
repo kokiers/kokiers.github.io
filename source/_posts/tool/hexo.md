@@ -1,4 +1,5 @@
 ---
+lang: tool
 title: hexo 搭建博客
 categories:
   - tool

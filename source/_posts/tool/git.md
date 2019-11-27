@@ -1,4 +1,5 @@
 ---
+lang: tool
 title: git 
 categories:
   - tool

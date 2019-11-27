@@ -1,4 +1,5 @@
 ---
+lang: js
 title: js 小方法
 categories:
   - js
@@ -187,4 +188,42 @@ function parseURL(url) {
         segments: a.pathname.replace(/^\//, '').split('/')
     };
 }
+```
+##### 字符串混淆 加密 解密
+```bash
+function strChange(str,c){
+    if (c){
+      let nstr = '' ,
+      index = str.indexOf('L'),
+      iSplit = str.substr(0,index),
+      ilen = str.length
+      let arr = Array.from(str)
+      let j = 0;
+      let mixL = iSplit >= 24 ? 24 : iSplit;
+      let after = '';
+      for(let i=index+1;i<ilen;i+=2){
+        if (j >= mixL){
+          after = str.substr(i)
+          break;
+        }
+        nstr += arr[i]
+        j++
+      } 
+      return nstr + after
+    }else{
+      let ilen = str.length, nstr = ilen + 'L',flag = (Math.random().toString(36) + new Date().getTime()).substr(2)
+      let arr = Array.from(str),brr = Array.from(flag)
+      let mixL = ilen <= 24 ? ilen : 24;
+      let after = ilen <= 24 ? '' : str.substr(24);
+      for(let i=0;i<mixL;i++){
+        nstr += arr[i] + brr[i]
+      } 
+      return nstr + after
+    }
+  }
+
+strChange('kokier')
+//"6Lkcopkeipe5rw"
+strChange("6Lkcopkeipe5rw",1)
+//"kokier"
 ```

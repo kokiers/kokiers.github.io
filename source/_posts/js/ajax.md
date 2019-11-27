@@ -1,4 +1,5 @@
 ---
+lang: js
 title: 原生ajax
 categories:
   - js

@@ -1,4 +1,5 @@
 ---
+lang: plugin
 title: swipe
 categories:
   - plugin

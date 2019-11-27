@@ -1,4 +1,5 @@
 ---
+lang: js
 title: 实用正则合集
 categories:
   - js
