@@ -42,7 +42,11 @@ hexo new "My New Post"
 ```
 hexo new page 'tags'
 ```
-
+新建一个文章 到'good'文件夹（前提设置了permalink
+```
+hexo new 'hello' --lang good
+// source\_posts\good\hello.md
+```
 启动本地服务
 
 ```
