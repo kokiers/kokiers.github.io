@@ -121,7 +121,7 @@
 
 
 
-  <title>git | kokiers</title>
+  <title>JS对象递归 | kokiers</title>
   
 
 
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="tool">
+<body itemscope itemtype="http://schema.org/WebPage" lang="js">
 
   
   
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/tool/518e617c.html">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/js/3bec5ba6.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kokiers">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git</h1>
+          <h1 class="post-title" itemprop="name headline">JS对象递归</h1>
         
 
         <div class="post-meta">
@@ -287,7 +287,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-07T19:35:32+08:00">2019-07-07</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-12-25T16:04:43+08:00">2019-12-25</time>
             
 
             
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-27T17:24:24+08:00">2019-11-27</time>
+              <time title="更新于" itemprop="dateModified" datetime="2019-12-25T16:23:44+08:00">2019-12-25</time>
             
           </span>
 
@@ -318,8 +318,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
+                  <a href="/categories/js/" itemprop="url" rel="index">
+                    <span itemprop="name">js</span>
                   </a>
                 </span>
 
@@ -360,26 +360,18 @@
       
 
       
-        <h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br><span class="line">连接 ssh git@github.com</span><br></pre></td></tr></table></figure>
-
+        <p>最近在弄一个树形结构的数据，<br>具体问题具体分析，拿到一个树形结构的数据，但是拼接的数据id不是唯一节点。需要自己稍微修改一下数据的属性。</p>
+<ul>
+<li>数据的层级不可预见</li>
+<li>次跟层级是需要特殊处理</li>
+<li>次叶层级特殊处理</li>
+<li>叶子的属性num需要冒泡到根节点</li>
+<li>拼接唯一节点id</li>
+</ul>
 <a id="more"></a>
-<h3 id="提交"><a href="#提交" class="headerlink" title="提交"></a>提交</h3><h4 id="添加文件"><a href="#添加文件" class="headerlink" title="添加文件"></a>添加文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git add </span><br><span class="line"></span><br><span class="line">git add . (提交所有文件)</span><br></pre></td></tr></table></figure>
 
-<h4 id="查看状态"><a href="#查看状态" class="headerlink" title="查看状态"></a>查看状态</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git status</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> handleTree = <span class="keyword">function</span>(data, prefix) &#123;</span><br><span class="line">  <span class="keyword">if</span> (!data || !prefix) &#123;</span><br><span class="line">    <span class="built_in">return</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="built_in">let</span> Label = keyName[prefix].name</span><br><span class="line">  <span class="built_in">let</span> appIcon = keyName[prefix].icon</span><br><span class="line">  <span class="built_in">let</span> arr = [];</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> findleaf(obj, arr, icon, pre) &#123;</span><br><span class="line">    <span class="built_in">let</span> m = 0</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">      <span class="keyword">if</span> (pre) &#123;</span><br><span class="line">        // KEY 0 || 1 未 || 删除 这个时候是次叶子节点了。</span><br><span class="line">        <span class="built_in">let</span> label = i,</span><br><span class="line">          leaf = <span class="literal">false</span>,</span><br><span class="line">          iIcon = icon</span><br><span class="line">        <span class="keyword">if</span> (i == 0 || i == 1) &#123;</span><br><span class="line">          label = i &gt; 0 ? <span class="string">'已'</span> + Label : Label</span><br><span class="line">          leaf = <span class="literal">true</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (!iIcon) &#123;</span><br><span class="line">          iIcon = wordKey[i] ? i : <span class="string">'default'</span></span><br><span class="line">          label = wordKey[i] ? wordKey[i] : <span class="string">'其它'</span></span><br><span class="line">        &#125;</span><br><span class="line">        arr[m] = &#123;</span><br><span class="line">          id: pre + <span class="string">'-'</span> + i,</span><br><span class="line">          label: label,</span><br><span class="line">          num: 0,</span><br><span class="line">          appType: iIcon,</span><br><span class="line">          children: []</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (leaf) &#123;</span><br><span class="line">          formatLeaf(obj[i], arr[m], i)</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">          findleaf(obj[i], arr[m].children, iIcon, arr[m].id)</span><br><span class="line">        &#125;</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        // 根节点</span><br><span class="line">        arr[m] = &#123;</span><br><span class="line">          id: i,</span><br><span class="line">          label: i,</span><br><span class="line">          num: 0,</span><br><span class="line">          phone: <span class="literal">true</span>,</span><br><span class="line">          children: []</span><br><span class="line">        &#125;</span><br><span class="line">        findleaf(obj[i], arr[m].children, icon, i)</span><br><span class="line">      &#125;</span><br><span class="line">      m++</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  findleaf(data, arr, appIcon)</span><br><span class="line">  arr.map(v =&gt; &#123;</span><br><span class="line">    v.num = Addnum(v.children)</span><br><span class="line">    <span class="built_in">return</span> v</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="built_in">return</span> arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> Addnum(arr) &#123;</span><br><span class="line">  <span class="built_in">let</span> nums = 0</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> getNum(arr) &#123;</span><br><span class="line">    <span class="built_in">let</span> num = 0</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i = 0, ilen = arr.length; i &lt; ilen; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (!arr[i].num) &#123;</span><br><span class="line">        arr[i].num = getNum(arr[i].children)</span><br><span class="line">      &#125;</span><br><span class="line">      num = num + arr[i].num;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> num;</span><br><span class="line">  &#125;</span><br><span class="line">  nums = getNum(arr)</span><br><span class="line">  <span class="built_in">return</span> nums</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> formatLeaf(obj, arr, deleteStatus) &#123;</span><br><span class="line">  <span class="built_in">let</span> nums = 0;</span><br><span class="line">  <span class="keyword">if</span> (typeof obj === <span class="string">'object'</span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="built_in">let</span> i <span class="keyword">in</span> obj) &#123;</span><br><span class="line">      <span class="built_in">let</span> key = Object.keys(obj[i])[0]</span><br><span class="line">      <span class="built_in">let</span> num = Object.values(obj[i])[0]</span><br><span class="line">      arr.children.push(&#123;</span><br><span class="line">        id: arr.id + <span class="string">'-'</span> + i,</span><br><span class="line">        label: key,</span><br><span class="line">        gid: i,</span><br><span class="line">        deleteStatus: deleteStatus,</span><br><span class="line">        appType: arr.appType,</span><br><span class="line">        num: num,</span><br><span class="line">      &#125;)</span><br><span class="line">      nums = nums + num</span><br><span class="line">    &#125;</span><br><span class="line">    arr.num = nums</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h4 id="提交之前，先进行-fetch"><a href="#提交之前，先进行-fetch" class="headerlink" title="提交之前，先进行 fetch"></a>提交之前，先进行 fetch</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch 更新线上到本地 （相当于是从远程获取最新版本到本地，不会自动merge ）</span><br></pre></td></tr></table></figure>
-
-<h4 id="pull"><a href="#pull" class="headerlink" title="pull"></a>pull</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull  更新到本地并且自动merge</span><br></pre></td></tr></table></figure>
-
-<h4 id="提交-1"><a href="#提交-1" class="headerlink" title="提交"></a>提交</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;备注内容&quot;</span><br></pre></td></tr></table></figure>
-
-<h4 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push -u origin master</span><br></pre></td></tr></table></figure>
-
-<h4 id="切换到master分支"><a href="#切换到master分支" class="headerlink" title="切换到master分支"></a>切换到master分支</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
-
-<h4 id="将分支的代合并到master"><a href="#将分支的代合并到master" class="headerlink" title="将分支的代合并到master"></a>将<branch>分支的代合并到master</branch></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge &lt;branch&gt;</span><br></pre></td></tr></table></figure>
-
-<h4 id="进入到要上传的仓库-添加远程地址"><a href="#进入到要上传的仓库-添加远程地址" class="headerlink" title="进入到要上传的仓库 添加远程地址"></a>进入到要上传的仓库 添加远程地址</h4><p>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:yourname/yourRepo.git </p>
 
       
     </div>
@@ -397,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag"># git</a>
+            <a href="/tags/js/" rel="tag"># js</a>
           
         </div>
       
@@ -410,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/plugin/b35a6840.html" rel="next" title="toast">
-                <i class="fa fa-chevron-left"></i> toast
+              <a href="/js/f1c0636f.html" rel="next" title="vue环境变量和模式的使用">
+                <i class="fa fa-chevron-left"></i> vue环境变量和模式的使用
               </a>
             
           </div>
@@ -419,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/tool/ab21860c.html" rel="prev" title="hexo 搭建博客">
-                hexo 搭建博客 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -474,17 +462,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -556,22 +535,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#本地配置"><span class="nav-number">1.</span> <span class="nav-text">本地配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#提交"><span class="nav-number">2.</span> <span class="nav-text">提交</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#添加文件"><span class="nav-number">2.1.</span> <span class="nav-text">添加文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看状态"><span class="nav-number">2.2.</span> <span class="nav-text">查看状态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交之前，先进行-fetch"><span class="nav-number">2.3.</span> <span class="nav-text">提交之前，先进行 fetch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#pull"><span class="nav-number">2.4.</span> <span class="nav-text">pull</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交-1"><span class="nav-number">2.5.</span> <span class="nav-text">提交</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#推送"><span class="nav-number">2.6.</span> <span class="nav-text">推送</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#切换到master分支"><span class="nav-number">2.7.</span> <span class="nav-text">切换到master分支</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#将分支的代合并到master"><span class="nav-number">2.8.</span> <span class="nav-text">将分支的代合并到master</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进入到要上传的仓库-添加远程地址"><span class="nav-number">2.9.</span> <span class="nav-text">进入到要上传的仓库 添加远程地址</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
