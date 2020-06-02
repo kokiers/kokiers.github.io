@@ -73,5 +73,8 @@ deploy:
   repo: (你的项目地址)
 ```
 
-
 其他命令请到[官网](https://hexo.io/zh-cn/docs/)查看文档
+
+
+
+
