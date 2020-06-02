@@ -121,7 +121,7 @@
 
 
 
-  <title>原生ajax | kokiers</title>
+  <title>svg的利器：svg-sprite-loader | kokiers</title>
   
 
 
@@ -133,7 +133,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="js">
+<body itemscope itemtype="http://schema.org/WebPage" lang="tool">
 
   
   
@@ -258,7 +258,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/js/c5a6a264.html">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/tool/80a71d26.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="kokiers">
@@ -275,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">原生ajax</h1>
+          <h1 class="post-title" itemprop="name headline">svg的利器：svg-sprite-loader</h1>
         
 
         <div class="post-meta">
@@ -287,7 +287,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-06T11:02:08+08:00">2019-07-06</time>
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-06-02T11:36:03+08:00">2020-06-02</time>
             
 
             
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-27T17:23:28+08:00">2019-11-27</time>
+              <time title="更新于" itemprop="dateModified" datetime="2020-06-02T16:48:35+08:00">2020-06-02</time>
             
           </span>
 
@@ -318,8 +318,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
+                  <a href="/categories/tool/" itemprop="url" rel="index">
+                    <span itemprop="name">tool</span>
                   </a>
                 </span>
 
@@ -360,11 +360,19 @@
       
 
       
-        <h3 id="Create-a-ajax"><a href="#Create-a-ajax" class="headerlink" title="Create a ajax"></a>Create a ajax</h3><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (window.ActiveXObject) &#123;</span><br><span class="line">    xhr = new ActiveXObject(<span class="string">"Microsoft.XMLHTTP"</span>);</span><br><span class="line">&#125; <span class="keyword">else</span> <span class="keyword">if</span> (window.XMLHttpRequest) &#123;</span><br><span class="line">    xhr = new XMLHttpRequest();</span><br><span class="line">&#125;</span><br><span class="line">xhr.open(<span class="string">"post"</span>,url, <span class="literal">true</span>);</span><br><span class="line">xhr.onload = <span class="keyword">function</span> (evt)&#123;</span><br><span class="line">    var data = JSON.parse(evt.target.responseText);</span><br><span class="line">    // TODO AFTER</span><br><span class="line">    console.log(data) </span><br><span class="line">&#125;</span><br><span class="line">xhr.onerror =  <span class="function"><span class="title">function</span></span> () &#123;</span><br><span class="line">    console.log(<span class="string">'ERROR'</span>)</span><br><span class="line">&#125;;</span><br><span class="line">xhr.upload.onloadstart = <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">    console.log(<span class="string">'start'</span>);</span><br><span class="line">&#125;;</span><br><span class="line">xhr.send(form);</span><br></pre></td></tr></table></figure>
+        <p>项目设计画了很多可爱的图标，导出来很多可爱的svg<br>在项目中怎么能很方便的引用svg呢？</p>
+<p>嗯呐 就是<br>svg-sprite-loader</p>
+<p>安装插件  svg-sprite-loader</p>
+<h4 id="新建文件夹存放svg"><a href="#新建文件夹存放svg" class="headerlink" title="新建文件夹存放svg"></a>新建文件夹存放svg</h4><p><img src="../../images/svg-spri.png" alt="目录结构"></p>
+<a id="more"></a>
 
-<h3 id="form-data"><a href="#form-data" class="headerlink" title="form data"></a>form data</h3><p>有了它 ，可以轻轻松松把数据传给后端。<br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/FormData" target="_blank" rel="noopener">MDN formData</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> formData = new FormData(); </span><br><span class="line">formData.append(<span class="string">'username'</span>, <span class="string">'Chris'</span>);</span><br></pre></td></tr></table></figure>
+<h5 id="index-js-引入svg组件-注册。"><a href="#index-js-引入svg组件-注册。" class="headerlink" title="index.js 引入svg组件 注册。"></a>index.js 引入svg组件 注册。</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">import SvgIcon from <span class="string">'@/components/common/SvgIcon'</span>// svg component</span><br><span class="line"></span><br><span class="line">// register globally</span><br><span class="line">Vue.component(<span class="string">'svg-icon'</span>, SvgIcon)</span><br><span class="line"></span><br><span class="line">const req = require.context(<span class="string">'./svg'</span>, <span class="literal">false</span>, /\.svg$/)</span><br><span class="line">const requireAll = requireContext =&gt; requireContext.keys().map(requireContext)</span><br><span class="line">requireAll(req)</span><br></pre></td></tr></table></figure>
+
+<h5 id="svgo-yml"><a href="#svgo-yml" class="headerlink" title="svgo.yml"></a>svgo.yml</h5><p>配置svgo的配置  <a href="https://github.com/svg/svgo" target="_blank" rel="noopener">文档可戳</a></p>
+<p><img src="../../images/svg-spri-svgo.png" alt="svgo可配置项"></p>
+<h4 id="svgicon-组件"><a href="#svgicon-组件" class="headerlink" title="svgicon 组件"></a>svgicon 组件</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div v-if=<span class="string">"isExternal"</span> :style=<span class="string">"styleExternalIcon"</span> class=<span class="string">"svg-external-icon svg-icon"</span> v-on=<span class="string">"<span class="variable">$listeners</span>"</span> /&gt;</span><br><span class="line">  &lt;svg v-else :class=<span class="string">"svgClass"</span> aria-hidden=<span class="string">"true"</span> v-on=<span class="string">"<span class="variable">$listeners</span>"</span>&gt;</span><br><span class="line">    &lt;use :xlink:href=<span class="string">"iconName"</span> /&gt;</span><br><span class="line">  &lt;/svg&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">// doc: https://panjiachen.github.io/vue-element-admin-site/feature/component/svg-icon.html<span class="comment">#usage</span></span><br><span class="line"><span class="keyword">function</span> isExternal(path) &#123;</span><br><span class="line">  <span class="built_in">return</span> /^(https?:|mailto:|tel:)/.<span class="built_in">test</span>(path)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">  name: <span class="string">'SvgIcon'</span>,</span><br><span class="line">  props: &#123;</span><br><span class="line">    iconClass: &#123;</span><br><span class="line">      <span class="built_in">type</span>: String,</span><br><span class="line">      required: <span class="literal">true</span></span><br><span class="line">    &#125;,</span><br><span class="line">    className: &#123;</span><br><span class="line">      <span class="built_in">type</span>: String,</span><br><span class="line">      default: <span class="string">''</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  computed: &#123;</span><br><span class="line">    <span class="function"><span class="title">isExternal</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> isExternal(this.iconClass)</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">iconName</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> `<span class="comment">#icon-$&#123;this.iconClass&#125;`</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">svgClass</span></span>() &#123;</span><br><span class="line">      <span class="keyword">if</span> (this.className) &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'svg-icon '</span> + this.className</span><br><span class="line">      &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">'svg-icon'</span></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="function"><span class="title">styleExternalIcon</span></span>() &#123;</span><br><span class="line">      <span class="built_in">return</span> &#123;</span><br><span class="line">        mask: `url(<span class="variable">$&#123;this.iconClass&#125;</span>) no-repeat 50% 50%`,</span><br><span class="line">        <span class="string">'-webkit-mask'</span>: `url(<span class="variable">$&#123;this.iconClass&#125;</span>) no-repeat 50% 50%`</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.svg-icon &#123;</span><br><span class="line">  width: 16px;</span><br><span class="line">  height: 16px;</span><br><span class="line">  fill: currentColor;</span><br><span class="line">  overflow: hidden;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.svg-external-icon &#123;</span><br><span class="line">  vertical-align: middle;</span><br><span class="line">  background-color: currentColor;</span><br><span class="line">  mask-size: cover!important;</span><br><span class="line">  display: inline-block;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="comment">#  index.js 注册全局组件。</span></span><br><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">import SvgIcon from <span class="string">'@/components/common/SvgIcon'</span>// svg component</span><br><span class="line"></span><br><span class="line">// register globally</span><br><span class="line">Vue.component(<span class="string">'svg-icon'</span>, SvgIcon)</span><br><span class="line"></span><br><span class="line">const req = require.context(<span class="string">'./svg'</span>, <span class="literal">false</span>, /\.svg$/)</span><br><span class="line">const requireAll = requireContext =&gt; requireContext.keys().map(requireContext)</span><br><span class="line">requireAll(req)</span><br></pre></td></tr></table></figure>
+
+<h4 id="最后再引入svg的index-js使用"><a href="#最后再引入svg的index-js使用" class="headerlink" title="最后再引入svg的index.js使用"></a>最后再引入svg的index.js使用</h4>
       
     </div>
     
@@ -381,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/ajax/" rel="tag"># ajax</a>
+            <a href="/tags/svg/" rel="tag"># svg</a>
           
         </div>
       
@@ -394,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/tool/4cc2ef8a.html" rel="next" title="gulp">
-                <i class="fa fa-chevron-left"></i> gulp
+              <a href="/js/80a71d26.html" rel="next" title="鼠标拖拽修改宽度">
+                <i class="fa fa-chevron-left"></i> 鼠标拖拽修改宽度
               </a>
             
           </div>
@@ -403,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/plugin/b35a6840.html" rel="prev" title="toast">
-                toast <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -550,7 +554,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-ajax"><span class="nav-number">1.</span> <span class="nav-text">Create a ajax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#form-data"><span class="nav-number">2.</span> <span class="nav-text">form data</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#新建文件夹存放svg"><span class="nav-number">1.</span> <span class="nav-text">新建文件夹存放svg</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#index-js-引入svg组件-注册。"><span class="nav-number">1.1.</span> <span class="nav-text">index.js 引入svg组件 注册。</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#svgo-yml"><span class="nav-number">1.2.</span> <span class="nav-text">svgo.yml</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#svgicon-组件"><span class="nav-number">2.</span> <span class="nav-text">svgicon 组件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#最后再引入svg的index-js使用"><span class="nav-number">3.</span> <span class="nav-text">最后再引入svg的index.js使用</span></a></li></ol></div>
             
 
           </div>
