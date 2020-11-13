@@ -71,3 +71,17 @@ if (!preg.test(idCard)) {
 ```bash
 var str = v.replace(/[^\d]/g,'');
 ```
+### 千分位分隔
+```bash
+var str = v.replace(/\d{1,3}(?=(\d{3})+(.\d*)?$)/g, '$&,')
+```
+### 筛选字符串 eg: 'myname=nike&age=15'
+```bash
+let reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+let match = str.match(reg)
+```
+### 筛选字符串 eg: 
+```bash
+ let regex = /[t_]+[\d\,\*]+/; 
+ let regx = /\（(.+?)\）/;  
+ ```
