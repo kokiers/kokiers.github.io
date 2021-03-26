@@ -45,7 +45,8 @@ git pull  更新到本地并且自动merge
 git commit -m "备注内容"
 ```
 
-#### 推送
+#### 推送 
+加上了 –u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来
 ```
 git push -u origin master
 ```
@@ -62,3 +63,24 @@ git merge <branch>
 
 #### 进入到要上传的仓库 添加远程地址
 git remote add origin git@github.com:yourname/yourRepo.git 
+git remote add origin https://github.com/yourname/yourRepo.git
+
+git stash pop stash@{1}
+
+#### 分支 
+```
+git checkout -b dev 
+git checkout 命令加上 –b参数表示创建并切换，相当于如下2条命令
+git branch dev
+git checkout dev
+```
+
+#### 回退版本
+```
+git reset --hard HEAD^  回退一个版本
+git reset --hard HEAD~100 回退100个版本
+git reset --hard 6fcfc89 回退到版本 6fcfc89
+```
+
+#### 撤销文件修改
+git checkout --readme.txt

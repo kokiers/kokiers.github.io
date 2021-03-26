@@ -1,4 +1,4 @@
----
+ -----
 lang: tool
 title: hexo 搭建博客
 categories:
@@ -48,33 +48,21 @@ hexo new 'hello' --lang good
 // source\_posts\good\hello.md
 ```
 启动本地服务
-
 ```
 hexo server
 ```
-
 生成
-
 ```
 hexo generate
 ```
-
 部署到服务器
-
 ```
 hexo deploy
 ```
-
 部署之前，需要_config.yml配置
-
 ```
 deploy:
   type: git
   repo: (你的项目地址)
 ```
-
 其他命令请到[官网](https://hexo.io/zh-cn/docs/)查看文档
-
-
-
-
