@@ -73,14 +73,17 @@
 
 
 
+<meta name="description" content="个人信息 属性：超级可爱的人 职业：前端开发工程师 地区：中国  联系方式 Email: kokier11@outlook.com Github: kokiers">
 <meta property="og:type" content="website">
-<meta property="og:title" content="kokier categories">
-<meta property="og:url" content="https://kokiers.github.io/categories/index.html">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="https://kokiers.github.io/about/index.html">
 <meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="个人信息 属性：超级可爱的人 职业：前端开发工程师 地区：中国  联系方式 Email: kokier11@outlook.com Github: kokiers">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-25T02:07:40.289Z">
+<meta property="og:updated_time" content="2020-07-20T08:10:28.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kokier categories">
+<meta name="twitter:title" content="关于我">
+<meta name="twitter:description" content="个人信息 属性：超级可爱的人 职业：前端开发工程师 地区：中国  联系方式 Email: kokier11@outlook.com Github: kokiers">
 
 
 
@@ -112,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="https://kokiers.github.io/categories/">
+  <link rel="canonical" href="https://kokiers.github.io/about/">
 
 
 
@@ -298,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2020-11-13T15:37:01+08:00">2020-11-13</time>
+              <time title="更新于" itemprop="dateModified" datetime="2020-11-23T15:45:11+08:00">2020-11-23</time>
             
           </span>
 
@@ -377,6 +380,8 @@
 <h3 id="筛选字符串-eg-‘myname-nike-amp-age-15’"><a href="#筛选字符串-eg-‘myname-nike-amp-age-15’" class="headerlink" title="筛选字符串 eg: ‘myname=nike&amp;age=15’"></a>筛选字符串 eg: ‘myname=nike&amp;age=15’</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> reg = new RegExp(<span class="string">"(^| )"</span> + name + <span class="string">"=([^;]*)(;|$)"</span>);</span><br><span class="line"><span class="built_in">let</span> match = str.match(reg)</span><br></pre></td></tr></table></figure>
 
 <h3 id="筛选字符串-eg"><a href="#筛选字符串-eg" class="headerlink" title="筛选字符串 eg:"></a>筛选字符串 eg:</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> regex = /[t_]+[\d\,\*]+/; </span><br><span class="line"><span class="built_in">let</span> regx = /\（(.+?)\）/;</span><br></pre></td></tr></table></figure>
+
+<h3 id="清除空格"><a href="#清除空格" class="headerlink" title="清除空格"></a>清除空格</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"> String.prototype.trim = <span class="function"><span class="title">function</span></span>() &#123;</span><br><span class="line">    var reExtraSpace = /^\s*(.*?)\s+$/;</span><br><span class="line">    <span class="built_in">return</span> this.replace(reExtraSpace, <span class="string">"<span class="variable">$1</span>"</span>)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 清除左空格</span><br><span class="line"><span class="keyword">function</span> ltrim(s)&#123; <span class="built_in">return</span> s.replace( /^(\s*|　*)/, <span class="string">""</span>); &#125; </span><br><span class="line"></span><br><span class="line">// 清除右空格</span><br><span class="line"><span class="keyword">function</span> rtrim(s)&#123; <span class="built_in">return</span> s.replace( /(\s*|　*)$/, <span class="string">""</span>); &#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -497,7 +502,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -519,7 +524,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -562,7 +567,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配英文"><span class="nav-number">1.</span> <span class="nav-text">匹配英文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配中文"><span class="nav-number">2.</span> <span class="nav-text">匹配中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空格"><span class="nav-number">3.</span> <span class="nav-text">空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空格-1"><span class="nav-number">4.</span> <span class="nav-text">空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮箱"><span class="nav-number">5.</span> <span class="nav-text">邮箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#身份证"><span class="nav-number">6.</span> <span class="nav-text">身份证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只允许输入数字"><span class="nav-number">7.</span> <span class="nav-text">只允许输入数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#千分位分隔"><span class="nav-number">8.</span> <span class="nav-text">千分位分隔</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#筛选字符串-eg-‘myname-nike-amp-age-15’"><span class="nav-number">9.</span> <span class="nav-text">筛选字符串 eg: ‘myname=nike&amp;age=15’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#筛选字符串-eg"><span class="nav-number">10.</span> <span class="nav-text">筛选字符串 eg:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配英文"><span class="nav-number">1.</span> <span class="nav-text">匹配英文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#匹配中文"><span class="nav-number">2.</span> <span class="nav-text">匹配中文</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空格"><span class="nav-number">3.</span> <span class="nav-text">空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#空格-1"><span class="nav-number">4.</span> <span class="nav-text">空格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮箱"><span class="nav-number">5.</span> <span class="nav-text">邮箱</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#身份证"><span class="nav-number">6.</span> <span class="nav-text">身份证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#只允许输入数字"><span class="nav-number">7.</span> <span class="nav-text">只允许输入数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#千分位分隔"><span class="nav-number">8.</span> <span class="nav-text">千分位分隔</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#筛选字符串-eg-‘myname-nike-amp-age-15’"><span class="nav-number">9.</span> <span class="nav-text">筛选字符串 eg: ‘myname=nike&amp;age=15’</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#筛选字符串-eg"><span class="nav-number">10.</span> <span class="nav-text">筛选字符串 eg:</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#清除空格"><span class="nav-number">11.</span> <span class="nav-text">清除空格</span></a></li></ol></div>
             
 
           </div>
@@ -582,7 +587,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

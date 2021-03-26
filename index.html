@@ -73,14 +73,17 @@
 
 
 
+<meta name="description" content="个人信息 属性：超级可爱的人 职业：前端开发工程师 地区：中国  联系方式 Email: kokier11@outlook.com Github: kokiers">
 <meta property="og:type" content="website">
-<meta property="og:title" content="kokier categories">
-<meta property="og:url" content="https://kokiers.github.io/categories/index.html">
+<meta property="og:title" content="关于我">
+<meta property="og:url" content="https://kokiers.github.io/about/index.html">
 <meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="个人信息 属性：超级可爱的人 职业：前端开发工程师 地区：中国  联系方式 Email: kokier11@outlook.com Github: kokiers">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-10-25T02:07:40.289Z">
+<meta property="og:updated_time" content="2020-07-20T08:10:28.979Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="kokier categories">
+<meta name="twitter:title" content="关于我">
+<meta name="twitter:description" content="个人信息 属性：超级可爱的人 职业：前端开发工程师 地区：中国  联系方式 Email: kokier11@outlook.com Github: kokiers">
 
 
 
@@ -112,7 +115,7 @@
 
 
 
-  <link rel="canonical" href="https://kokiers.github.io/categories/">
+  <link rel="canonical" href="https://kokiers.github.io/about/">
 
 
 
@@ -242,6 +245,528 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/uncategorized/654263c0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/uncategorized/654263c0.html" itemprop="url">koa-ffmpeg</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-26T16:20:54+08:00">2021-03-26</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2021-03-26T16:31:17+08:00">2021-03-26</time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>服务器设置header</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line">const render = require(&apos;./lib/render&apos;);</span><br><span class="line">const logger = require(&apos;koa-logger&apos;);</span><br><span class="line">const router = require(&apos;@koa/router&apos;)();</span><br><span class="line">const koaBody = require(&apos;koa-body&apos;);</span><br><span class="line">const serve = require(&quot;koa-static&quot;)</span><br><span class="line">const Koa = require(&apos;koa&apos;);</span><br><span class="line">const app = module.exports = new Koa();</span><br><span class="line"></span><br><span class="line">// &quot;database&quot;</span><br><span class="line"></span><br><span class="line">const posts = [];</span><br><span class="line"></span><br><span class="line">// middleware</span><br><span class="line"></span><br><span class="line">app.use(logger());</span><br><span class="line">app.use(serve(__dirname + &quot;/static&quot;));</span><br><span class="line"></span><br><span class="line">app.use(render);</span><br><span class="line"></span><br><span class="line">app.use(koaBody());</span><br><span class="line"></span><br><span class="line">// route definitions</span><br><span class="line"></span><br><span class="line">router.get(&apos;/&apos;, list)</span><br><span class="line">  .get(&apos;/post/new&apos;, add)</span><br><span class="line">  .get(&apos;/post/:id&apos;, show)</span><br><span class="line">  .post(&apos;/post&apos;, create);</span><br><span class="line"></span><br><span class="line">app.use(router.routes());</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Post listing.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">async function list(ctx) &#123;</span><br><span class="line">  ctx.set(&apos;Cross-Origin-Embedder-Policy&apos;,&apos;require-corp&apos;)</span><br><span class="line">  ctx.set(&apos;Cross-Origin-Opener-Policy&apos;,&apos;same-origin&apos;)</span><br><span class="line">  await ctx.render(&apos;list&apos;, &#123; posts: posts &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Show creation form.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">async function add(ctx) &#123;</span><br><span class="line">  await ctx.render(&apos;new&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Show post :id.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">async function show(ctx) &#123;</span><br><span class="line">  const id = ctx.params.id;</span><br><span class="line">  const post = posts[id];</span><br><span class="line">  if (!post) ctx.throw(404, &apos;invalid post id&apos;);</span><br><span class="line">  await ctx.render(&apos;show&apos;, &#123; post: post &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * Create a post.</span><br><span class="line"> */</span><br><span class="line"></span><br><span class="line">async function create(ctx) &#123;</span><br><span class="line">  const post = ctx.request.body;</span><br><span class="line">  const id = posts.push(post) - 1;</span><br><span class="line">  post.created_at = new Date();</span><br><span class="line">  post.id = id;</span><br><span class="line">  ctx.redirect(&apos;/&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// listen</span><br><span class="line"></span><br><span class="line">if (!module.parent) app.listen(3000);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;video autobuffer autoloop loop controls id=&quot;myvideo&quot;&gt;&lt;/video&gt;</span><br><span class="line">&lt;script src=&quot;/ffmpeg.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; &gt;</span><br><span class="line">  const &#123; createFFmpeg, fetchFile &#125; = FFmpeg;</span><br><span class="line">  let url = &apos;/e813f92ebaa7dc24472e6fb05aa2f607(1006489).avi&apos;, vType = &apos;avi&apos;</span><br><span class="line">  let isTrans = ![&apos;mp4&apos;,&apos;webm&apos;].includes(vType)</span><br><span class="line">  isTrans &amp;&amp; tranforVideo(url)</span><br><span class="line">  async function tranforVideo(file)&#123;</span><br><span class="line">    const ffmpeg = createFFmpeg(&#123;</span><br><span class="line">      log: true,</span><br><span class="line">    &#125;);</span><br><span class="line">    let name = &apos;transVideo&apos;, outName = &apos;my.mp4&apos;;</span><br><span class="line">    await ffmpeg.load();</span><br><span class="line">    ffmpeg.FS(&apos;writeFile&apos;, name, await fetchFile(file));</span><br><span class="line">    await ffmpeg.run(&apos;-i&apos;, name, outName);</span><br><span class="line">    const data = ffmpeg.FS(&apos;readFile&apos;, outName);</span><br><span class="line">    let obj = &#123;</span><br><span class="line">      src: URL.createObjectURL(new Blob([data.buffer], &#123; type: &apos;video/mp4&apos; &#125;)),</span><br><span class="line">      type: &apos;video/mp4&apos; </span><br><span class="line">    &#125;</span><br><span class="line">    let video = document.getElementById(&apos;myvideo&apos;)</span><br><span class="line">    video.src = obj.src</span><br><span class="line">  &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/uncategorized/388e4bc0.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/uncategorized/388e4bc0.html" itemprop="url">github 技巧</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-03-11T15:40:03+08:00">2021-03-11</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2021-03-11T15:40:34+08:00">2021-03-11</time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>好，我们来总结一下。我们想要进行精准搜索，无非就是增加筛选条件。</p>
+<p>in:name xxx // 按照项目名搜索</p>
+<p>in:readme xxx // 按照 README 搜索</p>
+<p>in:description xxx // 按照 description 搜索</p>
+<p>那么在这里面呢，我们又可以增加筛选条件</p>
+<p>stars:&gt;xxx // stars 数大于 xxx</p>
+<p>forks:&gt;3000 // forks 数大于 xxx</p>
+<p>language:xxx // 编程语言是 xxx</p>
+<p>pushed:&gt;YYYY-MM-DD // 最后更新时间大于 YYYY-MM-DD</p>
+<p>以上就是我们在 GitHub 上面精准搜索项目的一些小技巧，希望对你有所帮助！</p>
+<p>作者：MarkerHub<br>链接：<a href="https://juejin.cn/post/6937908330362994702" target="_blank" rel="noopener">https://juejin.cn/post/6937908330362994702</a></p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/uncategorized/eaefdf64.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/uncategorized/eaefdf64.html" itemprop="url">cssMask</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2021-01-08T11:21:33+08:00">2021-01-08</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2021-01-08T11:21:33+08:00">2021-01-08</time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/uncategorized/48f09df7.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/uncategorized/48f09df7.html" itemprop="url">videojs</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-03T10:13:18+08:00">2020-12-03</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-12-03T10:21:36+08:00">2020-12-03</time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;video id=<span class="string">"videoPlayer"</span>&gt;&lt;/video&gt;</span><br><span class="line"></span><br><span class="line">import videojs from <span class="string">'video.js'</span></span><br><span class="line">import flvjs from <span class="string">'flv.js'</span></span><br><span class="line">import <span class="string">'videojs-flash'</span></span><br><span class="line">import <span class="string">'videojs-flvjs'</span></span><br><span class="line">import swfUrl from <span class="string">'@/assets/social/video-js.swf'</span></span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> options = &#123;</span><br><span class="line">      techOrder: [<span class="string">"html5"</span>, <span class="string">"flash"</span>],</span><br><span class="line">      flash: &#123;</span><br><span class="line">        swf: swfUrl</span><br><span class="line">      &#125;,</span><br><span class="line">      sources:[&#123;</span><br><span class="line">        src: v.url,</span><br><span class="line">        <span class="built_in">type</span>: <span class="string">'video/'</span> + v.type</span><br><span class="line">      &#125;],</span><br><span class="line">      controls: <span class="literal">true</span>,</span><br><span class="line">      preload: <span class="string">"auto"</span>,</span><br><span class="line">      width: <span class="string">"200px"</span>,</span><br><span class="line">      height: <span class="string">"100px"</span>,</span><br><span class="line">      languages: &#123;</span><br><span class="line">        <span class="string">"zh-CN"</span>: require(<span class="string">"video.js/dist/lang/zh-CN.json"</span>)</span><br><span class="line">      &#125;,</span><br><span class="line">      language: <span class="string">"zh-CN"</span>,</span><br><span class="line">      notSupportedMessage:<span class="string">'暂不支持此类视频播放'</span>,</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">let</span> videoDom = document.getElmentById(<span class="string">'videoPlayer'</span>),</span><br><span class="line">    player = videojs(videoDom,options,<span class="keyword">function</span> <span class="function"><span class="title">onPlayerReady</span></span>()&#123;</span><br><span class="line">      player.on(<span class="string">'error'</span>,err=&gt;&#123;</span><br><span class="line">        options.sources.length &gt; 0 &amp;&amp; player.src(&#123;</span><br><span class="line">          src: options.sources[0].src,</span><br><span class="line">          <span class="built_in">type</span>: <span class="string">'video/x-flv'</span> </span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">    player.addClass(<span class="string">'video-js'</span>)</span><br><span class="line">    player.addClass(<span class="string">'vjs-default-skin'</span>)</span><br><span class="line">    player.addClass(<span class="string">'vjs-big-play-centered'</span>)</span><br><span class="line">    </span><br><span class="line"> </span><br><span class="line">销毁</span><br><span class="line">  <span class="keyword">if</span> (player) &#123;</span><br><span class="line">    player.dispose()</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
     
       
 
@@ -1177,632 +1702,11 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/css/83b1b72a.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kokiers">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/kok.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kokiers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/css/83b1b72a.html" itemprop="url">css loading 动画</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-11-21T09:26:12+08:00">2019-11-21</time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-27T17:23:20+08:00">2019-11-27</time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/css/" itemprop="url" rel="index">
-                    <span itemprop="name">css</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>css 实现加载中点点点动画。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/css/83b1b72a.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/tool/1875b830.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kokiers">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/kok.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kokiers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/tool/1875b830.html" itemprop="url">express</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-28T14:36:52+08:00">2019-10-28</time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-27T17:24:19+08:00">2019-11-27</time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>express 基于 Node.js 平台，快速、开放、极简的 Web 开发框架<br><a href="http://www.expressjs.com.cn" target="_blank" rel="noopener">文档</a></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/tool/1875b830.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/js/78573ae4.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kokiers">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/kok.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kokiers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/js/78573ae4.html" itemprop="url">前端下载图片</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-25T16:11:34+08:00">2019-10-25</time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-27T17:23:53+08:00">2019-11-27</time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/js/" itemprop="url" rel="index">
-                    <span itemprop="name">js</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>有成熟的开源框架，比如 <a href="http://html2canvas.hertzen.com/" target="_blank" rel="noopener">html2Canvas</a> ,把html直接转成图片。</p>
-<h5 id="下载图片"><a href="#下载图片" class="headerlink" title="下载图片"></a>下载图片</h5><ul>
-<li>canvas 下载 转成base64  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">base64 = canvas.toDataURL(&quot;image/jpeg&quot;, quality);</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/js/78573ae4.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/tool/ec14dd9b.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="kokiers">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/kok.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="kokiers">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/tool/ec14dd9b.html" itemprop="url">d3 可视化图表</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-10-23T10:48:51+08:00">2019-10-23</time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于&#58;</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2019-11-27T17:24:13+08:00">2019-11-27</time>
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tool/" itemprop="url" rel="index">
-                    <span itemprop="name">tool</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="官方文档-官方文档"><a href="#官方文档-官方文档" class="headerlink" title="官方文档 官方文档 "></a>官方文档 <a href="https://d3js.org.cn/document" target="_blank" rel="noopener">官方文档 </a></h4><h4 id="环形饼图"><a href="#环形饼图" class="headerlink" title="环形饼图"></a>环形饼图</h4><p><img src="../../images/pie_20191023.jpg" alt="环形饼图"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/tool/ec14dd9b.html#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1850,7 +1754,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">19</span>
+                  <span class="site-state-item-count">22</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -1872,7 +1776,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">15</span>
+                  <span class="site-state-item-count">14</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -1919,7 +1823,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
