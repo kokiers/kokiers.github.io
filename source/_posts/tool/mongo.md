@@ -11,11 +11,16 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 ```
 
-连接数据库  ip:端口:数据库名
+#### 连接数据库  
++ mongoose.connect(uri, options);
+ip:端口:数据库名
 ```bash
   mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
 ```
-type 类型有
++ 连接数据库的options
+
+
+#### type 类型有
 
 | leixing | zuoyong  |
 | --- | --- |
@@ -31,7 +36,7 @@ type 类型有
 | Map | 定义字符串  |
 | Schema | 定义字符串 |
 
-定义表的结构
+#### 定义表的结构
 ```bash
 const schema = new Schema({
   name: String,
@@ -39,20 +44,57 @@ const schema = new Schema({
 },{
   timestamps:true 
 });
+//当 schema 中设置timestamps为 true 时，schema映射的文档 document 会自动添加 createdAt 和 updatedA t这两个字段，代表创建时间和更新时间
 
 ```
-
+ 定义之后需要添加字段 用 add()
+```bash
+var schema = new Schema()
+schema.add({stuId:Number})
+```
+#### 保存数据
+· save Model.prototype.save([options], [options.safe], [options.validateBeforeSave], [fn])
+```bash
+let scoreModel = mongoose.model('score',schema)
+new scoreModel({
+  name: 'cdfdd',
+  score: 3.8
+}).save((err,docs)=>{
+  if (!err) {
+    console.log('insert success')
+  }
+})
+```
+. create  Model.create(doc(s), [callback])
+```bash
 let scoreModel = mongoose.model('score',schema)
 scoreModel.create({
   name: 'cdfdd',
   score: 3.8
 },(err,docs)=>{
-  console.log(err,docs)
   if (!err) {
     console.log('insert success')
   }
 })
-
+```
+.insertMany
+```bash
+let scoreModel = mongoose.model('score',schema)
+scoreModel.insertMany([{
+  name: 'yuyuyu',
+  score: 6
+},{
+  name: '2344',
+  score: 7
+}],(err,docs)=>{
+  if (!err) {
+    console.log('insert success')
+  }
+})
+````
+#### 查询数据
++ Model.find(conditions, [projection], [options], [callback])
+```bash
 scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
   if (!err) {
     console.log(docs,'?????')
@@ -60,3 +102,23 @@ scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
     console.log(err)
   }
 })
+```
++ Model.findById(id, [projection], [options], [callback])
+```bash
+scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
+  if (!err) {
+    console.log(docs,'?????')
+  }else{
+    console.log(err)
+  }
+})
+```
+
++ $where 可以使用任意的 JavaScript 作为查询的一部分，包含JavaScript 表达式的字符串或者函数
+```bash
+ scoreModel.find({$where:"this.name == obj.name" || "this..score == obj.score"},(err,doc) => {
+   if(!err){
+      console.log(doc)
+  }
+})
+```
