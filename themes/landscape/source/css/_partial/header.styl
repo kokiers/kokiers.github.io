@@ -1,0 +1,45 @@
+#header
+  height: auto
+  width:100%;
+  margin: 3em auto
+  padding-left:20px;
+  position: relative
+ 
+#logo 
+  background-image: url(logo-url);
+  background-size: 100%
+  width: logo-size
+  height: logo-size
+  position: absolute
+  top: 0 
+  left: 20px
+
+
+$logo-text
+  text-decoration: none
+  color: base-color
+  font-weight: bold
+$main-nav-link
+  text-decoration: none
+  color: base-color
+  font-size: subtitle-size
+  line-height 30px
+  color: base-color
+ 
+.subtitle
+  @extend $logo-text
+  font-size: logo-font
+  line-height: logo-line
+  letter-spacing: 2px
+  margin-left: logo-size + 10
+  margin-bottom: 10
+  
+.sublink
+  margin-left: logo-size + 10
+  overflow: hidden
+  li
+    float:left
+    margin-right: 10px
+    a
+      @extend $main-nav-link
+   

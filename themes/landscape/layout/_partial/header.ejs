@@ -1,0 +1,18 @@
+<header id="header">
+  
+  <a href="<%- url_for() %>" class="subtitle"><%= config.title %></a>
+  <a href="<%- url_for() %>" id="logo"></a>
+  <ul class="sublink">
+  <% for (var i in theme.menu){ %>
+    <li>
+    <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    </li>
+  <% } %>
+  <li>
+    <a class="main-nav-link" href="/uncategorized/b5f422e3.html">About</a>
+  </li>
+  <li>
+    <a class="main-nav-link" href="https://github.com/kokiers">Github</a>
+  </li>
+  </ul>
+</header>

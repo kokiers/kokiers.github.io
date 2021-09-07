@@ -1,0 +1,13 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="container">
+      <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+      <div class="content">
+        <%- body %>
+      </div>
+      <%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/after-footer') %>
+    <%- partial('_partial/gitment') %>
+  </div>
+</body>
+</html>
