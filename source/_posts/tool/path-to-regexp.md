@@ -10,7 +10,7 @@ tags:
 1. pathToRegexp()
 作用：这里这个方法可以类比于 js 中 new ExpReg('xxx')。
 
-2、exec()
+2. exec()
 作用：匹配 url 地址与规则是否相符
 
 3. parse()
