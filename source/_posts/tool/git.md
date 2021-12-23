@@ -85,3 +85,9 @@ git reset --hard 6fcfc89 回退到版本 6fcfc89
 #### 撤销文件修改
 git checkout --readme.txt
 
+#### 建立关联
+ git push --set-upstream origin branch_name
+
+#### 忽略不一致的
+ git pull origin branch_name --allow-unrelated-histories
+
