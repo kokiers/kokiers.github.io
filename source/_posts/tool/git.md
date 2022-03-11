@@ -91,3 +91,5 @@ git checkout --readme.txt
 #### 忽略不一致的
  git pull origin branch_name --allow-unrelated-histories
 
+fatal: refusing to merge unrelated histories
+
