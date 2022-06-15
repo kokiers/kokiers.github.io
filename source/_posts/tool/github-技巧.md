@@ -4,6 +4,7 @@ lang: tool
 abbrlink: 388e4bc0
 date: 2021-03-11 15:40:03
 tags:
+  - git
 ---
 
 
@@ -11,7 +12,7 @@ tags:
 
 
 in:name xxx // 按照项目名搜索
-
+<!-- more -->
 
 in:readme xxx // 按照 README 搜索
 

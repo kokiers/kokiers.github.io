@@ -6,7 +6,9 @@ date: 2021-12-27 13:51:32
 tags:
 ---
 
+不间断记录问题，做备忘。
 OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443 
+<!--more-->
 
 去掉代理 git config --global --unset http.proxy
 
@@ -17,7 +19,7 @@ OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443
 token 替换密码。 90天过期。 //2021 12 27
 
 
-github 需要token 每次输入好说。
+github 需要token 每次输入
 
 #### question: gitlab每次输入都要输账号密码 、、
 1.重新配置了ssh key 

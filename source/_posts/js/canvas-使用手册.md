@@ -4,6 +4,7 @@ lang: js
 abbrlink: 3b2d7402
 date: 2021-09-06 14:55:08
 tags:
+ - 手册
 ---
 
 
@@ -19,6 +20,7 @@ ctx.beginPath();
 ctx.arc(70, 70, 20, 0, Math.PI / 2, false);
 ctx.fill(); //fill 画实心， stroke 是画空心
 ```
+<!--more-->
 
 #### 文字
 ```bash

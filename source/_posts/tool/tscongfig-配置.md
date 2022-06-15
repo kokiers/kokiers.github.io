@@ -7,6 +7,8 @@ tags:
 ---
 
 tsconfig.json
+
+<!--more-->
 "compilerOptions": {
   "incremental": true, // TS编译器在第一次编译之后会生成一个存储编译信息的文件，第二次编译会在第一次的基础上进行增量编译，可以提高编译的速度
   "tsBuildInfoFile": "./buildFile", // 增量编译文件的存储位置

@@ -4,11 +4,13 @@ lang: js
 abbrlink: 2538c5b0
 date: 2021-09-28 10:05:12
 tags:
+ - 手册
 ---
 
 
 #### viewBox 
 viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and height，
+<!--more-->
 
 #### defs
   defs 定义好形状，或者颜色变化的。最后use调用

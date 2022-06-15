@@ -4,6 +4,7 @@ lang: tool
 abbrlink: 713dc437
 date: 2021-07-21 10:05:16
 tags:
+ - 数据库
 ---
 
 ```bash
@@ -19,7 +20,7 @@ ip:端口:数据库名
 ```
 + 连接数据库的options
 
-
+<!--more-->
 #### type 类型有
 
 | leixing | zuoyong  |

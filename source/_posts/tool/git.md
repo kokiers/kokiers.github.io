@@ -93,3 +93,6 @@ git checkout --readme.txt
 
 fatal: refusing to merge unrelated histories
 
+
+git pull origin branch_name --allow-unrelated-histories
+
