@@ -1,5 +1,5 @@
 ---
-title: mongo
+title: mongo 手册
 lang: tool
 abbrlink: 713dc437
 date: 2021-07-21 10:05:16
