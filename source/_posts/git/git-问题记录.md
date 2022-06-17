@@ -26,3 +26,9 @@ github 需要token 每次输入
 2.git config --global credential.helper store 
 
 
+解决 fatal: Not a git repository (or any of the parent directories): .git 问题
+
+提示说没有.git这样一个目录
+
+在命令行 输入 git init  然后回车就好了
+
