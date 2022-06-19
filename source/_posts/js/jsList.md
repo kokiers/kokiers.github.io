@@ -227,3 +227,66 @@ strChange('kokier')
 strChange("6Lkcopkeipe5rw",1)
 //"kokier"
 ```
+
+
+##### Storage
+```bash
+var myPerson = {
+    set: function (str) {
+        var isIn = false,
+            pers = window.localStorage.firList,
+            perList = [];
+
+        if (pers != undefined) {
+
+            perList = JSON.parse(pers);
+
+            for(var i = 0,perLen = perList.length; i < perLen; i++){
+                if (JSON.stringify(str) == JSON.stringify(perList[i])) {
+                    isIn = true;
+                    break;
+                }
+            }
+
+        }
+        if (!isIn) {
+            perList.push(str);
+            window.localStorage.removeItem('firList');
+            window.localStorage.firList = JSON.stringify(perList);
+        }
+    },
+    get: function () {
+        var perList = [],
+            uLists = [],
+            pers = window.localStorage.firList;
+
+        if (pers != undefined) {
+
+            perList = JSON.parse(pers);
+
+            for(var i = 0; i < perList.length; i++){
+                uLists[perList[i].user_id] = perList[i];
+            }
+        }
+        return uLists;
+    },
+    remove: function (strId) {
+        var isDel = false,pers = window.localStorage.firList,perList = [];
+        if (pers != undefined) {
+
+            perList = JSON.parse(pers);
+
+            for(var i = 0,perLen = perList.length; i < perLen; i++){
+                if (strId == perList[i].user_id) {
+                    perList.splice(i,1);
+                    isDel = true;
+                    window.localStorage.removeItem('firList');
+                    window.localStorage.firList = JSON.stringify(perList);
+                    break;
+                }
+            }
+        }
+        return isDel;
+    }
+}
+```
