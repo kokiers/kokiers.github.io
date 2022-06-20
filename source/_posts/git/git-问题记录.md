@@ -21,6 +21,12 @@ token 替换密码。 90天过期。 //2021 12 27
 
 github 需要token 每次输入
 
+或者用token
+git remote remove origin
+
+git remote add origin https://${token}@github.com/xxx/xxxx.git
+
+
 #### question: gitlab每次输入都要输账号密码 、、
 1.重新配置了ssh key 
 2.git config --global credential.helper store 
