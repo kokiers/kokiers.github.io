@@ -1,4 +1,4 @@
- -----
+---
 lang: tool
 title: hexo 搭建博客
 categories:
@@ -66,3 +66,17 @@ deploy:
   repo: (你的项目地址)
 ```
 其他命令请到[官网](https://hexo.io/zh-cn/docs/)查看文档
+
+
+github 更换token 验证后需要 配置一下token 
+
+git config --local user.name 'name'
+git config --local user.password 'token'
+
+报错：
+typeError [ERR_INVALID_ARG_TYPE]: The "mode" argument must be integer. Received an instance of Object
+
+应该是node 版本过高(14.x.x.)导致，更换低版本的（12.x.x）就可以解决
+
+
+
