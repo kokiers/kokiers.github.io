@@ -136,3 +136,18 @@ Converting an Image to an ImageProvider
 If you have an Image widget and you need its ImageProvider, then do the following:
 
 myImageWidget.image
+
+
+
+
+
+flutter 获取应用签名 （需要jre 低版本才能查看md5）
+keytool -list -v -keystore D:\XX\key.jks
+
+
+
+chat 问题修改
+搜索样式统一
+导航样式不一样得地方修改
+宠物一个地方获取 
+
