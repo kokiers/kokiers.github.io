@@ -7,21 +7,26 @@ tags:
 ---
 
 不间断记录问题，做备忘。
-OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443 
+
+#### fatal: Not a git repository (or any of the parent directories): .git 问题
+
+提示说没有.git这样一个目录
+
+在命令行 输入 git init  然后回车就好了
+
 <!--more-->
+##### OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443 
 
 去掉代理 git config --global --unset http.proxy
 
 公司代理关掉   Failed to connect to github.com port 443: Timed out
 
-成功了  md
 
-token 替换密码。 90天过期。 //2021 12 27
+#### Github token校验
 
+1、github 需要token 每次输入
 
-github 需要token 每次输入
-
-或者用token
+2、不想数输入的话，可以token
 git remote remove origin
 
 git remote add origin https://${token}@github.com/xxx/xxxx.git
@@ -31,10 +36,4 @@ git remote add origin https://${token}@github.com/xxx/xxxx.git
 1.重新配置了ssh key 
 2.git config --global credential.helper store 
 
-
-解决 fatal: Not a git repository (or any of the parent directories): .git 问题
-
-提示说没有.git这样一个目录
-
-在命令行 输入 git init  然后回车就好了
 

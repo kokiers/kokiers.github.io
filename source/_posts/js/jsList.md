@@ -6,7 +6,7 @@ categories:
 abbrlink: 4d191d65
 date: 2019-07-16 18:24:42
 tags:
-  - js 
+  - jsFc
 ---
 
 不定期更新一些js小方法
@@ -290,3 +290,48 @@ var myPerson = {
     }
 }
 ```
+#### 排序相关
+##### 乱序： 
+var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+arr.sort(function () {
+    let a = Math.random() - 0.5;
+    console.log(a)
+    return a;
+});
+
+
+##### 正序 从小到大
+function quickSort(arr) {
+    if(arr.length <= 1) {
+        return arr;  
+    }
+    var left = [],
+        right = [],
+        current = arr.splice(0,1); 
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < current) {
+            left.push(arr[i])  
+        } else {
+            right.push(arr[i])
+        }
+    }
+    return quickSort(left).concat(current,quickSort(right));
+}
+
+##### 倒序 从小到大
+function quickSort(arr) {
+    if(arr.length <= 1) {
+        return arr;  
+    }
+    var left = [],
+        right = [],
+        current = arr.splice(0,1); 
+    for(let i = 0; i < arr.length; i++) {
+        if(arr[i] < current) {
+            left.push(arr[i])  
+        } else {
+            right.push(arr[i])
+        }
+    }
+    return quickSort(left).concat(current,quickSort(right));
+}
