@@ -60,10 +60,11 @@ git checkout master
 ```
 git merge <branch>
 ```
-
+ 
 #### 进入到要上传的仓库 添加远程地址
 git remote add origin git@github.com:yourname/yourRepo.git 
 git remote add origin https://github.com/yourname/yourRepo.git
+git remote rm origin //删除配置
 
 git stash pop stash@{1}
 

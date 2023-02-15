@@ -22,6 +22,9 @@ tags:
     Never （never类型表示的是那些永不存在的值。never类型是任何类型的子类型）
     Object（表示非原始类型，也就是除number，string，boolean，symbol，null或undefined之外的类型。）
 + 泛型
++ 回调函数类型 (写上函数返回类型)
+  无返回值使用： void 
++ 重载与回调函数
 
 #### 类型断言
 + 尖括号 
@@ -41,6 +44,11 @@ let strLen:number = (str as string).length
 
 
 #### 声明： declare
+模块结构声明： declare 
++ module-function.d.ts (可做函数调用)
++ modeul-class.d.ts (可用new 构造)
++ module.d.ts (不能调用或者构造)
+
 
 #### interface type
 interface 侧重描述数据结构。type 侧重描述类型. 二者都可描述对象 函数，都可extends。
