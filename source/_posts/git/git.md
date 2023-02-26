@@ -17,6 +17,13 @@ $ git config --global user.email "email@example.com"
 连接 ssh git@github.com
 ```
 <!--more-->
+
+```bash
+git config --global --unset user.name 
+git config --list
+git config --list --global
+```
+
 ### 提交
 #### 添加文件
 ```
