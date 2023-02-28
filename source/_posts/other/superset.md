@@ -61,4 +61,12 @@ docker-compose -f docker-compose-non-dev.yml up
 docker 
 docker-compose up --detach --build //修改代码重新build
 
+
+
 ```
+
+删除，停止所有容器，在windows cmd 一下命令不能生效。用git bash ，
+docker rm $(docker ps -aq)
+docker stop $(docker ps -q) //停止
+
+或者power shell docker ps -q | % { docker stop $_ } // 未尝试
