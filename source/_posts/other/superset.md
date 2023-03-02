@@ -35,16 +35,7 @@ sudo apt-get update
     sudo apt-get install docker-compose-plugin
     ```
 
-  docker 常用命令
-```bash
-docker ps //查看所有启动的容器
-docker ps -a //查看所有容器 启动 + 未启动
-docker start myDocker
-docker stop myDocker
-docker rm myDocker
-docker images //查看镜像
-docker rmi myImageId 
-```
+
 #### 启动
 
 ```bash
@@ -60,11 +51,15 @@ docker-compose -f docker-compose-non-dev.yml up
  以上是生产环境的启动方法。本地修改代码，不会生效。
 
 
+##### docker 常用命令
 ```bash
-docker 
-docker-compose up --detach --build //修改代码重新build
-
-
+docker ps //查看所有启动的容器
+docker ps -a //查看所有容器 启动 + 未启动
+docker start myDocker
+docker stop myDocker
+docker rm myDocker
+docker images //查看镜像
+docker rmi myImageId 
 ```
 
 删除，停止所有容器，在windows cmd 一下命令不能生效。用git bash ，
@@ -73,11 +68,16 @@ docker stop $(docker ps -q) //停止
 
 或者power shell docker ps -q | % { docker stop $_ } // 未尝试
 
+### docker compose 常用命令
+
+```bash
+docker 
+docker-compose up --detach --build //修改代码重新build
+```
 
 #### 本地开发
 
 官风提示需要一个superset_config.py 文件来定义需要修改的配置项。
-
 我直接在config.py 下直接改。
 
 ```bash
@@ -88,11 +88,10 @@ docker compose up
 
 ```
 
-
-尝试了
+碎碎念：
+尝试了好几个办法，就想本地撸一下superset 怎么这么难啊！！ 
 1.虚拟机下Linux系统，直接用docker compose up. 修改本地代码生效了？
 2.windows系统下  安装docker destop，使用本地代码，但是总是重启。有问题。
 3.虚拟化python环境 ，安装 Microsoft visual c++ build tools 一直安装失败！！！！
 
 
-### 虚拟化python环境 

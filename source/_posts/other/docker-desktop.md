@@ -7,6 +7,8 @@ tags:
 
 windows 使用docker 可以安装 Docker Desktop。 在配合Windows 子系统，可完成一些传统虚拟机的工作。
 
+### windows 安装docker destop
+
 1. 下载 [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) 安装
 2. 安装完成后，安装 WSL [wsl install](https://learn.microsoft.com/zh-cn/windows/wsl/install)
    ```bash
@@ -19,8 +21,8 @@ windows 使用docker 可以安装 Docker Desktop。 在配合Windows 子系统�
 
 3. 运行docker desktop 使用
 
-
-错误处理：
+### 常见错误处理
+错误1：
 error during connect: 
 This error may indicate that the docker daemon is not running.: 
 Get "http://%2F%2F.%2Fpipe%2Fdocker_engine/v1.24/containers/json": 
@@ -30,7 +32,7 @@ open //./pipe/docker_engine: The system cannot find the file specified.
    进入C盘 C:\Program Files\Docker\Docker
 dockercli.exe -switchdaemon 
 
-本地起开发docker compose up 报错。
+错误2.本地起开发docker compose up 报错。
  A Default SECRET_KEY was detected, please use superset_config.py to override it.
  Use a strong complex alphanumeric string and use a tool to help you generate 
  a sufficiently random sequence, ex: openssl rand -base64 42
