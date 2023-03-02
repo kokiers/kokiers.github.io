@@ -35,5 +35,6 @@ dockercli.exe -switchdaemon
  Use a strong complex alphanumeric string and use a tool to help you generate 
  a sufficiently random sequence, ex: openssl rand -base64 42
 
- 解决： 安装 python -m pip install markupsafe=2.0.1
+ 解决： 安装 python -m pip install markupsafe=2.0.1  
+ 不成功 呜呜
 
