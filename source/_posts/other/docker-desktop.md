@@ -1,6 +1,7 @@
 ---
 title: docker  desktop
 lang: other
+abbrlink: 139433de
 date: 2023-02-20 10:14:38
 tags:
 ---

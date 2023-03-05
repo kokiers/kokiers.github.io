@@ -37,6 +37,7 @@ https://docs.flutter.dev/development/ui/widgets/layout
 + GestureDetector //手势识别
 + stack 
 + Positioned
++ Padding
 
 
 #### Image vs ImageProvider
