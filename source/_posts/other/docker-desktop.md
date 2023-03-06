@@ -31,7 +31,7 @@ open //./pipe/docker_engine: The system cannot find the file specified.
 
 解决：
    进入C盘 C:\Program Files\Docker\Docker
-dockercli.exe -switchdaemon 
+dockercli.exe -switchdaemon  （确认docker desktop 启动了）
 
 错误2.本地起开发docker compose up 报错。
  A Default SECRET_KEY was detected, please use superset_config.py to override it.

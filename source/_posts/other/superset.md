@@ -60,6 +60,8 @@ docker stop myDocker
 docker rm myDocker
 docker images //查看镜像
 docker rmi myImageId 
+
+docker system prune -a //删除全部缓存 
 ```
 
 删除，停止所有容器，在windows cmd 一下命令不能生效。用git bash ，
