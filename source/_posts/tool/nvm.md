@@ -9,7 +9,6 @@ tags:
  - 工具推荐
 ---
 
-
 nvm 是nodejs的版本管理器,切换版本，方便开发。
 
 下载 推荐github下载安装 https://github.com/coreybutler/nvm-windows/releases
@@ -26,3 +25,4 @@ nvm 是nodejs的版本管理器,切换版本，方便开发。
  卸载版本
  nvm uninstall 版本号
 
+ 如果不能正确下载的话，就在网上找对应的版本手动下载更新一下。[release nodejs](https://nodejs.org/download/release/v16.19.1/)

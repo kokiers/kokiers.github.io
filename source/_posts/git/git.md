@@ -85,6 +85,7 @@ git checkout dev
 
 #### 回退版本
 ```
+git log：查看代码提交记录
 git reset --hard HEAD^  回退一个版本
 git reset --hard HEAD~100 回退100个版本
 git reset --hard 6fcfc89 回退到版本 6fcfc89
