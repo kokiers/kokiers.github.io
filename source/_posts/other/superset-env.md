@@ -28,8 +28,8 @@ py -3 -m venv venv || python3 -m venv venv
 # 4、开启虚拟化
 venv\Scripts\activate 
 # 5、安装superset 可以选择版本安装。
-pip install apache-superset==2.0.1 // --use-deprecated=legacy-resolver
    #tips: 如果superset对应的版本已经下载下来，且虚拟目录在项目中开启，则可忽略此步骤。
+pip install apache-superset==2.0.1 // --use-deprecated=legacy-resolver
 ```
 5、安装需要的package（以下2个步骤好像选一个就可以了?)
 ```bash
@@ -37,7 +37,7 @@ pip install -r requirements/testing.txt
 # Install Superset in editable (development) mode
 pip install -e .
 ```
-6、 配置后端服务
+6、 配置**后端服务**
 ```bash
 # (别的位置看到的)
 set flask = superset 
@@ -59,6 +59,15 @@ superset load-examples
 # See instructions below how to build the front-end assets.
 FLASK_ENV=development superset run -p 8088 --with-threads --reload --debugger
 ```
+7、**前端服务**起来
+ 安装nodejs 16.19.1 报错少。别的版本的错误巨多。
+ ```bash
+ # cd superset-frontend
+ npm install 
+ # 默认启用的9000 端口，后端服务用的flask服务起的。
+ npm run dev 
+ ````
+
 
 #### 常见错误
 + 环境报错，需要安装好环境注意事项的包。
@@ -77,74 +86,13 @@ ERROR: Could not open requirements file: [Errno 2] No such file or directory: �
   先执行pip freeze > requirements.txt//会在当前目录下生成文件。 管理包版本
   然后再pip install -r requirements.txt
 
-一直各种包之间冲突，没有成功，在issue上看到分享说，2.0.1版本在3.9以上不能成功配置，有网友分享3.8可用，在尝试ing
-各种倒腾，到最后说网络不行，不能 superset load_examples。 郁闷死。。。
-继续进行下一步，起来了，但是登录上去是坏的。。。
 
-
-### python 虚拟环境
-
-[文档](https://superset.apache.org/docs/installation/installing-superset-from-scratch)
-1、安装python 下载exe安装 //配置环境变量
-
-2、pip install virtualenv 
-3、py -3 -m venv venv //python3 -m venv venv (在项目目录下执行)
- 错误： 
- ，python3 不是内部外部命令，不能识别。用 **py -3** 代替。如果需要使用，需要复制python.exe 后重命名 python3.exe
-4、venv\Scripts\activate //. venv/bin/activate 开启虚拟化
-  deactivate //退出虚拟化
-
-5、 pip install apache-superset==2.0.1 --use-deprecated=legacy-resolver
-
-安装过程中各种错误，安装如下可解决。
-需要额外下载好visual studio 的相关插件。![详情如图](../../images/superset_20230304172137.jpg)
-+ 错误1：
-fatal error C1083: Cannot open include file: 'basetsd.h'致命错误 C1083：无法打开包含文件：“basetsd.h”
-fatal error C1083: 无法打开包括文件: “basetsd.h”: No such file or directory
-+ 错误2.
- error: command 'D:\\visual studio\\VC\\Tools\\MSVC\\14.31.31103\\bin\\HostX86\\x64\\cl.exe' failed with exit code 2
-+ 错误3.
- error: legacy-install-failure
-+ 错误4.
- src/geohash.cpp(2): fatal error C1083: 无法打开包括文件: “stdio.h”: No such file or directory
-+ 错误5.
-  Command errored out with exit status 1:
-+ 错误6.
-  pip is looking at multiple versions of dnspython to determine which version is compatible with other requirements. This could take a while.
-
-  tips: 第5步在项目目录下可不安装(待我的确认)
-
-6、安装requirements.txt 错误：
-ERROR: Could not open requirements file: [Errno 2] No such file or directory: ‘requirments.txt’
-  先执行pip freeze > requirements.txt//会在当前目录下生成文件。 管理包版本
-  然后再pip install -r requirements.txt
-
-一直各种包之间冲突，没有成功，在issue上看到分享说，2.0.1版本在3.9以上不能成功配置，有网友分享3.8可用，在尝试ing
-各种倒腾，到最后说网络不行，不能 superset load_examples。 郁闷死。。。
-继续进行下一步，起来了，但是登录上去是坏的。。。
-
-
-错误：ModuleNotFoundError: No module named ‘pip
++ ModuleNotFoundError: No module named ‘pip
 先解决 ModuleNotFoundError: No module named ‘pip‘
 先把pip装回来：
 python -m ensurepip
 
-
-#### python 版本切换
-切换python版本，[参照文档](https://blog.csdn.net/qq_42455308/article/details/129263694)
-安装不一样的版本，可切换版本使用。再走一遍。
-
-python38 install virtualenv
-
-错误：ERROR: After October 2020 you may experience errors when installing or updating packages 
-解决：pip install apache-superset --use-feature=2020-resolver
-
-pip install sqlalchemy-utils==0.36.6 --use-feature=2020-resolver -i https://pypi.douban.com/simple/
-
-
-
-错误：
-Found but failed to import local superset_config
++ Found but failed to import local superset_config
 ....
 OSError: The environment variable DATABASE_DIALECT was missing, abort...
 解决:
@@ -164,22 +112,58 @@ Init superset fail with error 'No module named 'cryptography.hazmat.backends.ope
 
 pip install flask==2.1.0
 # 数据库用上的 
-pip install pibow
+pip install pillow
 # 不确定这个有用
 pip install pyopenssl==22.1.0
+# 这个很重要
+ pip install flask-wtf==1.0.1 
 ```
 
-# 前端服务起来
- 安装nodejs 16.19.1 报错少。别的版本的错误巨多。
+
+  前端项目起来，后端服务也起来，登录页面也出来了。登录上去后报错。
+ {"errors": [{"message": "validate() got an unexpected keyword argument 'extra_validators'", "error_type": "GENERIC_BACKEND_ERROR", "level": "error", "extra": {"issue_codes": [{"code": 1011, "message": "Issue 1011 - Superset encountered an unexpected error."}]}}]}
  ```bash
- # cd superset-frontend
- npm install 
- # 默认启用的9000 端口，后端服务用的flask服务起的。
- npm run dev 
- ````
+#  log:
+2023-03-08 09:42:29,976:INFO:werkzeug: * Running on http://127.0.0.1:8088/ (Press CTRL+C to quit)
+2023-03-08 09:42:32,514:INFO:werkzeug:127.0.0.1 - - [08/Mar/2023 09:42:32] "GET / HTTP/1.1" 302 -
+2023-03-08 09:42:32,584:WARNING:root:Class 'werkzeug.local.LocalProxy' is not mapped
+2023-03-08 09:42:32,686:DEBUG:superset.stats_logger:[stats_logger] (incr) welcome
+2023-03-08 09:42:32,732:INFO:werkzeug:127.0.0.1 - - [08/Mar/2023 09:42:32] "GET /superset/welcome/ HTTP/1.1" 302 -
+2023-03-08 09:42:34,465:INFO:werkzeug:127.0.0.1 - - [08/Mar/2023 09:42:34] "GET /login/ HTTP/1.1" 200 -
+2023-03-08 09:42:35,129:INFO:werkzeug:127.0.0.1 - - [08/Mar/2023 09:42:35] "GET /static/assets/preamble.418fde3b.entry.js HTTP/1.1" 200 -
+2023-03-08 09:42:35,161:WARNING:superset.views.base:HTTPException
+Traceback (most recent call last):
+  File "D:\work\myTest\superset\lastv\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "D:\work\myTest\superset\lastv\lib\site-packages\flask\app.py", line 1499, in dispatch_request
+    self.raise_routing_exception(req)
+  File "D:\work\myTest\superset\lastv\lib\site-packages\flask\app.py", line 1481, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "D:\work\myTest\superset\lastv\lib\site-packages\flask\ctx.py", line 397, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "D:\work\myTest\superset\lastv\lib\site-packages\werkzeug\routing.py", line 2042, in match
+    raise NotFound()
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+2023-03-08 09:42:35,231:INFO:werkzeug:127.0.0.1 - - [08/Mar/2023 09:42:35] "GET /static/assets/menu.926ed779.entry.js HTTP/1.1" 200 -
+ ```
+
+解决办法： 
+```bash
+ pip install flask-wtf==1.0.1 
+```
+https://github.com/apache/superset/issues/20914
 
 
+ 
+#### python 版本切换
+切换python版本，[参照文档](https://blog.csdn.net/qq_42455308/article/details/129263694)
+安装不一样的版本，可切换版本使用。再走一遍。
 
+python38 install virtualenv
 
+错误：ERROR: After October 2020 you may experience errors when installing or updating packages 
+解决：pip install apache-superset --use-feature=2020-resolver
+
+pip install sqlalchemy-utils==0.36.6 --use-feature=2020-resolver -i https://pypi.douban.com/simple/
 
 

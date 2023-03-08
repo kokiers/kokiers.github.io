@@ -15,6 +15,7 @@ tags:
 2.Ubuntu .iso 镜像
 
 windows 10 下载，安装教程 ，详细查看[csdn 小玉](https://blog.csdn.net/weixin_43525386/article/details/108920902) 教程。
+<!-- more -->
 
 ```bash
 free -h  //查看内存
