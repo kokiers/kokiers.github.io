@@ -83,6 +83,13 @@ docker-compose up --detach --build //修改代码重新build
 官风提示需要一个superset_config.py 文件来定义需要修改的配置项。
 我直接在config.py 下直接改。
 
+设置 PYTHONPATH
+```bash
+export SUPERSET_CONFIG_PATH=/path/to/your/superset_config.py
+# 例子
+set SUPERSET_CONFIG_PATH = E:/superset/superset_config.py
+```
+
 ```bash
 docker 
 docker-compose up --detach --build //修改代码重新build
@@ -90,6 +97,12 @@ docker compose pull
 docker compose up 
 
 ```
+
+文档地址：
+
+[superset docs](https://apache-superset.readthedocs.io/en/latest/installation.html)
+
+[Flask](https://flask.net.cn/quickstart.html)
 
 碎碎念：
 尝试了好几个办法，就想本地撸一下superset 怎么这么难啊！！ 

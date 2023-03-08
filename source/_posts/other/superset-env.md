@@ -151,7 +151,7 @@ werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on 
 ```bash
  pip install flask-wtf==1.0.1 
 ```
-https://github.com/apache/superset/issues/20914
+https://github.com/apache/superset/issues/20914#issuecomment-1434344417
 
 
  
