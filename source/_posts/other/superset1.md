@@ -1,5 +1,5 @@
 ---
-title: superset 
+title: superset
 lang: other
 abbrlink: 7b3ed7b3
 date: 2023-02-14 10:45:06
@@ -95,14 +95,3 @@ docker compose up
 1.虚拟机下Linux系统，直接用docker compose up. 修改本地代码生效了？
 2.windows系统下  安装docker destop，使用本地代码，但是总是重启。有问题。
 3.虚拟化python环境 ，安装 Microsoft visual c++ build tools 一直安装失败！！！！
-
-
-
-
-
-
-
-
-
-
-
