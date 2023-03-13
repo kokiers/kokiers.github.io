@@ -61,4 +61,5 @@ npm run dev
 
 
 参考文档[在 Superset v2 中构建自定义 Viz 插件](https://preset.io/blog/building-custom-viz-plugins-in-superset-v2/)
+[Creating Visualization Plugins](https://superset.apache.org/docs/contributing/creating-viz-plugins/)
 

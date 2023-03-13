@@ -39,3 +39,6 @@ pushed:>YYYY-MM-DD // 最后更新时间大于 YYYY-MM-DD
 
 作者：MarkerHub
 链接：https://juejin.cn/post/6937908330362994702
+
+#### github host
+https://raw.hellogithub.com/hosts
