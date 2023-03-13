@@ -10,8 +10,9 @@ superset 在windows 环境中安装，可以通过python虚拟环境配置，记
 
 #### **环境注意事项**
 安装过程中各种错误，安装如下可解决。
-需要额外下载好visual studio 的相关插件。好像单个组件不选也可以。![详情如图](../../images/superset_20230304172137.jpg)
+需要额外下载好visual studio 的相关插件。好像单个组件不选也可以。
 <!-- more -->
+![详情如图](../../images/superset_20230304172137.jpg)
 #### **具体步骤：**
 详细可以查看[superset 官方文档](https://superset.apache.org/docs/installation/installing-superset-from-scratch) 或者 [GitHub CONTRIBUTING](https://github.com/apache/superset/blob/master/CONTRIBUTING.md#documentation)
 

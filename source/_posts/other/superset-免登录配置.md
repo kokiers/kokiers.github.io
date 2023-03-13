@@ -15,6 +15,7 @@ PUBLIC_ROLE_LIKE: Optional[str] = "Gamma"
 DASHBOARD_CROSS_FILTERS = true
 DASHBOARD_NATIVE_FILTERS_SET = true
 ```
+<!-- more -->
 ![superset配置二](../../images/super_login_20230310180004.png)
 ![superset配置一](../../images/super_login_20230310175930.png)
 

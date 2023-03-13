@@ -12,6 +12,7 @@ windows 使用docker 可以安装 Docker Desktop。 在配合Windows 子系统�
 ### windows 安装docker destop
 
 1. 下载Windows 版本 [Docker Desktop for Windows](https://docs.docker.com/desktop/install/windows-install/) 安装
+   <!-- more -->
 2. 安装完成后，安装 WSL [wsl install](https://learn.microsoft.com/zh-cn/windows/wsl/install)
 3. 安装 Ubuntu 子系统
 ```bash
@@ -21,7 +22,6 @@ windows 使用docker 可以安装 Docker Desktop。 在配合Windows 子系统�
 ``` 
 tips: 2，3步骤 **power shell** 中运行。需要开启**虚拟化**！！！！
 
-   <!-- more -->
 
 3. 运行docker desktop 使用
 
