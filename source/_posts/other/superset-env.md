@@ -168,3 +168,7 @@ python38 install virtualenv
 pip install sqlalchemy-utils==0.36.6 --use-feature=2020-resolver -i https://pypi.douban.com/simple/
 
 
+#### 退出
+ `deactivate`
+
+
