@@ -14,9 +14,9 @@ date: 2020-06-02 11:36:03
 在项目中怎么能很方便的引用svg呢？
 
 嗯呐 就是
-svg-sprite-loader
+**svg-sprite-loader**
 
-安装插件  svg-sprite-loader
+安装插件  `svg-sprite-loader`
 
 #### 新建文件夹存放svg
 
@@ -25,7 +25,7 @@ svg-sprite-loader
 
 ##### index.js 引入svg组件 注册。
 
-``` bash
+``` javaScript
 import Vue from 'vue'
 import SvgIcon from '@/components/common/SvgIcon'// svg component
 
@@ -45,7 +45,7 @@ requireAll(req)
 
 ####  svgicon 组件
 
-```bash
+```vue
 
 <template>
   <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" v-on="$listeners" />
@@ -111,9 +111,10 @@ export default {
   display: inline-block;
 }
 </style>
+```
 
-
- #  index.js 注册全局组件。
+   index.js 注册全局组件。
+ ```javaScript
 import Vue from 'vue'
 import SvgIcon from '@/components/common/SvgIcon'// svg component
 

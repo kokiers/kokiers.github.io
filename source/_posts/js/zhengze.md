@@ -10,30 +10,30 @@ tags:
 ---
 
 ### 匹配英文
-```bash
+```javaScript
 var str = /[^a-zA-Z]/g;
 var test = '77hhs';
 test.replace(str,'');//hhs
 ```
 <!--more-->
 ### 匹配中文
-```bash
+```javaScript
 var str = /[^\u4E00-\u9FA5]/g
 ```
 ### 空格
-```bash
+```javaScript
 var str = /^ +| +$/g;
 ```
-### 空格
-```bash
+### 手机号
+```javaScript
 var str = /^1[34578][0-9]{9}$/;
 ```
 ### 邮箱
-```bash
+```javaScript
 var str = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 ```
 ### 身份证
-```bash
+```javaScript
 var preg = /^(^[1-9]\d{7}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}$)|(^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])((\d{4})|\d{3}[Xx])$)$/;
 if (!preg.test(idCard)) {
     console.log('不合格' + idCard);
@@ -68,25 +68,25 @@ if (!preg.test(idCard)) {
 
 ```
 ### 只允许输入数字
-```bash
+```javaScript
 var str = v.replace(/[^\d]/g,'');
 ```
 ### 千分位分隔
-```bash
+```javaScript
 var str = v.replace(/\d{1,3}(?=(\d{3})+(.\d*)?$)/g, '$&,')
 ```
 ### 筛选字符串 eg: 'myname=nike&age=15'
-```bash
+```javaScript
 let reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
 let match = str.match(reg)
 ```
 ### 筛选字符串 eg: 
-```bash
+```javaScript
  let regex = /[t_]+[\d\,\*]+/; 
  let regx = /\（(.+?)\）/;  
  ```
 ### 清除空格
-```bash
+```javaScript
  String.prototype.trim = function() {
     var reExtraSpace = /^\s*(.*?)\s+$/;
     return this.replace(reExtraSpace, "$1")

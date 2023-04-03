@@ -7,7 +7,7 @@ tags:
  - 数据库
 ---
 
-```bash
+```javaScript
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 ```
@@ -15,7 +15,7 @@ const { Schema } = mongoose;
 #### 连接数据库  
 + mongoose.connect(uri, options);
 ip:端口:数据库名
-```bash
+```javaScript
   mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser: true, useUnifiedTopology: true});
 ```
 + 连接数据库的options
@@ -38,7 +38,7 @@ ip:端口:数据库名
 | Schema | 定义字符串 |
 
 #### 定义表的结构
-```bash
+```javaScript
 const schema = new Schema({
   name: String,
   score: Number,
@@ -49,13 +49,13 @@ const schema = new Schema({
 
 ```
  定义之后需要添加字段 用 add()
-```bash
+```javaScript
 var schema = new Schema()
 schema.add({stuId:Number})
 ```
 #### 保存数据
 · save Model.prototype.save([options], [options.safe], [options.validateBeforeSave], [fn])
-```bash
+```javaScript
 let scoreModel = mongoose.model('score',schema)
 new scoreModel({
   name: 'cdfdd',
@@ -67,7 +67,7 @@ new scoreModel({
 })
 ```
 . create  Model.create(doc(s), [callback])
-```bash
+```javaScript
 let scoreModel = mongoose.model('score',schema)
 scoreModel.create({
   name: 'cdfdd',
@@ -79,7 +79,7 @@ scoreModel.create({
 })
 ```
 .insertMany
-```bash
+```javaScript
 let scoreModel = mongoose.model('score',schema)
 scoreModel.insertMany([{
   name: 'yuyuyu',
@@ -92,10 +92,12 @@ scoreModel.insertMany([{
     console.log('insert success')
   }
 })
-````
+```
 #### 查询数据
-+ Model.find(conditions, [projection], [options], [callback])
-```bash
+
++ Model.find(conditions, [projection], [options], [callback]);
+
+```javaScript
 scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
   if (!err) {
     console.log(docs,'?????')
@@ -105,7 +107,7 @@ scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
 })
 ```
 + Model.findById(id, [projection], [options], [callback])
-```bash
+```javaScript
 scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
   if (!err) {
     console.log(docs,'?????')
@@ -116,7 +118,7 @@ scoreModel.find({name:/cd/},{name:1},(err,docs)=>{
 ```
 
 + $where 可以使用任意的 JavaScript 作为查询的一部分，包含JavaScript 表达式的字符串或者函数
-```bash
+```javaScript
  scoreModel.find({$where:"this.name == obj.name" || "this..score == obj.score"},(err,doc) => {
    if(!err){
       console.log(doc)

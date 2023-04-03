@@ -12,7 +12,7 @@ categories:
 hash 模式 用 createWebHashHistory() 创建的：
 HTML5 模式 用 createWebHistory() 创建 HTML5 模式. 需要服务端配置
 
-```bash
+```javaScript
 import { createRouter, createWebHashHistory } from 'vue-router'
 
 const router = createRouter({
@@ -24,11 +24,11 @@ const router = createRouter({
 ```
 *** 
 <!--more-->
-$\color{red}{字体颜色}$
+<!-- $\color{red}{字体颜色}$ -->
 ### 全局守卫 
 #### 全局路由守卫 beforeEach
 
-```bash
+```javaScript
 const router = createRouter({ ... })
 
 router.beforeEach((to, from, next) => {
@@ -40,8 +40,8 @@ router.beforeEach((to, from, next) => {
 ```
 
 #### 全局解析守卫 beforeResolve
-这和 router.beforeEach 类似，因为它在 **每次导航时都会触发**，但是确保在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被正确调用。
-```bash
+这和 `router.beforeEach` 类似，因为它在 **每次导航时都会触发**，但是确保在导航被确认之前，同时在所有组件内守卫和异步路由组件被解析之后，解析守卫就被正确调用。
+```javaScript
 router.beforeResolve(async to => {
   if (to.meta.requiresCamera) {
     try {
@@ -58,18 +58,20 @@ router.beforeResolve(async to => {
   }
 })
 ```
-router.beforeResolve 是获取数据或执行任何其他操作（如果用户无法进入页面时你希望避免执行的操作）的理想位置。
+`router.beforeResolve` 是获取数据或执行任何其他操作（如果用户无法进入页面时你希望避免执行的操作）的理想位置。
 
 #### 全局后置钩子 afterEach
 没有next 入参，不会改变路由。可以用在路由完成后，修改页面标题等
->router.afterEach((to, from,failure) => {
->   if (!failure) sendToAnalytics(to.fullPath)
->})
+```javaScript
+router.afterEach((to, from,failure) => {
+  if (!failure) sendToAnalytics(to.fullPath)
+})
+```
 
 ### 单个路由守卫
 #### 路由独享的守卫 beforeEnter
 路由配置上定义 beforeEnter 守卫：
-```bash
+```javaScript
 const routes = [
   {
     path: '/users/:id',
@@ -81,7 +83,7 @@ const routes = [
   },
 ]
 ```
-```bash
+```javaScript
 function removeQueryParams(to) {
   if (Object.keys(to.query).length)
     return { path: to.path, query: {}, hash: to.hash }
@@ -109,11 +111,11 @@ const routes = [
 ### 组件内守卫
 你可以为路由组件添加以下配置：
 
-+ beforeRouteEnter //此时不能用this 还未创建组件实例
-+ beforeRouteUpdate
-+ beforeRouteLeave // 离开守卫 通常用来预防用户在还未保存修改前突然离开。该导航可以通过返回 false 来取消。
++ `beforeRouteEnter` //此时不能用this 还未创建组件实例
++ `beforeRouteUpdate`
++ `beforeRouteLeave` // 离开守卫 通常用来预防用户在还未保存修改前突然离开。该导航可以通过返回 false 来取消。
 
-```bash
+```javaScript
 const UserDetails = {
   template: `...`,
   beforeRouteEnter(to, from) {
@@ -131,4 +133,5 @@ const UserDetails = {
     // 在导航离开渲染该组件的对应路由时调用
     // 与 `beforeRouteUpdate` 一样，它可以访问组件实例 `this`
   },
-}```
+}
+```

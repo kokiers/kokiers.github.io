@@ -8,7 +8,7 @@ tags:
 
 
 服务器设置header
-```bash
+```javaScript
 const render = require('./lib/render');
 const logger = require('koa-logger');
 const router = require('@koa/router')();
@@ -85,7 +85,7 @@ async function create(ctx) {
 if (!module.parent) app.listen(3000);
 ```
 
-```bash
+```vue
   <video autobuffer autoloop loop controls id="myvideo"></video>
   <script src="/ffmpeg.min.js"></script>
   <script type="text/javascript" charset="utf-8" >

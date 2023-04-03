@@ -25,7 +25,7 @@ DNS Prefetch，即DNS预获取，是前端优化的一部分。一般来说，�
 – Opera: Unknown
 – IE: 9+ (called “Pre-resolution” on blogs.msdn.com)
 
-```bash
+```html
 <meta http-equiv="x-dns-prefetch-control" content="on">// 如需关闭  改成off
 <link rel="dns-prefetch" href="//www.img.com">
 <link rel="dns-prefetch" href="//www.api.com">

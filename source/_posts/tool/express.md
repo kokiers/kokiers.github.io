@@ -14,11 +14,11 @@ express 基于 Node.js 平台，快速、开放、极简的 Web 开发框架
 
 <!--more-->
 #### 安装
-```
+```bash
 npm install express
 ```
 #### 启动服务
-```
+```javaScript
 const server = require('express')();
 server.get('/', function (req, res, next) {
   //do something
@@ -34,7 +34,7 @@ app.METHOD(PATH, HANDLER)
 + METHOD is an HTTP request method, in lowercase.
 + PATH is a path on the server.
 + HANDLER is the function executed when the route is matched.
-```
+```javaScript
 app.get('/', function (req, res) {
   res.send('hello world')
 })
@@ -43,7 +43,7 @@ app.get('/', function (req, res) {
 #### middleware 中间件
 
 ##### use
-```
+```javaScript
 var myLogger = function (req, res, next) {
   console.log('LOGGED')
   next()
@@ -57,7 +57,7 @@ app.use(myLogger)
 + [express.urlencoded](http://www.expressjs.com.cn/en/4x/api.html#express.urlencoded) parses incoming requests with URL-encoded payloads. NOTE: Available with Express 4.16.0+
 
 [static](http://www.expressjs.com.cn/en/4x/api.html#express.static)
-```
+```javaScript
 let options = {
   setHeaders: function (res, path, stat) {
     res.set('x-timestamp', Date.now())
@@ -67,9 +67,10 @@ server.use(express.static('public', options))
 ```
 #### 模板 template engines
 pug
-```
+```bash
 npm install pug
-
+```
+```javaScript
 //serve.js
 server.set('view engine', 'pug')
 server.get('/', function (req, res) {
@@ -79,8 +80,10 @@ server.get('/', function (req, res) {
 ![pug](../../images/express_pug.png)
 
 #### 调试DEBUG
-```
-lunix:DEBUG=express:* node index.js
-window:set DEBUG=express:* & node index.js
+```bash
+# lunix:
+DEBUG=express:* node index.js
+# window:
+set DEBUG=express:* & node index.js
 ```
 更多文档，请查看[官方4x文档](http://www.expressjs.com.cn/en/4x/api.html)

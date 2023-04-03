@@ -122,7 +122,7 @@ function toThousands(num) {
 #### url
 
 ##### url 分割query
-```bash
+```javaScript
 function splitParam(href) {
     href = href || location.search;
     var arr={},
@@ -136,7 +136,7 @@ function splitParam(href) {
 
 ##### url 分割query
 保留部分参数
-```bash
+```javaScript
 function addParam(href) {
     href = href || location.search;
     var name = ['f','ref','isapp','ssc','usc','td','dgfromsource','_vs'],
@@ -159,7 +159,7 @@ function addParam(href) {
 ```
 
 ##### a标签 解析 url
-```bash
+```javaScript
 function parseURL(url) {
     var a = document.createElement('a');
     a.href = url;
@@ -190,7 +190,7 @@ function parseURL(url) {
 }
 ```
 ##### 字符串混淆 加密 解密
-```bash
+```javaScript
 function strChange(str,c){
     if (c){
       let nstr = '' ,
@@ -230,7 +230,7 @@ strChange("6Lkcopkeipe5rw",1)
 
 
 ##### Storage
-```bash
+```javaScript
 var myPerson = {
     set: function (str) {
         var isIn = false,
@@ -292,15 +292,16 @@ var myPerson = {
 ```
 #### 排序相关
 ##### 乱序： 
+```javaScript
 var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 arr.sort(function () {
     let a = Math.random() - 0.5;
-    console.log(a)
     return a;
 });
-
+```
 
 ##### 正序 从小到大
+```javaScript
 function quickSort(arr) {
     if(arr.length <= 1) {
         return arr;  
@@ -317,8 +318,10 @@ function quickSort(arr) {
     }
     return quickSort(left).concat(current,quickSort(right));
 }
+```
 
 ##### 倒序 从小到大
+```javaScript
 function quickSort(arr) {
     if(arr.length <= 1) {
         return arr;  
@@ -335,3 +338,4 @@ function quickSort(arr) {
     }
     return quickSort(left).concat(current,quickSort(right));
 }
+```

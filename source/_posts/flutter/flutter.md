@@ -17,6 +17,7 @@ flutter run
  <!--more-->
 
 定义一个 Widget 组件 
+```dart
 Widget textSection = const Padding(
   padding: EdgeInsets.all(32),
   child: Text(
@@ -29,6 +30,7 @@ Widget textSection = const Padding(
     softWrap: true,// By setting softwrap to true, text lines will fill the column width before wrapping at a word boundary.
   ),
 );
+```
 
 
 https://docs.flutter.dev/development/ui/widgets/layout
@@ -38,7 +40,7 @@ https://docs.flutter.dev/development/ui/widgets/layout
 
 + Aligin
 
-```bash
+```dart
 Container(
     height: 120.0,
     width: 120.0,
@@ -74,7 +76,7 @@ FractionalOffset
 
 手势识别。
 GestureDetector 
-
+```dart
  Positioned(
   right: 24 - rL,
   bottom: 54 - rB,
@@ -104,7 +106,7 @@ GestureDetector
       print('end');
     },                                
   )),
-
+```
 
 
   Image vs ImageProvider
@@ -144,10 +146,4 @@ myImageWidget.image
 flutter 获取应用签名 （需要jre 低版本才能查看md5）
 keytool -list -v -keystore D:\XX\key.jks
 
-
-
-chat 问题修改
-搜索样式统一
-导航样式不一样得地方修改
-宠物一个地方获取 
 

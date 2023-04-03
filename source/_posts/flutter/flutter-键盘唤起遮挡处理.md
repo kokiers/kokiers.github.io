@@ -9,7 +9,7 @@ tags:
 
 监听键盘收起，用虚拟的元素撑起被键盘遮盖的元素。
 
-```bash
+```dart
 import 'dart:async';
 import 'dart:convert';
 import 'dart:io';

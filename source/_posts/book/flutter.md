@@ -12,10 +12,12 @@ Flutter 是谷歌开源的应用开发框架，仅通过一套代码库，就能
 中文版本文档： https://flutter.cn/
 
 #### 常用命令：
+```bash
 flutter clean
 flutter doctor
 flutter run
 flutter build apk --no-tree-shake-icons //打安卓包
+```
  <!--more-->
 
 https://docs.flutter.dev/development/ui/widgets/layout

@@ -52,8 +52,8 @@ let strLen:number = (str as string).length
 
 #### interface type
 interface 侧重描述数据结构。type 侧重描述类型. 二者都可描述对象 函数，都可extends。
-```bash
-# interface
+```javaScript
+// # interface
 interface Man{
     age: number
 }
@@ -62,7 +62,7 @@ interface Woman extends Man{
     sex: string
 }
 
-# type
+// # type
 type Dog{
     age: number
 }
@@ -70,12 +70,12 @@ type Animal = Dog & {
     sex: string
 }
 
-# type extends interface
+// # type extends interface
 type nAnimal = Man & {
     sex: string
 }
 
-# interface extends type
+// # interface extends type
 interface nAnimal extends Dog{
     sex: sting
 }

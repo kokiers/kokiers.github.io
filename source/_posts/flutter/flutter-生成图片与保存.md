@@ -16,7 +16,7 @@ tags:
 ```
 
 ##### 在屏幕外（不可见区域）渲染生成图片
-```bash
+```dart
 // Creates an image from the given widget by first spinning up a element and render tree,
 /// then waiting for the given [wait] amount of time and then creating an image via a [RepaintBoundary].
 /// [widget] 需要获取截图的widget

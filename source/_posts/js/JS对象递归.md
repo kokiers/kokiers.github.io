@@ -21,7 +21,7 @@ tags:
 
 <!--more-->
 
-```bash
+```javaScript
 let handleTree = function(data, prefix) {
   if (!data || !prefix) {
     return

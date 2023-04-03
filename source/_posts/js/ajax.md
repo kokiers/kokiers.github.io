@@ -12,7 +12,7 @@ date: 2019-07-06 11:02:08
 ### Create a ajax
 
 <!--more-->
-``` bash
+``` javaScript
 if (window.ActiveXObject) {
     xhr = new ActiveXObject("Microsoft.XMLHTTP");
 } else if (window.XMLHttpRequest) {
@@ -36,7 +36,7 @@ xhr.send(form);
 ### form data
 有了它 ，可以轻轻松松把数据传给后端。
 [MDN formData](https://developer.mozilla.org/zh-CN/docs/Web/API/FormData)
-```bash
+```javaScript
 let formData = new FormData(); 
 formData.append('username', 'Chris');
 ```

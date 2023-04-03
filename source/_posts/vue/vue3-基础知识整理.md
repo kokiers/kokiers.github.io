@@ -20,13 +20,15 @@ Vue 的组件可以按两种不同的风格书写：选项式 API 和组合式 A
 
 #### 组合式 (Composition API)
 vue3 新写法，推荐！ 
-在单文件组件中，组合式 API 通常会与 script setup搭配使用
+在单文件组件中，组合式 API 通常会与 `<script setup>`搭配使用
 
 ### 创建实例
-createApp
+`createApp`
 
+```javaScript
 const app = createApp(App)
 app.mount('#app')
+```
 
 ### ref reactive 区别
 
@@ -35,7 +37,7 @@ reactive() 里面是对象  取值 直接获取
 ref本质也是reactive，ref(obj)等价于reactive({value: obj})
 ref只能传入简单值，他的底层是reactive，所以reactive有的，他都有
 
-```bash
+```javaScript
 function reactive(obj) {
   return new Proxy(obj, {
     get(target, key) {
@@ -72,7 +74,7 @@ function ref(value) {
 .once
 .passive
 
-```bash
+```jsx
 <!-- 单击事件将停止传递 -->
 <a @click.stop="doThis"></a>
 
@@ -92,7 +94,7 @@ function ref(value) {
 
 ### watch
 
-```bash
+```javaScript
 //选项式写法：
  watch:{
     name:function(newVal,oldVal){

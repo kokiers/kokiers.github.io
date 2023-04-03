@@ -9,17 +9,17 @@ categories:
 ---
  
 双向数据绑定： 
- vue2 使用 Object.defineProperty(obj, prop, descriptor)
- vue3 使用 Proxy
+ vue2 使用 `Object.defineProperty(obj, prop, descriptor)`
+ vue3 使用 `Proxy`
  <!--more-->
 
  ie9以上支持。所以vue 不支持ie8以下的ie浏览器。
-Object.defineProperty 
+`Object.defineProperty` 
 描述符默认值汇总
-拥有布尔值的键 configurable、enumerable 和 writable 的默认值都是 false。
-属性值和函数的键 value、get 和 set 字段的默认值为 undefined。
+拥有布尔值的键 `configurable`、`enumerable` 和 `writable` 的默认值都是 `false`。
+属性值和函数的键 `value`、`get` 和 `set` 字段的默认值为 `undefined`。
 
- ```bash
+ ```javaScript
 
 let obj = {}
 let name = '12'

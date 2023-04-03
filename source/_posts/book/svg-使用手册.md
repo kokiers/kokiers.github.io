@@ -14,7 +14,7 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 
 #### defs
   defs 定义好形状，或者颜色变化的。最后use调用
-```bash
+```xml
 <svg viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Some graphical objects to use -->
@@ -35,11 +35,11 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 
 #### 基本形状元素
 + circle: cx cy r
-```
+```xml
   <circle cx="60" cy="60" r="50"/>
 ```
 + ellipse: cx cy rx ry
-```bash
+```xml
 <svg viewBox="0 0 20 30" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink">
   <!-- Some graphical objects to use -->
@@ -60,7 +60,7 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 <line x1="0" y1="80" x2="100" y2="20" stroke="black" />
 ```
 + polygon: 多边形 收尾连接
-```bash
+```xml
   <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Example of a polygon with the default fill -->
   <polygon points="0,100 50,25 50,75 100,0" />
@@ -71,7 +71,7 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 </svg>
 ```
 + polyline: 收尾不连接。当 no fill 是就是各点连成线
-```bash
+```xml
 <svg viewBox="0 0 200 100" xmlns="http://www.w3.org/2000/svg">
   <!-- Example of a polyline with the default fill -->
   <polyline points="0,100 50,25 50,75 100,0" />
@@ -83,7 +83,7 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 
 ```
 + rect: 矩形 x width height rx(圆角半径) ry
-  ```bash
+  ```xml
   <rect width="100" height="100" />
 
   <!-- Rounded corner rectangle -->
@@ -96,7 +96,7 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 
 ```
 #### 渐变元素
-```
+```xml
 <linearGradient>, <radialGradient>, <stop>
 
 
@@ -110,8 +110,9 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 <rect fill="url(#MyGradient)"
       x="10" y="10" width="100" height="100"/>
 ```
-```
+
 <radialGradient>
+```xml
 <defs>
     <radialGradient id="myGradient">
       <stop offset="10%" stop-color="gold" />
@@ -121,4 +122,4 @@ viewBox属性的值是一个包含4个参数的列表 min-x, min-y, width and he
 
   <!-- using my radial gradient -->
   <circle cx="5" cy="5" r="4" fill="url('#myGradient')" />
-  ````
+  ```

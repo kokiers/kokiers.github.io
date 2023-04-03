@@ -6,6 +6,7 @@ date: 2019-11-27 09:12:30
 categories:
   - js
 tags:
+ - vue
 ---
 
 #### 前言
@@ -27,7 +28,7 @@ vue中使用vue create app创建项目后，需要转发请求到后端的接口
 ##### 新建一个配置文件
 项目根目录下 新建一个 .env.test.local。这样 git忽略这个文件。
 
-```
+```javaScript
 NODE_ENV = 'development'
 VUE_APP_HOST = 'http://127.0.0.1:8090'
 ```
@@ -35,7 +36,7 @@ VUE_APP_HOST = 'http://127.0.0.1:8090'
 ##### 配置代理转发
 vue.config.js 拿到配置的数据
 
-```
+```javaScript
 let key  = ['/login','/api/']
 let host = process.env.VUE_APP_HOST || 'http://localhost:8080' 
 let obj  = {}
@@ -62,14 +63,14 @@ module.exports = {
 
 ##### 如何使用
 
-```
+```bash
 npx vue-cli-service serve --mode test 
 ```
 
-这样启动服务就会把api,login的接口请求转发到http://127.0.0.1:8090。
+这样启动服务就会把api,login的接口请求转发到 http://127.0.0.1:8090。
 
 指定 启动的服务端口 8083
-```
+```bash
 npx vue-cli-service serve --mode test --port 8083
 ```
 

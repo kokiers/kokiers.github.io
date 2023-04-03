@@ -8,9 +8,11 @@ tags:
 ---
 
 创建数组：
+```javaScript
 var arr  = [];
 var arr1 = array();
 var arr2 = new Array();
+```
 
 通过索引访问数组元素： arr[0]
 

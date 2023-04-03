@@ -28,7 +28,7 @@ npm install --global gulp-cli
 gulp.task('ugpop'） 调用这个 task ： gulp ugpop 即可。
 一般有 gulp.task('default'） 可以执行 ：gulp 即可
 
-``` bash
+``` javaScript
 var gulp = require('gulp');
 var uglify = require('gulp-uglify')
 
