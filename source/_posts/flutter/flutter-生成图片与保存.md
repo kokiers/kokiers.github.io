@@ -3,12 +3,14 @@ title: flutter 生成图片与保存
 lang: flutter
 abbrlink: df55c9c4
 date: 2022-12-08 11:10:56
+categories:
+ - flutter
 tags:
 ---
 
 #### 图片生成 
 
-
+<!-- more -->
 ##### 截图生成 
 
 ```bash

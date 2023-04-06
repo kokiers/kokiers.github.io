@@ -3,6 +3,8 @@ title: flutter
 lang: js
 abbrlink: 2a2a7e8a
 date: 2022-04-08 14:36:42
+categories:
+ - flutter
 tags:
 ---
 

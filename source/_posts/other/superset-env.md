@@ -3,6 +3,8 @@ title: superset window python 虚拟环境配置记录
 lang: other
 abbrlink: 4b6927f1
 date: 2023-03-07 22:27:44
+categories:
+  - superset
 tags:
 ---
 

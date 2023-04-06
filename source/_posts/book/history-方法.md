@@ -5,7 +5,7 @@ abbrlink: 64ae500f
 date: 2022-08-14 16:03:02
 tags:
 categories:
-  - js
+  - doc
 ---
 
  摘抄自MDN 文档，详见 [history Api 文档](https://developer.mozilla.org/zh-CN/docs/Web/API/History_API)

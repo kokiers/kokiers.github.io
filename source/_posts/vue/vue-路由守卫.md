@@ -24,7 +24,6 @@ const router = createRouter({
 ```
 *** 
 <!--more-->
-<!-- $\color{red}{字体颜色}$ -->
 ### 全局守卫 
 #### 全局路由守卫 beforeEach
 
@@ -135,3 +134,5 @@ const UserDetails = {
   },
 }
 ```
+
+

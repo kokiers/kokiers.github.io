@@ -5,7 +5,7 @@ abbrlink: 96b40927
 date: 2022-08-04 23:12:57
 tags:
 categories:
-  - js
+  - doc
 ---
 
 http 请求知识点汇总整理，详见[MDN HTTP文档](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Headers)

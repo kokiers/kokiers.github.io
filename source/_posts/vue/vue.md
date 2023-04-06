@@ -1,8 +1,8 @@
 ---
 lang: js
-title: vue 
+title: vue2 的知识
 categories:
-  - js
+  - vue
 tags:
   - vue
 abbrlink: c0add594
@@ -25,7 +25,7 @@ date: 2019-07-13 22:42:29
 #### Vue 组件开发
 [组件开发](https://cn.vuejs.org/v2/guide/components-registration.html)
 
-```bash
+```javaScript
 import child from './child'
 export default mychild{
   install: function (Vue) {
@@ -37,10 +37,10 @@ export default mychild{
 vue.use(mychild)
 ```
 #### Vue 响应式 
-[响应式](https://cn.vuejs.org/v2/guide/reactivity.html) Object.defineProperty
+[响应式](https://cn.vuejs.org/v2/guide/reactivity.html) `Object.defineProperty`
  
 + vue data中定义
-```
+```javaScript
 var vm = new Vue({
   data:{
     a:1
@@ -48,18 +48,18 @@ var vm = new Vue({
 })
 ```
 + vue set 方法向嵌套对象添加响应式
-```
+```javaScript
 Vue.set(vm.someObject, 'b', 2)
 ```
 + 已有对象赋值多个新属性
-```
+```javaScript
 this.someObject = Object.assign({}, this.someObject, { a: 1, b: 2 })
 ```
 #### Vue 路由
 [vue-router](https://router.vuejs.org/)
 
 + 全局前置守卫 确保调用next 否则钩子就不会被 resolved。
-```
+```javaScript
 const router = new VueRouter({ ... })
 
 router.beforeEach((to, from, next) => {
@@ -67,13 +67,13 @@ router.beforeEach((to, from, next) => {
 })
 ```
 + 全局后置钩子
-```
+```javaScript
 router.afterEach((to, from) => {
   // ...
 })
 ```
 + 路由独享的守卫
-```
+```javaScript
 const router = new VueRouter({
   routes: [
     {
@@ -87,7 +87,7 @@ const router = new VueRouter({
 })
 ```
 + 组件内的守卫
-```
+```javaScript
 const Foo = {
   template: `...`,
   beforeRouteEnter (to, from, next) {

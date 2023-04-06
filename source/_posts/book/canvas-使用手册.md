@@ -3,6 +3,8 @@ title: canvas 使用手册
 lang: js
 abbrlink: 3b2d7402
 date: 2021-09-06 14:55:08
+categories:
+  - doc
 tags:
  - 手册
 ---

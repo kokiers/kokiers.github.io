@@ -3,6 +3,8 @@ title: svg 使用手册
 lang: js
 abbrlink: 2538c5b0
 date: 2021-09-28 10:05:12
+categories:
+  - doc
 tags:
  - 手册
 ---

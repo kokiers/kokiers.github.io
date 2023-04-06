@@ -3,8 +3,8 @@ title: docker desktop
 lang: other
 abbrlink: 139433de
 date: 2023-02-20 10:14:38
-tags:
-- 工具推荐
+categories:
+  - superset
 ---
 
 windows 使用docker 可以安装 Docker Desktop。 在配合Windows 子系统，可完成一些传统虚拟机的工作。

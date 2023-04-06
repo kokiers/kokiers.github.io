@@ -4,7 +4,7 @@ title: react中使用CSS Modules
 abbrlink: eb91a32b
 date: 2019-11-26 18:09:46
 categories:
-  - css
+  - react
 tags:
   - css 
   - react

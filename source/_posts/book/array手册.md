@@ -1,7 +1,7 @@
 ---
 title: array 数组
 categories:
-  - js
+  - doc
 abbrlink: 2eaa9655
 date: 2019-07-17 10:42:05
 tags:

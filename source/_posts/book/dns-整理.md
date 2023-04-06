@@ -3,6 +3,8 @@ title: dns 整理
 lang: book
 abbrlink: d099dabd
 date: 2022-10-14 12:09:35
+categories:
+  - doc
 tags:
 ---
 
@@ -10,7 +12,7 @@ tags:
 www.google.com.cn 
 三级域名.二级域名.顶级域(通用顶级域，国家地区顶级域)
 
-
+<!-- more -->
 
 前端之优化 DNS预解析
 DNS Prefetch，即DNS预获取，是前端优化的一部分。一般来说，在前端优化中与 DNS 有关的有两点：

@@ -4,7 +4,7 @@ title: vue环境变量和模式的使用
 abbrlink: f1c0636f
 date: 2019-11-27 09:12:30
 categories:
-  - js
+  - vue
 tags:
  - vue
 ---

@@ -12,7 +12,7 @@ css 实现加载中点点点动画。
 <!--more-->
 用stylus写的。
 
-```bash
+```stylus
 $text-color = #2D3040
  .clip
     background-color:$text-color

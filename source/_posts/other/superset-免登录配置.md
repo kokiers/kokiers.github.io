@@ -3,6 +3,8 @@ title: superset 免登录配置
 lang: other
 abbrlink: 355ba238
 date: 2023-03-10 17:57:45
+categories:
+  - superset
 tags:
 ---
 

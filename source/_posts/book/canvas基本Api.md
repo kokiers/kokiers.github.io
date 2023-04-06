@@ -1,7 +1,7 @@
 ---
 title: canvas Api
 categories:
-  - js
+  - doc
 tags:
   - canvas
 abbrlink: 6f7abb59
