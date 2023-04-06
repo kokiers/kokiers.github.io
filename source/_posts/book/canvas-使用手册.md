@@ -13,6 +13,7 @@ tags:
 #### arc 
   ctx.arc(x, y, radius, startAngle, endAngle, anticlockwise); //anticlockwise 可选的Boolean值 ，如果为 true，逆时针绘制圆弧，反之，顺时针绘制。 
 
+<!--more-->
 ```javaScript
 var canvas = document.createElement('canvas')
 var ctx = canvas.getContext('2d');
@@ -22,7 +23,6 @@ ctx.beginPath();
 ctx.arc(70, 70, 20, 0, Math.PI / 2, false);
 ctx.fill(); //fill 画实心， stroke 是画空心
 ```
-<!--more-->
 
 #### 文字
 ```javaScript

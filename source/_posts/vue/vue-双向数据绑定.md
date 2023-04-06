@@ -19,7 +19,33 @@ categories:
 拥有布尔值的键 `configurable`、`enumerable` 和 `writable` 的默认值都是 `false`。
 属性值和函数的键 `value`、`get` 和 `set` 字段的默认值为 `undefined`。
 
+
 <!-- more -->
+```javaScript
+var o = {}; // 创建一个新对象
+
+// 在对象中添加一个属性与数据描述符的示例
+Object.defineProperty(o, "a", {
+  value : 37,
+  writable : true,
+  enumerable : true,
+  configurable : true
+});
+
+var bValue = 38;
+Object.defineProperty(o, "b", {
+  // 使用了方法名称缩写（ES2015 特性）
+  // 下面两个缩写等价于：
+  // get : function() { return bValue; },
+  // set : function(newValue) { bValue = newValue; },
+  get() { return bValue; },
+  set(newValue) { bValue = newValue; },
+  enumerable : true,
+  configurable : true
+});
+
+```
+
 下面通过2个例子进行比较，期望： input 输入框的值同步在span中。
 > html 
 ```html

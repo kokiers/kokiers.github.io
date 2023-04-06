@@ -8,6 +8,23 @@ categories:
 tags:
 ---
 
+TypeScript 作为javaScript 的超集，它可以编译成普通的JavaScript代码，简称TS。
+TS 是编译型预言，在编写阶段可规避错误。javaScript是解释型语言，在运行中才有可能暴露错误。
+<!-- more -->
+#### 安装
+针对使用npm的用户：`npm install -g typescript`
+
+#### 编译
+> greet.ts
+```ts
+function greeter(person) {
+    return "Hello, " + person;
+}
+let user = "Jane User";
+document.body.innerHTML = greeter(user);
+
+```
+在命令行上，运行TypeScript编译器：`tsc greet.ts` 输出一个 `greet.js`
 #### 类型
  + 普通类型：
     number 
@@ -29,7 +46,7 @@ tags:
 #### 类型断言
 + 尖括号 
 + as 
-```bash
+```javaScript
 let str:any = 'abc';
 let strLen:number = (<sting>str).length
 let strLen:number = (str as string).length
@@ -87,7 +104,7 @@ interface nAnimal extends Dog{
  + 必传参数，可选参数
  + 联合类型
  + any
- ```
+ ```javaScript
 function doSome(a: number | string, b: string, c?：number, d: any){
 
 }
@@ -95,7 +112,7 @@ function doSome(a: number | string, b: string, c?：number, d: any){
 
 #### 函数重载
 把精确得放在前面，不精确的在后面
-```bash
+```javaScript
 function compile(a:string,b:string): string
 
 function compile(a: number, b:number):number

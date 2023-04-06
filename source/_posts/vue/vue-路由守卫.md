@@ -12,6 +12,7 @@ categories:
 hash 模式 用 createWebHashHistory() 创建的：
 HTML5 模式 用 createWebHistory() 创建 HTML5 模式. 需要服务端配置
 
+  <!--more-->
 ```javaScript
 import { createRouter, createWebHashHistory } from 'vue-router'
 
@@ -23,7 +24,6 @@ const router = createRouter({
 })
 ```
 *** 
-<!--more-->
 ### 全局守卫 
 #### 全局路由守卫 beforeEach
 

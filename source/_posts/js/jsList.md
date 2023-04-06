@@ -5,15 +5,14 @@ categories:
   - js
 abbrlink: 4d191d65
 date: 2019-07-16 18:24:42
-tags:
-  - jsFc
 ---
 
 不定期更新一些js小方法
+    <!-- more -->
 
 #### 数组
 ##### 数组存在
-```bash
+```javaScript
 function inArray(val,arr) {
 	let arlen = arr.length;	
 	let test = '';		
@@ -26,10 +25,9 @@ function inArray(val,arr) {
     return false;
 };
 ```
-<!--more-->
 
 ##### 对象拷贝
-```bash
+```javaScript
 function deepCopyObj(obj) { 
 
 	let str, result = obj.constructor === Array ? [] : {};
@@ -51,7 +49,7 @@ function deepCopyObj(obj) {
 
 ##### 日期格式化
 
-```bash
+```javaScript
 function formatTime(time,fmt) {
   fmt = fmt || 'yyyy-MM-dd'
   time = new Date(time)
@@ -78,7 +76,7 @@ function formatTime(time,fmt) {
 #### 字符串String
 
 ##### 字符串分隔空格
-```bash
+```javaScript
 function andleSplit(str){
     var temp = str.split(/[\s+,]/g);
     for (var i = 0; i < temp.length; i++) {
@@ -91,7 +89,7 @@ function andleSplit(str){
 }
 ```
 ##### string 替换
-```bash
+```javaScript
 String.prototype.format = String.prototype.f = function () {
     var s = this,
         i = arguments.length;
@@ -107,7 +105,7 @@ var result1=template1.format("loogn",22,9090);
 #### 数字Number
 
 ##### 数字千分位格式化
-```bash
+```javaScript
 function toThousands(num) {
     var num = (num || 0).toString(), result = '';
     while (num.length > 3) {

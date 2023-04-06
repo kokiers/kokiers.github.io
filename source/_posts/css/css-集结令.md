@@ -10,10 +10,11 @@ tags:
  - css 技巧
 ---
 
+不间断记录css小技巧
+ #### shape-outside 设置文字环绕
+ <!-- more -->
 
- shape-outside 设置文字环绕
-
-```bash
+```css
    /* 关键字值 */
   shape-outside: none;
   shape-outside: margin-box;

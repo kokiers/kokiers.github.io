@@ -3,9 +3,13 @@ title: koa-ffmpeg
 lang: tool
 abbrlink: 654263c0
 date: 2021-03-26 16:20:54
+categories:
+ - tool
 tags:
 ---
 
+web端播放视频，碰到有些格式不能正常播放，那样就可以对视频进行转换再播放。比如本文提到的 ffmpeg
+<!-- more -->
 
 服务器设置header
 ```javaScript
@@ -84,6 +88,8 @@ async function create(ctx) {
 
 if (!module.parent) app.listen(3000);
 ```
+
+#### 在vue中使用
 
 ```vue
   <video autobuffer autoloop loop controls id="myvideo"></video>

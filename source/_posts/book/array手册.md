@@ -13,6 +13,7 @@ var arr  = [];
 var arr1 = array();
 var arr2 = new Array();
 ```
+<!-- more -->
 
 通过索引访问数组元素： arr[0]
 

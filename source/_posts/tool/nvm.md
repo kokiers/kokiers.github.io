@@ -11,8 +11,8 @@ tags:
 
 nvm 是nodejs的版本管理器,切换版本，方便开发。
 
-下载 推荐github下载安装 https://github.com/coreybutler/nvm-windows/releases
-
+下载 推荐github下载安装[下载地址](https://github.com/coreybutler/nvm-windows/releases)
+<!-- more -->
 查看已经安装的版本
  `nvm list `
 
