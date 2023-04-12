@@ -6,7 +6,36 @@ date: 2023-04-07 13:16:28
 tags:
 ---
 
+### WebSocket
+`WebSocket `对象提供了用于创建和管理 WebSocket 连接，以及可以通过该连接发送和接收数据的 API。
+使用 WebSocket() 构造函数来构造一个 WebSocket。
+<!-- more -->
+websocket的常量与状态值：
 
+<!-- | Align `left`   | center align |   Align right |
+| :------------- | :----------: | ------------: |
+| `left`-aligned |   centered   | right-aligned |
+| `左`对齐        |    中对齐     |         右对齐 | -->
+
+| websocket的常量   |  状态值 |
+| :------------- |  ------------: |
+| WebSocket.CONNECTING | 0|
+| WebSocket.OPEN	| 1 |
+| WebSocket.CLOSING	| 2 |
+| WebSocket.CLOSED	| 3 |
+
+### 方法
+关闭当前链接:`WebSocket.close([code[, reason]])` 
+发送消息：`WebSocket.send(data)`
+
+### 事件
+使用 `addEventListener()` 或将一个事件监听器赋值给本接口的 `oneventname` 属性，来监听下面的事件。
++ `close `: 连接被关闭时触发 ||  通过 `onclose` 属性
++ `error` : 连接因错误而关闭时触发 || 通过 `onerror` 属性来设置。
++ `message` :  WebSocket 收到数据时触发 ||  通过 `onmessage `属性来设置
++ `open` : 连接成功触发 || 通过 `onopen `属性来设置
+
+### 实战完整例子
 ```javaScript
 enum chatTypes {
 	doctor = 1,
@@ -44,9 +73,6 @@ interface Messages {
 	[index: number]: Message
 }
 
-import { useSocketStore } from '@/stores/socket'
-const socketStore = useSocketStore();
-
 class wsManager {
 	lockReconnect = false;
 	heartMsg = JSON.stringify({
@@ -63,7 +89,7 @@ class wsManager {
 	socketServer = window.location.host
 	protocols = window.location.protocol == 'http:' ? 'ws' : 'wss'
 	userId = sessionStorage.getItem('uid')
-	chatType = chatTypes.doctor // 1 问诊 2 客服 
+	chatType = chatTypes.doctor 
 	token = sessionStorage.getItem('token')
 	websock!: WebSocket;
 
@@ -78,25 +104,20 @@ class wsManager {
 	init() {
 		if (!sessionStorage.getItem('token') || !sessionStorage.getItem('uid')) {
 			this.lockReconnect = true;
-			socketStore.setSatus(4,this.chatType == chatTypes.doctor)
 			return;
 		}
 		let url = this.getUrl();
 		this.websock = new WebSocket(url);
 		this.websock.onmessage = (val: any) => {
-			socketStore.setSatus(1,this.chatType == chatTypes.doctor)
 			this.wsReset();
 		};
 		this.websock.onopen = (val: any) => {
-			socketStore.setSatus(1,this.chatType == chatTypes.doctor)
 			this.wsHeartbeat();
 		};
 		this.websock.onerror = (e: any) => {
-			socketStore.setSatus(4,this.chatType == chatTypes.doctor)
 			this.wsReconnect();
 		};
 		this.websock.onclose = (e: any) => {
-			socketStore.setSatus(3,this.chatType == chatTypes.doctor)
 			if (this.lockReconnect) {
 				return
 			}

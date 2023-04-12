@@ -14,7 +14,7 @@ tags:
 + 封装：针对对象属性，以及修改属性的方法进行封装；
 + 继承：你可以在创建新对象的时候继承来自上一个对象的所有属性和方法（
 + 多态：具体表现为方法重载和方法重写（ prototype ）
-
+<!-- more -->
 
 #### es5 
 
@@ -69,7 +69,6 @@ class Cat {
 }
 
 let cat1 = new Cat('喵喵', 1, 'female');
-
 
 ```
 
@@ -134,33 +133,155 @@ console.log(instance2.color);//"red,green,blue"
 + 缺点：
 实例对象instance1上的两个属性就屏蔽了其原型对象SubType.prototype的两个同名属性。所以，组合模式的缺点就是在使用子类创建实例对象时，其原型中会存在两份相同的属性/方法。
 
-#### 共享原型继承
-
-+ 原型式继承
-
-
-+ 寄生式继承
-
-+ 寄生组合式继承
-结合借用构造函数传递参数和寄生模式实现继承
-+ ES6中class的继承（新）
-
-```javaScript
-function Parent() {
-  this.parentName = '父类';
+```javascript
+function SuperType(name){
+  this.name = name;
+  this.colors = ["red", "blue", "green"];
 }
-Parent.prototype.getParentName = function() {
-  return this.parentName;
+SuperType.prototype.sayName = function(){
+  alert(this.name);
 };
 
-function Child() {
-  this.childName = '子类';
+function SubType(name, age){
+  // 继承属性
+  // 第二次调用SuperType()
+  SuperType.call(this, name);
+  this.age = age;
 }
-Child.prototype = new Parent();
-// Child.prototype.getChildName = function() {
-//   return this.childName
-// };
 
-var c = new Child();
-console.log(c.getParentName()); // '父类'
+// 继承方法
+// 构建原型链
+// 第一次调用SuperType()
+SubType.prototype = new SuperType(); 
+// 重写SubType.prototype的constructor属性，指向自己的构造函数SubType
+SubType.prototype.constructor = SubType; 
+SubType.prototype.sayAge = function(){
+    alert(this.age);
+};
+
+var instance1 = new SubType("Nicholas", 29);
+instance1.colors.push("black");
+alert(instance1.colors); //"red,blue,green,black"
+instance1.sayName(); //"Nicholas";
+instance1.sayAge(); //29
+
+var instance2 = new SubType("Greg", 27);
+alert(instance2.colors); //"red,blue,green"
+instance2.sayName(); //"Greg";
+instance2.sayAge(); //27
 ```
+
+
+#### 原型式继承
+
+缺点：
+原型链继承多个实例的引用类型属性指向相同，存在篡改的可能。
+无法传递参数
+另外，ES5中存在Object.create()的方法，能够代替上面的object方法。
+```javascript
+function object(obj){
+  // function F(){}
+  // F.prototype = obj;
+	// return new F();
+	return Object.create(obj)
+}
+var person = {
+  name: "Nicholas",
+  friends: ["Shelby", "Court", "Van"]
+};
+
+var anotherPerson = object(person);
+anotherPerson.name = "Greg";
+anotherPerson.friends.push("Rob");
+
+var yetAnotherPerson = object(person);
+yetAnotherPerson.name = "Linda";
+yetAnotherPerson.friends.push("Barbie");
+
+console.log(anotherPerson,person,yetAnotherPerson);   //"Shelby,Court,Van,Rob,Barbie"
+```
+
+
+#### 寄生式继承
+核心：在原型式继承的基础上，增强对象，返回构造函数
+```javaScript
+function createAnother(original){
+  var clone = object(original); // 通过调用 object() 函数创建一个新对象
+  clone.sayHi = function(){  // 以某种方式来增强对象
+    alert("hi");
+  };
+  return clone; // 返回这个对象
+}
+```
+
+#### 寄生组合式继承
+结合借用构造函数传递参数和寄生模式实现继承
+
+```javaScript
+function inheritPrototype(subType, superType){
+  var prototype = Object.create(superType.prototype); // 创建对象，创建父类原型的一个副本
+  prototype.constructor = subType;                    // 增强对象，弥补因重写原型而失去的默认的constructor 属性
+  subType.prototype = prototype;                      // 指定对象，将新创建的对象赋值给子类的原型
+}
+
+// 父类初始化实例属性和原型属性
+function SuperType(name){
+  this.name = name;
+  this.colors = ["red", "blue", "green"];
+}
+SuperType.prototype.sayName = function(){
+  alert(this.name);
+};
+
+// 借用构造函数传递增强子类实例属性（支持传参和避免篡改）
+function SubType(name, age){
+  SuperType.call(this, name);
+  this.age = age;
+}
+
+// 将父类原型指向子类
+inheritPrototype(SubType, SuperType);
+
+// 新增子类原型属性
+SubType.prototype.sayAge = function(){
+  alert(this.age);
+}
+
+var instance1 = new SubType("xyc", 23);
+var instance2 = new SubType("lxy", 23);
+
+instance1.colors.push("2"); // ["red", "blue", "green", "2"]
+instance1.colors.push("3"); // ["red", "blue", "green", "3"]
+
+```
+#### ES6中class的继承（新）
+
+```javascript
+class Point { /* ... */ }
+
+class ColorPoint extends Point {
+  constructor(x, y, color) {
+    super(x, y); // 调用父类的constructor(x, y)
+    this.color = color;
+  }
+
+  toString() {
+    return this.color + ' ' + super.toString(); // 调用父类的toString()
+  }
+}
+```
+
+`Object.getPrototypeOf()`方法可以用来从子类上获取父类。可以判断一个类是否继承了另一个类。
+```javaScript
+class Point { /*...*/ }
+
+class ColorPoint extends Point { /*...*/ }
+
+Object.getPrototypeOf(ColorPoint) === Point
+```
+
+继承转载自[JavaScript常用八种继承方案 by 程序员依扬](https://juejin.cn/post/6844903696111763470)
+转载自[阮一峰老师](https://es6.ruanyifeng.com/#docs/class-extends)
+
+
+
