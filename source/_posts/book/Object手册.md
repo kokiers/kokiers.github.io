@@ -10,6 +10,7 @@ categories:
 
 
 Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 `Object()` 构造函数或者使用 `对象字面量` 的方式创建
+<!-- more -->
 
 创建
 ```JavaScript
