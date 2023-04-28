@@ -13,10 +13,22 @@ categories:
 
 Vue 的组件可以按两种不同的风格书写：选项式 API 和组合式 API。
 <!--more-->
+```javaScript
+
+
+```
 
 #### 选项式 (Options api)
 个人理解与vue2差不多
 官方解释： 使用选项式 API，我们可以用包含多个选项的对象来描述组件的逻辑，例如 data、methods 和 mounted。选项所定义的属性都会暴露在函数内部的 this 上，它会指向当前的组件实例。
+
+
+
+
+```javascript
+```
+
+
 
 #### 组合式 (Composition API)
 vue3 新写法，推荐！ 
@@ -122,3 +134,26 @@ watchEffect(()=>{
 
 
  nexttick
+
+#### 组件中参数+函数传递
++ provide inject
+```javaScript
+// parent
+import { provide,ref } from 'vue';
+
+let myName = ref('haibing')
+let changeName = (v:string)=>{
+  myName.value = v
+}
+provide('myName',myName)
+provide('changeName',changeName)
+```
+```javaScript
+// child or grandson
+   import {inject} from 'vue'
+  
+  let aName = inject('myName')
+  // 调用函数的例子 2种做法。
+  let setName = inject('changeName') as Function 
+  let setNameT = inject('changeName',Function,true)
+```

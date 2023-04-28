@@ -107,3 +107,26 @@ const Foo = {
   }
 }
 ```
+
+
+vue 原理
+vue2 vue3 区别
+vue 组件生命周期，组件通信
+
+uniapp 与flutter 优缺点，取舍？
+uniapp 是vue写的，更容易上手。 需要转译成原生的，不够流畅。 插件少，很多需要付费。
+flutter 是谷歌公司发布的，更原生，更流畅。插件更多，更方便。就是国内资料较少。
+
+
+
+```javascript
+async function sleep(millis) {
+      new Promise(()=>{
+   setTimeout(()=>{
+    resolve()
+    },millis)
+      })
+}
+```
+
+

@@ -68,7 +68,10 @@ let strLen:number = (str as string).length
 
 
 #### interface type
-interface 侧重描述数据结构。type 侧重描述类型. 二者都可描述对象 函数，都可extends。
+interface 侧重描述数据结构。
+type 侧重描述类型. 二者都可描述对象 函数，都可extends。
+平时开发中，一般使用组合或者交叉类型的时候，用 type。
+一般要用类的 extends 或 implements 时，用 interface。
 ```javaScript
 // # interface
 interface Man{
@@ -97,6 +100,27 @@ interface nAnimal extends Dog{
     sex: sting
 }
 
+```
+
+##### 不同点
+
++ type可，interface 不行
+  可用声明基本类型，联合类型，交叉类型，元组。 
++ interface 可以 type 不行
+  合并重复声明. type 的话会报错，不合法。
+```javascript
+interface Person {
+    name: string
+}
+
+interface Person {         // 重复声明 interface，就合并了
+    age: number 
+}
+
+const person: Person = {
+    name: 'lin',
+    age: 18
+}
 ```
 
 
