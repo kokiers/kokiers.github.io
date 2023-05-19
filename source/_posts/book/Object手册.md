@@ -81,3 +81,60 @@ var c = Object.create(null);
 var a = {}
 var b = {}
 Object.is(a, b);
+
+
+`Object.getOwnPropertyNames()`：返回一个数组，它包含了指定对象所有的可枚举或不可枚举的属性名。
+`Object.getOwnPropertySymbols()`：返回一个数组，它包含了指定对象自身所有的符号属性。
+上面两种方法一起 与 下面一样。
+`Reflect.ownKeys()`:方法可以返回所有类型的键名，包括常规键名和 Symbol 键名。 
+
+
+Symbol.for() 会在全局注册，可以设置同一个symbol。
+```js
+Symbol.for("bar") === Symbol.for("bar")// true
+Symbol("bar") === Symbol("bar") //fasle
+// Symbol.keyFor()方法返回一个已登记的 Symbol 类型值的key。
+let s1 = Symbol.for("foo");
+Symbol.keyFor(s1) // "foo"
+let s2 = Symbol("foo");
+Symbol.keyFor(s2) // undefined
+
+```
+
+`Object.defineProperty(obj, name, desc)`在无法定义属性时，会抛出一个错误，而`Reflect.defineProperty(obj, name, desc)`则会返回false
+
+Reflect对象一共有 13 个静态方法。
+
+Reflect.apply(target, thisArg, args)
+Reflect.construct(target, args)
+`Reflect.get(target, name, receiver)`: name属性部署了读取函数（getter），则读取函数的this绑定receiver。
+`Reflect.set(target, name, value, receiver)`: name属性部署了读取函数（getter），则读取函数的this绑定receiver。如果是传入receiver，则触发 `Proxy.defineProperty`拦截。如无receiver。则不会触发。
+Reflect.defineProperty(target, name, desc)
+Reflect.deleteProperty(target, name)
+Reflect.has(target, name)
+Reflect.ownKeys(target)
+Reflect.isExtensible(target)
+Reflect.preventExtensions(target)
+Reflect.getOwnPropertyDescriptor(target, name)
+Reflect.getPrototypeOf(target)
+Reflect.setPrototypeOf(target, prototype)
+
+```js
+function Greeting(name,age) {
+    console.log(name,age)
+  this.name = name;
+  this.age = age || 1
+}
+
+// new 的写法
+// const instance = new Greeting('张三');
+
+// Reflect.construct 的写法
+const instance = Reflect.construct(Greeting, ['张三',10]);
+```
+
+class static 方法不会被实例继承。可以被子类继承（也可以用super 调用）
+
+
+
+

@@ -136,3 +136,12 @@ const UserDetails = {
 ```
 
 
+$route 与 $router
+```js
+// this.$router 是路由实例。
+this.$router.push()
+// $route 是路由信息对象
+this.$route.query 
+this.$route.params
+```
+

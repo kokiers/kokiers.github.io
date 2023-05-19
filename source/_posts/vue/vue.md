@@ -129,4 +129,31 @@ async function sleep(millis) {
 }
 ```
 
+v-on 常用修饰符
+.stop 该修饰符将阻止事件向上冒泡。同理于调用 event.stopPropagation() 方法
+.prevent 该修饰符会阻止当前事件的默认行为。同理于调用 event.preventDefault() 方法
+.self 该指令只当事件是从事件绑定的元素本身触发时才触发回调
+.once 该修饰符表示绑定的事件只会被触发一次
+
+
+$route和$router的区别？
+$route是“路由信息对象”，包括path，params，hash，query，fullPath，matched，name等路由信息参数。
+$router是’路由实例’对象包括了路由的跳转方法，钩子函数等。
+
+
+#### vuex
+有五种,分别是State , Getter , Mutation , Action , Module (就是mapAction)
+
+1. state：vuex的基本数据，用来存储变量
+
+2. geeter：从基本数据(state)派生的数据，相当于state的计算属性
+
+3. mutation：提交更新数据的方法，必须是同步的(如果需要异步使用action)。每个mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数，提交载荷作为第二个参数。
+
+4. 
+action：和mutation的功能大致相同，不同之处在于 ==》
+1. Action 提交的是 mutation，而不是直接变更状态。 
+2. Action 可以包含任意异步操作。
+
+5. modules：模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。
 

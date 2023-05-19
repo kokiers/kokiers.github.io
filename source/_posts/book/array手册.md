@@ -46,3 +46,39 @@ arr.forEach((item,index,arr)=>{}); 没有办法中止或者跳出 forEach() 循�
 
 参考：
 [isArray](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array)
+
+
+
+Set
+new Set()
++ add
++ has 
++ delete
++ forEach
+
+WeakSet 只能是对象，不能forEach，没有length
++ add
++ has 
++ delete
+
+Map 弥补了对象key只能是字符串。
++ size 返回长度
++ has 返回布尔值
++ set 设置值
++ get 获取值
++ delete 删除键，返回布尔值。
++ clear 清除所有，无返回值。
+
+Map.prototype.keys()：返回键名的遍历器。
+Map.prototype.values()：返回键值的遍历器。
+Map.prototype.entries()：返回所有成员的遍历器。
+Map.prototype.forEach()：遍历 Map 的所有成员。
+
+WeekMap 与Map 结构类似，区别有：
++ 1.WeekMap只接受对象为键名（null也不行）。
++ 2.WeakMap的键名所指向的对象，不计入垃圾回收机制（不影响键名所指向的对象被回收)。
+
+WeekMap有四个方法可用：get()、set()、has()、delete()。
+
+
+垃圾回收
