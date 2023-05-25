@@ -68,3 +68,6 @@ quadraticCurveTo(cp1x, cp1y, x, y)
 bezierCurveTo(cp1x, cp1y, cp2x, cp2y, x, y)
 ```
 绘制三次贝塞尔曲线，cp1x,cp1y为控制点一，cp2x,cp2y为控制点二，x,y为结束点。
+
+`globalCompositeOperation`
+ this.ctx.globalCompositeOperation = 'source-over';
