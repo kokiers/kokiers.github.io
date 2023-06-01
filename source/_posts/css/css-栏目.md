@@ -29,7 +29,7 @@ vmin	相对于视口*较小尺寸的 1％
 vmax	相对于视口*较大尺寸的 1％
 %	相对于父元素
 
-### transition
+### transition 过度
 transition是过度动画。但是transition并不能实现独立的动画，只能在某个标签元素样式或状态改变时进行平滑的动画效果过渡，而不是马上改变
 属性可以被指定为一个或多个CSS属性的过渡效果，多个属性之间用逗号进行分隔，必须规定两项内容：
 `transition` 是个简写属性。`transition: property duration timing-function delay`;
@@ -161,7 +161,7 @@ skewX(angle)	定义沿着 X 轴的 2D 倾斜转换。
 skewY(angle)	定义沿着 Y 轴的 2D 倾斜转换。
 perspective(n)	为 3D 转换元素定义透视视图。
 
-#### animation 动画
+#### animation 自定义动画
 `animation: name duration timing-function delay iteration-count direction;`
 animation-name：动画名称(@keyframes 预设动画)
 animation-duration：动画持续时间
