@@ -1,0 +1,791 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/kokier.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/kokier.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/kokier.png?v=6.0.0">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="HTTP 响应状态代码HTTP 响应状态代码指示特定 HTTP 请求是否已成功完成。 响应分为五类： 信息响应 （ –100 - 199)100 Continue此临时响应指示客户端应继续请求，如果请求已完成，则应忽略响应。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="http 状态码">
+<meta property="og:url" content="https://kokiers.github.io/uncategorized/e1434ae1.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="HTTP 响应状态代码HTTP 响应状态代码指示特定 HTTP 请求是否已成功完成。 响应分为五类： 信息响应 （ –100 - 199)100 Continue此临时响应指示客户端应继续请求，如果请求已完成，则应忽略响应。">
+<meta property="og:locale" content="http">
+<meta property="og:updated_time" content="2024-04-15T12:22:19.922Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="http 状态码">
+<meta name="twitter:description" content="HTTP 响应状态代码HTTP 响应状态代码指示特定 HTTP 请求是否已成功完成。 响应分为五类： 信息响应 （ –100 - 199)100 Continue此临时响应指示客户端应继续请求，如果请求已完成，则应忽略响应。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://kokiers.github.io/uncategorized/e1434ae1.html">
+
+
+
+
+
+  <title>http 状态码 | kokiers</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="http">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">kokiers</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/uncategorized/e1434ae1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">http 状态码</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-06-28T15:39:25+08:00">2023-06-28</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>HTTP 响应状态代码<br>HTTP 响应状态代码指示特定 HTTP 请求是否已成功完成。 响应分为五类：</p>
+<h3 id="信息响应-（-–100-199"><a href="#信息响应-（-–100-199" class="headerlink" title="信息响应 （ –100 - 199)"></a>信息响应 （ –100 - 199)</h3><h4 id="100-Continue"><a href="#100-Continue" class="headerlink" title="100 Continue"></a>100 Continue</h4><p>此临时响应指示客户端应继续请求，如果请求已完成，则应忽略响应。</p>
+<a id="more"></a>
+<h4 id="101-Switching-Protocols"><a href="#101-Switching-Protocols" class="headerlink" title="101 Switching Protocols"></a>101 Switching Protocols</h4><p>发送此代码是为了响应来自客户端的升级请求标头，并指示服务器正在切换到的协议。</p>
+<h4 id="102-处理-（WebDAV"><a href="#102-处理-（WebDAV" class="headerlink" title="102 处理 （WebDAV)"></a>102 处理 （WebDAV)</h4><p>此代码指示服务器已收到并正在处理请求，但尚无可用的响应。</p>
+<h4 id="103-Early-Hints-实验的"><a href="#103-Early-Hints-实验的" class="headerlink" title="103 Early Hints 实验的"></a>103 Early Hints 实验的</h4><p>此状态代码主要用于 Link 标头，让用户代理在服务器准备响应时开始预加载资源。</p>
+<h3 id="成功的响应-（-–200-299"><a href="#成功的响应-（-–200-299" class="headerlink" title="成功的响应 （ –200-299)"></a>成功的响应 （ –200-299)</h3><h4 id="200-OK"><a href="#200-OK" class="headerlink" title="200 OK"></a>200 OK</h4><p>请求成功。“成功”的结果含义取决于HTTP方法：<br>GET：资源已在消息正文中获取和传输。<br>HEAD：表示标头包含在响应中，没有任何消息正文。<br>PUT或：描述操作结果的资源在消息正文中传输。POST<br>TRACE：消息正文包含服务器接收的请求消息。</p>
+<h4 id="201-Created"><a href="#201-Created" class="headerlink" title="201 Created"></a>201 Created</h4><p>请求成功，因此创建了一个新资源。这通常是在请求或某些请求之后发送的响应。POSTPUT</p>
+<h4 id="202-Accepted"><a href="#202-Accepted" class="headerlink" title="202 Accepted"></a>202 Accepted</h4><p>已收到该请求，但尚未采取行动。 它是非承诺的，因为在 HTTP 中无法稍后发送指示请求结果的异步响应。 它适用于其他进程或服务器处理请求的情况，或用于批处理。</p>
+<h4 id="203-Non-Authoritative-Information"><a href="#203-Non-Authoritative-Information" class="headerlink" title="203 Non-Authoritative Information"></a>203 Non-Authoritative Information</h4><p>此响应代码表示返回的元数据与源服务器提供的元数据不完全相同，而是从本地或第三方副本收集的。 这主要用于另一个资源的镜像或备份。 除该特定情况外，响应优先于此状态。200 OK</p>
+<h4 id="204-No-Content"><a href="#204-No-Content" class="headerlink" title="204 No Content"></a>204 No Content</h4><p>此请求没有要发送的内容，但标头可能很有用。 用户代理可能会使用新标头更新此资源的缓存标头。</p>
+<h4 id="205-Reset-Content"><a href="#205-Reset-Content" class="headerlink" title="205 Reset Content"></a>205 Reset Content</h4><p>告知用户代理重置发送此请求的文档。</p>
+<h4 id="206-Partial-Content"><a href="#206-Partial-Content" class="headerlink" title="206 Partial Content"></a>206 Partial Content</h4><p>当从客户端发送 Range 标头以仅请求资源的一部分时，将使用此响应代码。</p>
+<h4 id="207-多状态-（WebDAV"><a href="#207-多状态-（WebDAV" class="headerlink" title="207 多状态 （WebDAV)"></a>207 多状态 （WebDAV)</h4><p>传达有关多个资源的信息，适用于可能适合多个状态代码的情况。</p>
+<h4 id="208-已报告（WebDAV"><a href="#208-已报告（WebDAV" class="headerlink" title="208 已报告（WebDAV)"></a>208 已报告（WebDAV)</h4><p>在响应元素内部使用，以避免重复枚举同一集合的多个绑定的内部成员。<a href="dav:propstat" target="_blank" rel="noopener">dav:propstat</a></p>
+<p>使用 226 个 IM（HTTP 增量编码）)<br>服务器已满足对资源的请求，响应是应用于当前实例的一个或多个实例操作的结果的表示形式。GET</p>
+<h3 id="重定向消息-（-–300399"><a href="#重定向消息-（-–300399" class="headerlink" title="重定向消息 （ –300399)"></a>重定向消息 （ –300399)</h3><p>300 Multiple Choices<br>请求具有多个可能的响应。用户代理或用户应选择其中之一。（没有选择其中一个响应的标准化方法，但建议使用指向可能性的 HTML 链接，以便用户可以选择。</p>
+<p>301 Moved Permanently<br>所请求资源的 URL 已永久更改。响应中给出了新的 URL。</p>
+<p>302 Found<br>此响应代码表示请求资源的 URI 已临时更改。 将来可能会对 URI 进行进一步更改。因此，客户端应在将来的请求中使用相同的 URI。</p>
+<p>303 See Other<br>服务器发送此响应以指示客户端使用 GET 请求在另一个 URI 上获取请求的资源。</p>
+<p>304 Not Modified<br>这用于缓存目的。 它告诉客户端响应尚未修改，因此客户端可以继续使用相同的缓存版本的响应。</p>
+<p>305 Use Proxy 荒废的<br>在以前版本的 HTTP 规范中定义，以指示请求的响应必须由代理访问。 由于有关代理带内配置的安全问题，它已被弃用。</p>
+<p>306 unused<br>不再使用此响应代码;它只是保留的。它被用于以前版本的HTTP / 1.1规范中。</p>
+<p>307 Temporary Redirect<br>服务器发送此响应以指示客户端使用与上一个请求中使用的相同方法在另一个 URI 上获取请求的资源。 这与 HTTP 响应代码具有相同的语义，但用户代理不得更改使用的 HTTP 方法：如果在第一个请求中使用了 a，则必须在第二个请求中使用 a。302 FoundPOSTPOST</p>
+<p>308 Permanent Redirect<br>这意味着资源现在永久位于另一个 URI，由 HTTP 响应标头指定。 这与 HTTP 响应代码具有相同的语义，但用户代理不得更改使用的 HTTP 方法：如果在第一个请求中使用了 a，则必须在第二个请求中使用 a。Location:301 Moved PermanentlyPOSTPOST</p>
+<h3 id="客户端错误响应-（-–400499"><a href="#客户端错误响应-（-–400499" class="headerlink" title="客户端错误响应 （ –400499)"></a>客户端错误响应 （ –400499)</h3><p>400 Bad Request<br>由于被视为客户端错误（例如，格式错误的请求语法、无效的请求消息框架或欺骗性请求路由），服务器无法或不会处理请求。</p>
+<p>401 Unauthorized<br>尽管 HTTP 标准指定“未经授权”，但从语义上讲，此响应表示“未经身份验证”。 也就是说，客户端必须对自身进行身份验证才能获得请求的响应。</p>
+<p>402 Payment Required 实验的<br>此响应代码保留供将来使用。 创建此代码的最初目标是将其用于数字支付系统，但是此状态代码很少使用，并且不存在标准约定。</p>
+<p>403 Forbidden<br>客户端没有对内容的访问权限;也就是说，它是未经授权的，因此服务器拒绝提供请求的资源。 与 不同的是，客户端的身份是服务器已知的。401 Unauthorized</p>
+<p>404 Not Found<br>服务器找不到请求的资源。 在浏览器中，这意味着无法识别 URL。 在 API 中，这也可能意味着终端节点有效，但资源本身不存在。 服务器还可以发送此响应，而不是向未经授权的客户端隐藏资源的存在。 此响应代码可能是最广为人知的，因为它在 Web 上频繁出现。403 Forbidden</p>
+<p>405 Method Not Allowed<br>请求方法由服务器已知，但目标资源不支持。 例如，API 可能不允许调用以删除资源。DELETE</p>
+<p>406 Not Acceptable<br>当 Web 服务器在执行服务器驱动的内容协商后找不到任何符合用户代理给出的条件的内容时，将发送此响应。</p>
+<p>407 Proxy Authentication Required<br>这类似于，但身份验证需要由代理完成。401 Unauthorized</p>
+<p>408 Request Timeout<br>此响应由某些服务器在空闲连接上发送，即使客户端之前没有任何请求也是如此。 这意味着服务器想要关闭此未使用的连接。 由于某些浏览器（如Chrome，Firefox 27+或IE9）使用HTTP预连接机制来加速冲浪，因此此响应的使用更多。 另请注意，某些服务器只是关闭连接而不发送此消息。</p>
+<p>409 Conflict<br>当请求与服务器的当前状态冲突时，将发送此响应。</p>
+<p>410 Gone<br>当请求的内容已从服务器中永久删除且没有转发地址时，将发送此响应。 客户端应删除其缓存和指向资源的链接。 HTTP 规范打算将此状态代码用于“限时促销服务”。 API 不应被迫指示已使用此状态代码删除的资源。</p>
+<p>411 Length Required<br>服务器拒绝了请求，因为未定义标头字段，而服务器需要它。Content-Length</p>
+<p>412 Precondition Failed<br>客户端在其标头中指示了服务器不满足的前提条件。</p>
+<p>413 Payload Too Large<br>请求实体大于服务器定义的限制。 服务器可能会关闭连接或返回标头字段。Retry-After</p>
+<p>414 URI Too Long<br>客户端请求的 URI 比服务器愿意解释的要长。</p>
+<p>415 Unsupported Media Type<br>服务器不支持所请求数据的媒体格式，因此服务器拒绝该请求。</p>
+<p>416 Range Not Satisfiable<br>无法满足请求中标头字段指定的范围。 范围可能超出目标 URI 数据的大小。Range</p>
+<p>417 Expectation Failed<br>此响应代码表示服务器无法满足请求标头字段指示的期望。Expect</p>
+<p>418 I’m a teapot<br>服务器拒绝尝试用茶壶冲泡咖啡。</p>
+<p>421 Misdirected Request<br>请求定向到无法生成响应的服务器。 这可以由未配置为为请求 URI 中包含的方案和权限组合生成响应的服务器发送。</p>
+<p>422 无法处理的内容 （WebDAV)<br>请求格式正确，但由于语义错误而无法遵循。</p>
+<p>423 已锁定 （WebDAV)<br>正在访问的资源被锁定。</p>
+<p>424 失败的依赖项 （WebDAV)<br>由于上一个请求失败，请求失败。</p>
+<p>425 Too Early 实验的<br>指示服务器不愿意冒险处理可能重播的请求。</p>
+<p>426 Upgrade Required<br>服务器拒绝使用当前协议执行请求，但在客户端升级到其他协议后可能愿意这样做。 服务器在 426 响应中发送升级标头以指示所需的协议。</p>
+<p>428 Precondition Required<br>源服务器要求请求是有条件的。 此响应旨在防止“丢失更新”问题，即客户端对资源的状态进行修改并将其发送回服务器，而同时第三方修改了服务器上的状态，从而导致冲突。GETPUT</p>
+<p>429 Too Many Requests<br>用户在给定时间内发送了太多请求（“速率限制”）。</p>
+<p>431 Request Header Fields Too Large<br>服务器不愿意处理请求，因为其标头字段太大。 减小请求标头字段的大小后，可以重新提交请求。</p>
+<p>451 Unavailable For Legal Reasons<br>用户代理请求了无法合法提供的资源，例如被政府审查的网页。</p>
+<h3 id="服务器错误响应-（-–500599"><a href="#服务器错误响应-（-–500599" class="headerlink" title="服务器错误响应 （ –500599)"></a>服务器错误响应 （ –500599)</h3><p>500 Internal Server Error<br>服务器遇到不知道如何处理的情况。</p>
+<p>501 Not Implemented<br>服务器不支持该请求方法，无法处理。服务器需要支持的唯一方法（因此不得返回此代码）是 和 。GETHEAD</p>
+<p>502 Bad Gateway<br>此错误响应意味着服务器在充当网关以获取处理请求所需的响应时，得到了无效的响应。</p>
+<p>503 Service Unavailable<br>服务器尚未准备好处理请求。 常见原因是服务器因维护而停机或过载。 请注意，应与此响应一起发送一个用户友好的页面来解释问题。 此响应应用于临时情况，如果可能，HTTP 标头应包含恢复服务之前的估计时间。 网站站长还必须注意与此响应一起发送的与缓存相关的标头，因为这些临时条件响应通常不应缓存。Retry-After</p>
+<p>504 Gateway Timeout<br>当服务器充当网关并且无法及时获得响应时，会给出此错误响应。</p>
+<p>505 HTTP Version Not Supported<br>服务器不支持请求中使用的 HTTP 版本。</p>
+<p>506 Variant Also Negotiates<br>服务器存在内部配置错误：所选变体资源配置为本身参与透明内容协商，因此不是协商过程中的适当端点。</p>
+<p>507 存储空间不足 （WebDAV)<br>无法对资源执行该方法，因为服务器无法存储成功完成请求所需的表示形式。</p>
+<p>检测到 508 个循环 （WebDAV)<br>服务器在处理请求时检测到无限循环。</p>
+<p>510 Not Extended<br>服务器需要进一步扩展请求才能完成请求。</p>
+<p>511 Network Authentication Required<br>指示客户端需要进行身份验证才能获得网络访问权限。</p>
+<p>转载来源<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#redirection_messages" target="_blank" rel="noopener">mdn</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/uncategorized/533fecd8.html" rel="next" title="js 基础">
+                <i class="fa fa-chevron-left"></i> js 基础
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/tool/80b10de6.html" rel="prev" title="抓包">
+                抓包 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/kok.jpg" alt="kokiers">
+            
+              <p class="site-author-name" itemprop="name">kokiers</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kokiers" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#信息响应-（-–100-199"><span class="nav-number">1.</span> <span class="nav-text">信息响应 （ –100 - 199)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#100-Continue"><span class="nav-number">1.1.</span> <span class="nav-text">100 Continue</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#101-Switching-Protocols"><span class="nav-number">1.2.</span> <span class="nav-text">101 Switching Protocols</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#102-处理-（WebDAV"><span class="nav-number">1.3.</span> <span class="nav-text">102 处理 （WebDAV)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#103-Early-Hints-实验的"><span class="nav-number">1.4.</span> <span class="nav-text">103 Early Hints 实验的</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#成功的响应-（-–200-299"><span class="nav-number">2.</span> <span class="nav-text">成功的响应 （ –200-299)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#200-OK"><span class="nav-number">2.1.</span> <span class="nav-text">200 OK</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#201-Created"><span class="nav-number">2.2.</span> <span class="nav-text">201 Created</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#202-Accepted"><span class="nav-number">2.3.</span> <span class="nav-text">202 Accepted</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#203-Non-Authoritative-Information"><span class="nav-number">2.4.</span> <span class="nav-text">203 Non-Authoritative Information</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#204-No-Content"><span class="nav-number">2.5.</span> <span class="nav-text">204 No Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#205-Reset-Content"><span class="nav-number">2.6.</span> <span class="nav-text">205 Reset Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#206-Partial-Content"><span class="nav-number">2.7.</span> <span class="nav-text">206 Partial Content</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#207-多状态-（WebDAV"><span class="nav-number">2.8.</span> <span class="nav-text">207 多状态 （WebDAV)</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#208-已报告（WebDAV"><span class="nav-number">2.9.</span> <span class="nav-text">208 已报告（WebDAV)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重定向消息-（-–300399"><span class="nav-number">3.</span> <span class="nav-text">重定向消息 （ –300399)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#客户端错误响应-（-–400499"><span class="nav-number">4.</span> <span class="nav-text">客户端错误响应 （ –400499)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务器错误响应-（-–500599"><span class="nav-number">5.</span> <span class="nav-text">服务器错误响应 （ –500599)</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kokiers</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

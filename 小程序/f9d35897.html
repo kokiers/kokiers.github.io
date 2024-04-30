@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=6.0.0" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/kokier.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/kokier.png?v=6.0.0">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/kokier.png?v=6.0.0">
+
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="页面注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。参数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序知识整理">
+<meta property="og:url" content="https://kokiers.github.io/小程序/f9d35897.html">
+<meta property="og:site_name" content="kokiers">
+<meta property="og:description" content="页面注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。参数">
+<meta property="og:locale" content="other">
+<meta property="og:updated_time" content="2024-04-15T12:22:19.925Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小程序知识整理">
+<meta name="twitter:description" content="页面注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。参数">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '6.0.0',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://kokiers.github.io/小程序/f9d35897.html">
+
+
+
+
+
+  <title>小程序知识整理 | kokiers</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="other">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"> <div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">kokiers</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://kokiers.github.io/小程序/f9d35897.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kokiers">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/kok.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="kokiers">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">小程序知识整理</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2023-05-04T13:10:54+08:00">2023-05-04</time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于&#58;</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/小程序/" itemprop="url" rel="index">
+                    <span itemprop="name">小程序</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="页面"><a href="#页面" class="headerlink" title="页面"></a>页面</h3><p>注册小程序中的一个页面。接受一个 Object 类型参数，其指定页面的初始数据、生命周期回调、事件处理函数等。<br>参数</p>
+<a id="more"></a>
+<h3 id="页面跳转"><a href="#页面跳转" class="headerlink" title="页面跳转"></a>页面跳转</h3><p>wx.navigateTo(),wx.redirectTo(),wx.switchTab(),wx.navigateBack(),wx.reLaunch()的区别？<br>wx.navigateTo() : 保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面<br>wx.redirectTo() : 关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面<br>wx.switchTab() : 跳转到 TabBar 页面，并关闭其他所有非 tabBar 页面<br>wx.navigateBack() : 关闭当前页面，返回上一页面或多级页面。可通过 getCurrentPages() 获取当前的页面栈，决定需要返回几层<br>wx.reLaunch() : 关闭所有页面，打开到应用的某个页面。</p>
+<h3 id="小程序-生命周期"><a href="#小程序-生命周期" class="headerlink" title="小程序 生命周期"></a>小程序 生命周期</h3><h4 id="项目的生命周期"><a href="#项目的生命周期" class="headerlink" title="项目的生命周期"></a>项目的生命周期</h4><table>
+<thead>
+<tr>
+<th>属</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+<th>最低版本</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onLaunch</td>
+<td>function</td>
+<td>否</td>
+<td>生命周期回调——监听小程序初始化。</td>
+<td></td>
+</tr>
+<tr>
+<td>onShow</td>
+<td>function</td>
+<td>否</td>
+<td>生命周期回调——监听小程序启动或切前台。</td>
+<td></td>
+</tr>
+<tr>
+<td>onHide</td>
+<td>function</td>
+<td>否</td>
+<td>生命周期回调——监听小程序切后台。</td>
+<td></td>
+</tr>
+<tr>
+<td>onError</td>
+<td>function</td>
+<td>否</td>
+<td>错误监听函数。</td>
+<td></td>
+</tr>
+<tr>
+<td>onPageNotFound</td>
+<td>function</td>
+<td>否</td>
+<td>页面不存在监听函数。</td>
+<td>1.9.90</td>
+</tr>
+<tr>
+<td>onUnhandledRejection</td>
+<td>function</td>
+<td>否</td>
+<td>未处理的 Promise 拒绝事件监听函数。</td>
+<td>2.10.0</td>
+</tr>
+<tr>
+<td>onThemeChange</td>
+<td>function</td>
+<td>否</td>
+<td>监听系统主题变化</td>
+<td>2.11.0</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>any</td>
+<td>否</td>
+<td>开发者可以添加任意的函数或数据变量到 Object 参数中，用 this 可以访问</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>获取小程序实例。<code>getApp()</code></p>
+<h4 id="页面生命周期"><a href="#页面生命周期" class="headerlink" title="页面生命周期"></a>页面生命周期</h4><p>onLoad<br>onShow<br>onReady<br>onHide<br>onUnload </p>
+<h4 id="组件生命周期"><a href="#组件生命周期" class="headerlink" title="组件生命周期"></a>组件生命周期</h4><p>created:在组件实例刚刚被创建时执行<br>attached:在组件实例进入页面节点树时执行<br>ready:在组件在视图层布局完成后执行<br>moved:在组件实例被移动到节点树另一个位置时执行<br>detached:在组件实例被从页面节点树移除时执行<br>error:每当组件方法抛出错误时执行</p>
+<h3 id="小程序传参："><a href="#小程序传参：" class="headerlink" title="小程序传参："></a>小程序传参：</h3><ul>
+<li>globalData</li>
+<li>路由传参。 </li>
+<li>storage </li>
+<li>使用通信通道 getOpenerEventChannel()</li>
+<li>使用页面栈  getCurrentPages()</li>
+</ul>
+<h3 id="同步视图"><a href="#同步视图" class="headerlink" title="同步视图"></a>同步视图</h3><p><code>setData()</code></p>
+<h3 id="项目配置"><a href="#项目配置" class="headerlink" title="项目配置"></a>项目配置</h3><p>app.json <a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/app.html" target="_blank" rel="noopener">全局配置</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"pages"</span>: [</span><br><span class="line">    <span class="string">"pages/index/index"</span>,</span><br><span class="line">  ],</span><br><span class="line">  <span class="attr">"window"</span>: &#123;</span><br><span class="line">    <span class="attr">"backgroundTextStyle"</span>: <span class="string">"light"</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 设置 2-5个之间可以显示。 小于2 或者 大于5都不行。</span></span><br><span class="line">  <span class="attr">"tabBar"</span>: &#123;</span><br><span class="line">    <span class="attr">"backgroundColor"</span>: <span class="string">"#fff"</span>,</span><br><span class="line">    <span class="attr">"selectedColor"</span>: <span class="string">"#07c160"</span>,</span><br><span class="line">    <span class="attr">"color"</span>: <span class="string">"#222222"</span>,</span><br><span class="line">    <span class="attr">"list"</span>: [</span><br><span class="line">      ...</span><br><span class="line">    ]</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"style"</span>: <span class="string">"v2"</span>,</span><br><span class="line">  <span class="attr">"sitemapLocation"</span>: <span class="string">"sitemap.json"</span>,</span><br><span class="line">  <span class="attr">"plugins"</span>: &#123;</span><br><span class="line">    <span class="attr">"citySelector"</span>: &#123;</span><br><span class="line">      <span class="attr">"version"</span>: <span class="string">"1.0.2"</span>,</span><br><span class="line">      <span class="attr">"provider"</span>: <span class="string">"wx63ffb7b7894e99ae"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"permission"</span>: &#123;</span><br><span class="line">    <span class="attr">"scope.userFuzzyLocation"</span>: &#123;</span><br><span class="line">      <span class="attr">"desc"</span>: <span class="string">"你的位置信息将用于小程序定位"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="sitemap-配置"><a href="#sitemap-配置" class="headerlink" title="sitemap 配置"></a>sitemap 配置</h3><p>小程序根目录下的 sitemap.json 文件用来配置小程序及其页面是否允许被<strong>微信索引</strong>。</p>
+<h3 id="页面配置"><a href="#页面配置" class="headerlink" title="页面配置"></a>页面配置</h3><h4 id="page-json"><a href="#page-json" class="headerlink" title="page.json"></a>page.json</h4><p>可设置各项数据。一般组件，背景颜色，页面标题等。<a href="https://developers.weixin.qq.com/miniprogram/dev/reference/configuration/page.html" target="_blank" rel="noopener">页面配置</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"usingComponents"</span>: &#123;&#125;,</span><br><span class="line">  <span class="attr">"enablePullDownRefresh"</span>: <span class="literal">false</span>,</span><br><span class="line">  <span class="attr">"disableScroll"</span>:<span class="literal">true</span>,</span><br><span class="line">  <span class="attr">"navigationBarTitleText"</span>: <span class="string">"DIY水印"</span>,</span><br><span class="line">  <span class="attr">"backgroundColor"</span>: <span class="string">"#f7f7f7"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置背景色"><a href="#设置背景色" class="headerlink" title="设置背景色"></a>设置背景色</h4><ul>
+<li>page.json 中的背景色是设置下拉的背景颜色。</li>
+<li>页面中的背景色需要在样式中定义。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">page</span>&#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#f7f7f7</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ul>
+<h4 id="禁止页面滚动"><a href="#禁止页面滚动" class="headerlink" title="禁止页面滚动"></a>禁止页面滚动</h4><ul>
+<li>pagejson 设置： <code>&quot;disableScroll&quot;:true,</code></li>
+<li>page 设置一个包裹的容器，且设置高度等于屏幕高度,overflow:hidden</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/js/318077db.html" rel="next" title="js面向对象编程与继承">
+                <i class="fa fa-chevron-left"></i> js面向对象编程与继承
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/html/e0084cae.html" rel="prev" title="html 标签">
+                html 标签 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/kok.jpg" alt="kokiers">
+            
+              <p class="site-author-name" itemprop="name">kokiers</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kokiers" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#页面"><span class="nav-number">1.</span> <span class="nav-text">页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面跳转"><span class="nav-number">2.</span> <span class="nav-text">页面跳转</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小程序-生命周期"><span class="nav-number">3.</span> <span class="nav-text">小程序 生命周期</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#项目的生命周期"><span class="nav-number">3.1.</span> <span class="nav-text">项目的生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#页面生命周期"><span class="nav-number">3.2.</span> <span class="nav-text">页面生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#组件生命周期"><span class="nav-number">3.3.</span> <span class="nav-text">组件生命周期</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#小程序传参："><span class="nav-number">4.</span> <span class="nav-text">小程序传参：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步视图"><span class="nav-number">5.</span> <span class="nav-text">同步视图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目配置"><span class="nav-number">6.</span> <span class="nav-text">项目配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sitemap-配置"><span class="nav-number">7.</span> <span class="nav-text">sitemap 配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页面配置"><span class="nav-number">8.</span> <span class="nav-text">页面配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#page-json"><span class="nav-number">8.1.</span> <span class="nav-text">page.json</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置背景色"><span class="nav-number">8.2.</span> <span class="nav-text">设置背景色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#禁止页面滚动"><span class="nav-number">8.3.</span> <span class="nav-text">禁止页面滚动</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kokiers</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=6.0.0"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=6.0.0"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=6.0.0"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.0.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.0.0"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
