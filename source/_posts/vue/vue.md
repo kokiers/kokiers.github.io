@@ -150,10 +150,26 @@ $router是’路由实例’对象包括了路由的跳转方法，钩子函数�
 
 3. mutation：提交更新数据的方法，必须是同步的(如果需要异步使用action)。每个mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数，提交载荷作为第二个参数。
 
-4. 
-action：和mutation的功能大致相同，不同之处在于 ==》
+分发mutation： this.$store.commit 
+
+4. action：和mutation的功能大致相同，不同之处在于 ==》
 1. Action 提交的是 mutation，而不是直接变更状态。 
 2. Action 可以包含任意异步操作。
 
+分发action： 组件中使用 this.$store.dispatch('xxx') 分发 action，
+
 5. modules：模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。
+
+
+#### ref
+ref 的作用是被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。其特点是：
+
++ 如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素
++ 如果用在子组件上，引用就指向组件实例
+
+应用场景一般有：
+
++ 基本用法，本页面获取 DOM 元素
++ 获取子组件中的 data
++ 调用子组件中的方法
 
