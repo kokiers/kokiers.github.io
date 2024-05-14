@@ -349,7 +349,25 @@ const fullName = computed({
 3. 新增组合 API，更好的逻辑重用和代码组织
 4. v-if 和 v-for 的优先级
 5. 静态元素提升
-6. 虚拟节点静态标记
+6. Diff算法优化 虚拟节点静态标记
+```js
+// patchFlags 字段类型列举
+export const enum PatchFlags { 
+  TEXT = 1,   // 动态文本内容
+  CLASS = 1 << 1,   // 动态类名
+  STYLE = 1 << 2,   // 动态样式
+  PROPS = 1 << 3,   // 动态属性，不包含类名和样式
+  FULL_PROPS = 1 << 4,   // 具有动态 key 属性，当 key 改变，需要进行完整的 diff 比较
+  HYDRATE_EVENTS = 1 << 5,   // 带有监听事件的节点
+  STABLE_FRAGMENT = 1 << 6,   // 不会改变子节点顺序的 fragment
+  KEYED_FRAGMENT = 1 << 7,   // 带有 key 属性的 fragment 或部分子节点
+  UNKEYED_FRAGMENT = 1 << 8,   // 子节点没有 key 的fragment
+  NEED_PATCH = 1 << 9,   // 只会进行非 props 的比较
+  DYNAMIC_SLOTS = 1 << 10,   // 动态的插槽
+  HOISTED = -1,   // 静态节点，diff阶段忽略其子节点
+  BAIL = -2   // 代表 diff 应该结束
+}
+```
 7. 生命周期变化
 8. 打包体积优化
 9. ssr 渲染性能提升
