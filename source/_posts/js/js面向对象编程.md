@@ -84,6 +84,7 @@ let cat1 = new Cat('喵喵', 1, 'female');
 #### 原型链继承: 
 继承的本质就是复制，即重写原型对象，代之以一个新类型的实例。
 原型链方案存在的缺点：多个实例对**引用类型**的操作会被篡改。
+缺点： 继承了两个对象的属性，this的属性 + 原型的属性。
 ```javaScript
 function parent(){
 	this.name = 'hong'
@@ -97,6 +98,7 @@ function child(){
 	this.age = 20
 }
 
+// 借用父类实例对象
 child.prototype = new parent()
 child.prototype.getAge = function(){
 	return this.age;
@@ -106,9 +108,11 @@ child.prototype.getAge = function(){
 #### 借用构造函数继承
 
 使用父类的构造函数来增强子类实例，等同于复制父类的实例给子类（不使用原型）
+优点：
+获得父类自身成员的副本，不存在子对象修改父类对象的属性风险。
 缺点：
 只能继承父类的实例属性和方法，不能继承**原型属性/方法**
-无法实现复用，每个子类都有父类实例函数的副本，影响性能
+无法实现复用，每个子类都有父类实例函数的副本（深拷贝），影响性能
 
 ```javaScript
 function parent(){
@@ -126,10 +130,14 @@ console.log(instance2.color);//"red,green,blue"
 ```
 
 
-#### 组合模式继承
+#### 组合模式继承 -> 借用构造函数+原型继承
 
 + 定义：
-组合上述两种方法就是组合继承。用原型链实现对原型属性和方法的继承，用借用构造函数技术来实现实例属性的继承。
+前两种结合。即：先借用构造函数，还设置子构造函数的原型为父构造函数的实列对象。
++ 优点
+1.获得父类自身成员的副本 + 父对象中可复用的功能（原型成员方式实现的）
+2.子类可向父类构造函数传参
+3.可安全修改自身属性 不会修改父类
 + 缺点：
 实例对象instance1上的两个属性就屏蔽了其原型对象SubType.prototype的两个同名属性。所以，组合模式的缺点就是在使用子类创建实例对象时，其原型中会存在两份相同的属性/方法。
 
@@ -143,15 +151,12 @@ SuperType.prototype.sayName = function(){
 };
 
 function SubType(name, age){
-  // 继承属性
-  // 第二次调用SuperType()
-  SuperType.call(this, name);
+  SuperType.call(this, name);//1.借用构造函数继承
   this.age = age;
 }
 
-// 继承方法
-// 构建原型链
-// 第一次调用SuperType()
+// 继承方法 
+// 构建原型链 为父类的实例
 SubType.prototype = new SuperType(); 
 // 重写SubType.prototype的constructor属性，指向自己的构造函数SubType
 SubType.prototype.constructor = SubType; 
@@ -201,6 +206,26 @@ yetAnotherPerson.friends.push("Barbie");
 console.log(anotherPerson,person,yetAnotherPerson);   //"Shelby,Court,Van,Rob,Barbie"
 ```
 
+#### 共享原型
+
+定义：
+子对象的原型设置成父对象的原型即可。
+缺点： 子类或者孙类修改原型，父类会被篡改。
+```js
+function inherit(C,P){
+  C.prototype = P.prototype
+}
+```
+
+#### 临是构造函数
+解决共享原型带来的篡改问题，且可以继续受益原型链的好处
+```js
+function inherit(C,P){
+  var F = function(){}
+  F.prototype = P.prototype
+  C.prototype = new F();
+}
+```
 
 #### 寄生式继承
 核心：在原型式继承的基础上，增强对象，返回构造函数

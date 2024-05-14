@@ -98,3 +98,10 @@ function ltrim(s){ return s.replace( /^(\s*|　*)/, ""); }
 // 清除右空格
 function rtrim(s){ return s.replace( /(\s*|　*)$/, ""); }
 ```
+
+### 微信号
+```
+const wechatRegex = /^[a-zA-Z_][-_a-zA-Z0-9]{5,19}$/;
+```
+### 查找微信号 允许微信号 | qq号 | 电话号
+`const wechatRegexInput = /^(([a-zA-Z_][-_a-zA-Z0-9]{4,19}$)|([1-9]\d{4,10}$)|(1[3456789][0-9]{9}$))/;`

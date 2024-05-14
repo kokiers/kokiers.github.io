@@ -39,3 +39,53 @@ tags:
   shape-outside: inherit;
   shape-outside: unset;
 ```
+
+层叠感
+```html
+<div class="wrap wrap-0">
+  <div class="wrap wrap-1">
+    <div class="content">哈哈哈哈</div>
+  </div>
+</div>
+```
+```css
+.wrap{
+  background: transparent;
+  position: relative;
+  top: -10px;
+  border-radius: 10px;
+
+  &.wrap-0::before{
+   content: '';
+   display: inline-block;
+   position: absolute;
+   background: #fff;
+   bottom: -10px;
+   left:30px;
+   right: 30px;
+   height: 30px;
+   border-radius: inherit;
+   box-shadow: 0px 2px 24px 0px rgba(200,201,204,0.5);
+ }
+  &.wrap-1::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    background: #fff;
+    bottom: -12px;
+    left:20px;
+    right: 20px;
+    height: 30px;
+    border-radius: inherit;
+    box-shadow: 0px 2px 24px 0px rgba(200,201,204,0.5);
+  }
+  .content{
+    padding: 10px;
+    background: #fff;
+    border-radius: inherit;
+    box-shadow: 0px 2px 24px 0px rgba(200,201,204,0.5);
+    width: 200px;
+    height: 200px;
+  }
+}
+```
