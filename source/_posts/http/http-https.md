@@ -1,6 +1,7 @@
 ---
 title: http https
 lang: http
+abbrlink: b7ff66e7
 date: 2024-05-25 09:55:08
 tags:
 ---
