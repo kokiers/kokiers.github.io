@@ -18,9 +18,15 @@ tags:
 <!--more-->
 ##### OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443 
 
+方法一：
+
 去掉代理 git config --global --unset http.proxy
 
 公司代理关掉   Failed to connect to github.com port 443: Timed out
+
+方法二： 
+设置本机代理给git
+git config --global http.proxy http://127.0.0.1:7890
 
 
 #### Github token校验

@@ -79,6 +79,7 @@ git remote add origin https://github.com/yourname/yourRepo.git
 # 删除配置
 git remote rm origin 
 git stash pop stash@{1}
+git stash drop不带参数 - 删除顶部存储 - 或存储引用，如下所示：stash@{n}指定n要删除哪个存储
 ```
 
 #### 分支 
@@ -99,7 +100,7 @@ git reset --hard 6fcfc89 回退到版本 6fcfc89
 
 #### 撤销文件修改
 `
-git checkout --readme.txt
+git checkout -- readme.txt
 `
 
 #### 建立关联

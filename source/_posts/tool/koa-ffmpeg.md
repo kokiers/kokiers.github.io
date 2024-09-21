@@ -117,3 +117,68 @@ if (!module.parent) app.listen(3000);
     }
   </script>
   ```
+  ```
+  //新版本
+  
+  import { FFmpeg } from "@ffmpeg/ffmpeg";
+import { toBlobURL, fetchFile } from "@ffmpeg/util";
+
+export default {
+  data(){
+    return {
+      ffmpegInstance: null,
+      initTransStaus: false,
+      lastTrans: null,
+    }
+  },
+  methods:{
+    async checkLoad(){
+      this.ffmpegInstance = new FFmpeg();
+      const baseURL = "https://unpkg.com/@ffmpeg/core-mt@0.12.6/dist/esm";
+      const ffmpeg = this.ffmpegInstance;
+      ffmpeg.on("log", ({ message }) => {
+        console.log(message);
+      });
+      // toBlobURL is used to bypass CORS issue, urls with the same
+      // domain can be used directly.
+      await ffmpeg.load({
+        coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
+        wasmURL: await toBlobURL(
+          `${baseURL}/ffmpeg-core.wasm`,
+          "application/wasm"
+        ),
+        workerURL: await toBlobURL(
+          `${baseURL}/ffmpeg-core.worker.js`,
+          "text/javascript"
+        ),
+      });
+      this.initTransStaus = true
+    },
+    async transCode(videoURL,type){
+      const ffmpeg = this.ffmpegInstance;
+      let tempArr = videoURL.split("."), fileExt = "amr";
+      if (Array.isArray(tempArr) && tempArr.length > 1) {
+        fileExt = tempArr[tempArr.length - 1];
+        if (fileExt == 'wav') {
+          fileExt = 'amr';
+        }
+      }
+      if (this.lastTrans == videoURL) {
+        return
+      }
+      this.lastTrans = videoURL;
+      const ouputFileName = type == 1 ? "ouput.mp3" : "ouput.mp4";
+      const inputFileName = type == 1 ? "input." + fileExt : "input." + fileExt;
+      await ffmpeg.writeFile(inputFileName, await fetchFile(videoURL));
+      await ffmpeg.exec(["-i", inputFileName, ouputFileName]);
+      const fileData = await ffmpeg.readFile(ouputFileName);
+    //  let datas = URL.createObjectURL(new Blob([(data as Uint8Array).buffer], { type: 'video/mp4' }))
+      const data = new Uint8Array(fileData);
+      let newUrl = URL.createObjectURL(
+        new Blob([data.buffer], { type: 'video/mp4' })
+      )
+      console.log(newUrl,'????')
+    }
+  }
+}
+```
