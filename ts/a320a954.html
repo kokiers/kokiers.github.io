@@ -80,7 +80,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="TypeScript 作为javaScript 的超集，它可以编译成普通的JavaScript代码，简称TS。TS 是编译型预言，在编写阶段可规避错误。javaScript是解释型语言，在运行中才有可能暴露错误。">
 <meta property="og:locale" content="js">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.923Z">
+<meta property="og:updated_time" content="2025-01-07T10:48:18.101Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ts 入门">
 <meta name="twitter:description" content="TypeScript 作为javaScript 的超集，它可以编译成普通的JavaScript代码，简称TS。TS 是编译型预言，在编写阶段可规避错误。javaScript是解释型语言，在运行中才有可能暴露错误。">
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2025-01-07T18:48:18+08:00">2025-01-07</time>
             
           </span>
 
@@ -410,7 +410,7 @@
 <h4 id="函数重载"><a href="#函数重载" class="headerlink" title="函数重载"></a>函数重载</h4><p>把精确得放在前面，不精确的在后面</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">compile</span>(<span class="params">a:string,b:string</span>): <span class="title">string</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">function</span> <span class="title">compile</span>(<span class="params">a: number, b:number</span>):<span class="title">number</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"><span class="title">function</span> <span class="title">compile</span>(<span class="params">a:any,b:any</span>)</span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
+<h4 id="索引签名"><a href="#索引签名" class="headerlink" title="索引签名"></a>索引签名</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">interface SquareConfig &#123;</span><br><span class="line">    color?: string;</span><br><span class="line">    width?: number;</span><br><span class="line">    [propName: string]: any; //索引签名</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -525,7 +525,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -547,7 +547,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -590,7 +590,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译"><span class="nav-number">2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型"><span class="nav-number">3.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型断言"><span class="nav-number">4.</span> <span class="nav-text">类型断言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明：-declare"><span class="nav-number">5.</span> <span class="nav-text">声明： declare</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#interface-type"><span class="nav-number">6.</span> <span class="nav-text">interface type</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不同点"><span class="nav-number">6.1.</span> <span class="nav-text">不同点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数参数类型"><span class="nav-number">7.</span> <span class="nav-text">函数参数类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数重载"><span class="nav-number">8.</span> <span class="nav-text">函数重载</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#编译"><span class="nav-number">2.</span> <span class="nav-text">编译</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型"><span class="nav-number">3.</span> <span class="nav-text">类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型断言"><span class="nav-number">4.</span> <span class="nav-text">类型断言</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#声明：-declare"><span class="nav-number">5.</span> <span class="nav-text">声明： declare</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#interface-type"><span class="nav-number">6.</span> <span class="nav-text">interface type</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#不同点"><span class="nav-number">6.1.</span> <span class="nav-text">不同点</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数参数类型"><span class="nav-number">7.</span> <span class="nav-text">函数参数类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数重载"><span class="nav-number">8.</span> <span class="nav-text">函数重载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#索引签名"><span class="nav-number">9.</span> <span class="nav-text">索引签名</span></a></li></ol></div>
             
 
           </div>
@@ -610,7 +610,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

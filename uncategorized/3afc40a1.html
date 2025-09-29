@@ -81,7 +81,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="不间断记录问题，做备忘。 fatal: Not a git repository (or any of the parent directories): .git 问题提示说没有.git这样一个目录 在命令行 输入 git init  然后回车就好了">
 <meta property="og:locale" content="git">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.918Z">
+<meta property="og:updated_time" content="2025-09-28T03:39:02.151Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git 问题记录">
 <meta name="twitter:description" content="不间断记录问题，做备忘。 fatal: Not a git repository (or any of the parent directories): .git 问题提示说没有.git这样一个目录 在命令行 输入 git init  然后回车就好了">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2025-09-28T11:39:02+08:00">2025-09-28</time>
             
           </span>
 
@@ -343,8 +343,10 @@
 <h4 id="fatal-Not-a-git-repository-or-any-of-the-parent-directories-git-问题"><a href="#fatal-Not-a-git-repository-or-any-of-the-parent-directories-git-问题" class="headerlink" title="fatal: Not a git repository (or any of the parent directories): .git 问题"></a>fatal: Not a git repository (or any of the parent directories): .git 问题</h4><p>提示说没有.git这样一个目录</p>
 <p>在命令行 输入 git init  然后回车就好了</p>
 <a id="more"></a>
-<h5 id="OpenSSL-SSL-connect-SSL-ERROR-SYSCALL-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-SSL-ERROR-SYSCALL-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443"></a>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443</h5><p>去掉代理 git config –global –unset http.proxy</p>
+<h5 id="OpenSSL-SSL-connect-SSL-ERROR-SYSCALL-in-connection-to-github-com-443"><a href="#OpenSSL-SSL-connect-SSL-ERROR-SYSCALL-in-connection-to-github-com-443" class="headerlink" title="OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443"></a>OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com 443</h5><p>方法一：</p>
+<p>去掉代理 git config –global –unset http.proxy</p>
 <p>公司代理关掉   Failed to connect to github.com port 443: Timed out</p>
+<p>方法二：<br>设置本机代理给git<br>git config –global http.proxy <a href="http://127.0.0.1:7890" target="_blank" rel="noopener">http://127.0.0.1:7890</a></p>
 <h4 id="Github-token校验"><a href="#Github-token校验" class="headerlink" title="Github token校验"></a>Github token校验</h4><p>1、github 需要token 每次输入</p>
 <p>2、不想数输入的话，可以token<br>git remote remove origin</p>
 <p>git remote add origin https://${token}@github.com/xxx/xxxx.git</p>
@@ -470,7 +472,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -492,7 +494,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -555,7 +557,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

@@ -80,7 +80,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="css 单位绝对单位cm    厘米mm    毫米in    英寸 (1in = 96px = 2.54cm)px     像素 (1px = 1/96th of 1in)">
 <meta property="og:locale" content="css">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.914Z">
+<meta property="og:updated_time" content="2024-09-21T09:05:47.724Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css 栏目">
 <meta name="twitter:description" content="css 单位绝对单位cm    厘米mm    毫米in    英寸 (1in = 96px = 2.54cm)px     像素 (1px = 1/96th of 1in)">
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2024-09-21T17:05:47+08:00">2024-09-21</time>
             
           </span>
 
@@ -364,7 +364,7 @@
 <a id="more"></a>
 <p>pt    点 (1pt = 1/72 of 1in)<br>pc    派卡 (1pc = 12 pt)<br>tips: 像素（px）是相对于观看设备的。对于低 dpi 的设备，1px 是显示器的一个设备像素（点）。对于打印机和高分辨率屏幕，1px 表示多个设备像素。    </p>
 <h4 id="相对单位"><a href="#相对单位" class="headerlink" title="相对单位"></a>相对单位</h4><p>em    相对于元素的字体大小（font-size）（2em 表示当前字体大小的 2 倍）<br>ex    相对于当前字体的 x-height(极少使用)<br>ch    相对于 “0”（零）的宽度<br>rem    相对于根元素的字体大小（font-size）<br>vw    相对于视口<em>宽度的 1%<br>vh    相对于视口</em>高度的 1%<br>vmin    相对于视口<em>较小尺寸的 1％<br>vmax    相对于视口</em>较大尺寸的 1％<br>%    相对于父元素</p>
-<h3 id="transition"><a href="#transition" class="headerlink" title="transition"></a>transition</h3><p>transition是过度动画。但是transition并不能实现独立的动画，只能在某个标签元素样式或状态改变时进行平滑的动画效果过渡，而不是马上改变<br>属性可以被指定为一个或多个CSS属性的过渡效果，多个属性之间用逗号进行分隔，必须规定两项内容：<br><code>transition</code> 是个简写属性。<code>transition: property duration timing-function delay</code>;<br>transition-property: width;<br>transition-duration: 1s;<br>transition-timing-function: linear; // linear ease ease-in ease-out ease-in-out cubic-bezier<br>transition-delay: 2s;</p>
+<h3 id="transition-过度"><a href="#transition-过度" class="headerlink" title="transition 过度"></a>transition 过度</h3><p>transition是过度动画。但是transition并不能实现独立的动画，只能在某个标签元素样式或状态改变时进行平滑的动画效果过渡，而不是马上改变<br>属性可以被指定为一个或多个CSS属性的过渡效果，多个属性之间用逗号进行分隔，必须规定两项内容：<br><code>transition</code> 是个简写属性。<code>transition: property duration timing-function delay</code>;<br>transition-property: width;<br>transition-duration: 1s;<br>transition-timing-function: linear; // linear ease ease-in ease-out ease-in-out cubic-bezier<br>transition-delay: 2s;</p>
 <h3 id="grid-网格布局"><a href="#grid-网格布局" class="headerlink" title="grid 网格布局"></a>grid 网格布局</h3><p><code>grid: none|grid-template-rows / grid-template-columns|grid-template-areas|grid-template-rows / [grid-auto-flow] grid-auto-columns|[grid-auto-flow] grid-auto-rows / grid-template-columns|initial|inherit;</code></p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.wrap</span> &#123;</span><br><span class="line">  <span class="attribute">display</span>: grid;</span><br><span class="line">  <span class="attribute">grid-template-columns</span>: <span class="built_in">repeat</span>(<span class="number">7</span>, <span class="number">100px</span>);</span><br><span class="line">  <span class="comment">/* grid-template-rows: repeat(7,50px); */</span></span><br><span class="line">  <span class="attribute">grid-auto-rows</span>: <span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.child1</span> &#123;</span><br><span class="line">  <span class="attribute">grid-column</span>: <span class="number">1</span> / <span class="number">2</span>; <span class="comment">/* // grid-column-start grid-column-end 的合并简写 */</span></span><br><span class="line">  <span class="attribute">grid-row</span>: <span class="number">1</span> / <span class="number">4</span>; <span class="comment">/* // grid-row-start grid-row-end 的合并简写 */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -388,7 +388,7 @@
 <h4 id="background-背景属性"><a href="#background-背景属性" class="headerlink" title="background 背景属性"></a>background 背景属性</h4><p>background-clip、<br>background-origin、<br>background-size<br>background-break</p>
 <h4 id="text文字相关"><a href="#text文字相关" class="headerlink" title="text文字相关"></a>text文字相关</h4><p>word-wrap: 文字换行 <code>word-wrap: normal|break-word;</code><br>text-overflow： 文字超出  <code>text-overflow: clip|ellipsis|string</code>;<br>text-shadow: 文字阴影  <code>text-shadow: h-shadow v-shadow blur color;</code><br>text-decoration: 文字划线  <code>text-decoration: text-decoration-line text-decoration-color text-decoration-style text-decoration-thickness|initial|inherit;</code><br>writing-mode: 属性规定水平还是垂直地排布文本行。<code>writing-mode: horizontal-tb|vertical-rl|vertical-lr;</code></p>
 <h4 id="transform-转换"><a href="#transform-转换" class="headerlink" title="transform 转换"></a>transform 转换</h4><p>transform属性允许你<strong>旋转，缩放，倾斜或平移</strong>给定元素, 应用 <strong>2D 或 3D</strong> 转换<br>transform-origin：转换元素的位置（围绕那个点进行转换），默认值为(x,y,z):(50%,50%,0)<br>使用方式： <code>transform: none|transform-functions</code><br><code>transform: translate(120px, 50%)</code>：位移<br><code>transform: scale(2, 0.5)</code>：缩放<br><code>transform: rotate(0.5turn)</code>：旋转<br><code>transform: skew(30deg, 20deg)</code>：倾斜<br>transform-functions:<br>none    定义不进行转换。<br>matrix(n,n,n,n,n,n)    定义 2D 转换，使用六个值的矩阵。<br>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)    定义 3D 转换，使用 16 个值的 4x4 矩阵。<br>translate(x,y)    定义 2D 转换。<br>translate3d(x,y,z)    定义 3D 转换。<br>translateX(x)    定义转换，只是用 X 轴的值。<br>translateY(y)    定义转换，只是用 Y 轴的值。<br>translateZ(z)    定义 3D 转换，只是用 Z 轴的值。<br>scale(x,y)    定义 2D 缩放转换。<br>scale3d(x,y,z)    定义 3D 缩放转换。<br>scaleX(x)    通过设置 X 轴的值来定义缩放转换。<br>scaleY(y)    通过设置 Y 轴的值来定义缩放转换。<br>scaleZ(z)    通过设置 Z 轴的值来定义 3D 缩放转换。<br>rotate(angle)    定义 2D 旋转，在参数中规定角度。<br>rotate3d(x,y,z,angle)    定义 3D 旋转。<br>rotateX(angle)    定义沿着 X 轴的 3D 旋转。<br>rotateY(angle)    定义沿着 Y 轴的 3D 旋转。<br>rotateZ(angle)    定义沿着 Z 轴的 3D 旋转。<br>skew(x-angle,y-angle)    定义沿着 X 和 Y 轴的 2D 倾斜转换。<br>skewX(angle)    定义沿着 X 轴的 2D 倾斜转换。<br>skewY(angle)    定义沿着 Y 轴的 2D 倾斜转换。<br>perspective(n)    为 3D 转换元素定义透视视图。</p>
-<h4 id="animation-动画"><a href="#animation-动画" class="headerlink" title="animation 动画"></a>animation 动画</h4><p><code>animation: name duration timing-function delay iteration-count direction;</code><br>animation-name：动画名称(@keyframes 预设动画)<br>animation-duration：动画持续时间<br>animation-timing-function：动画时间函数<br>animation-delay：动画延迟时间<br>animation-iteration-count：动画执行次数，可以设置为一个整数，也可以设置为infinite，意思是无限循环<br>animation-direction：动画执行方向<br>animation-paly-state：动画播放状态<br>animation-fill-mode：动画填充模式</p>
+<h4 id="animation-自定义动画"><a href="#animation-自定义动画" class="headerlink" title="animation 自定义动画"></a>animation 自定义动画</h4><p><code>animation: name duration timing-function delay iteration-count direction;</code><br>animation-name：动画名称(@keyframes 预设动画)<br>animation-duration：动画持续时间<br>animation-timing-function：动画时间函数<br>animation-delay：动画延迟时间<br>animation-iteration-count：动画执行次数，可以设置为一个整数，也可以设置为infinite，意思是无限循环<br>animation-direction：动画执行方向<br>animation-paly-state：动画播放状态<br>animation-fill-mode：动画填充模式</p>
 <h4 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h4><p><code>linear-gradient</code>：线性渐变<br><code>radial-gradient</code>：径向渐变</p>
 
       
@@ -505,7 +505,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -527,7 +527,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -570,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-单位"><span class="nav-number">1.</span> <span class="nav-text">css 单位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绝对单位"><span class="nav-number">1.1.</span> <span class="nav-text">绝对单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相对单位"><span class="nav-number">1.2.</span> <span class="nav-text">相对单位</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transition"><span class="nav-number">2.</span> <span class="nav-text">transition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grid-网格布局"><span class="nav-number">3.</span> <span class="nav-text">grid 网格布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex"><span class="nav-number">4.</span> <span class="nav-text">flex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3新特性"><span class="nav-number">5.</span> <span class="nav-text">css3新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#边框属性"><span class="nav-number">5.1.</span> <span class="nav-text">边框属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-背景属性"><span class="nav-number">5.2.</span> <span class="nav-text">background 背景属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text文字相关"><span class="nav-number">5.3.</span> <span class="nav-text">text文字相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transform-转换"><span class="nav-number">5.4.</span> <span class="nav-text">transform 转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#animation-动画"><span class="nav-number">5.5.</span> <span class="nav-text">animation 动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#渐变"><span class="nav-number">5.6.</span> <span class="nav-text">渐变</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#css-单位"><span class="nav-number">1.</span> <span class="nav-text">css 单位</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#绝对单位"><span class="nav-number">1.1.</span> <span class="nav-text">绝对单位</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#相对单位"><span class="nav-number">1.2.</span> <span class="nav-text">相对单位</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transition-过度"><span class="nav-number">2.</span> <span class="nav-text">transition 过度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grid-网格布局"><span class="nav-number">3.</span> <span class="nav-text">grid 网格布局</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#flex"><span class="nav-number">4.</span> <span class="nav-text">flex</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#css3新特性"><span class="nav-number">5.</span> <span class="nav-text">css3新特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#边框属性"><span class="nav-number">5.1.</span> <span class="nav-text">边框属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#background-背景属性"><span class="nav-number">5.2.</span> <span class="nav-text">background 背景属性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#text文字相关"><span class="nav-number">5.3.</span> <span class="nav-text">text文字相关</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#transform-转换"><span class="nav-number">5.4.</span> <span class="nav-text">transform 转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#animation-自定义动画"><span class="nav-number">5.5.</span> <span class="nav-text">animation 自定义动画</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#渐变"><span class="nav-number">5.6.</span> <span class="nav-text">渐变</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -590,7 +590,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

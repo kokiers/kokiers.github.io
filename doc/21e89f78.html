@@ -80,7 +80,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="缓存分成两种 强缓存  协商缓存强缓存优先级高于协商缓存">
 <meta property="og:locale" content="js">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.922Z">
+<meta property="og:updated_time" content="2024-09-21T09:05:55.172Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="http 强缓存 协商缓存">
 <meta name="twitter:description" content="缓存分成两种 强缓存  协商缓存强缓存优先级高于协商缓存">
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2024-09-21T17:05:55+08:00">2024-09-21</time>
             
           </span>
 
@@ -371,15 +371,15 @@
 <p>一般只有get 请求进行缓存</p>
 <h3 id="缓存控制"><a href="#缓存控制" class="headerlink" title="缓存控制"></a>缓存控制</h3><p> Cache-control 头</p>
 <ul>
-<li><p>Cache-Control: no-store // 不缓存</p>
+<li><p><code>Cache-Control: no-store</code> // 不缓存</p>
 </li>
-<li><p>Cache-Control: no-cache // 每次有请求发出时，缓存会将此请求发到服务器 由服务器返回是否缓存过期，返回200 或者304</p>
+<li><p><code>Cache-Control: no-cache</code> // 每次有请求发出时，缓存会将此请求发到服务器 由服务器返回是否缓存过期，返回200 或者304</p>
 </li>
-<li><p>Cache-Control: private // 私有缓存</p>
+<li><p><code>Cache-Control: private</code> // 私有缓存 私有缓存是绑定到特定客户端的缓存——通常是浏览器缓存</p>
 </li>
-<li><p>Cache-Control: public  // 公共缓存 可被中间的代理，cdn等缓存</p>
+<li><p><code>Cache-Control: public</code>  // 公共缓存 可被中间的代理，cdn等缓存</p>
 </li>
-<li><p>Cache-Control: max-age=31536000 //设置缓存过期时间 单位一般是秒   </p>
+<li><p><code>Cache-Control: max-age=31536000</code> //设置缓存过期时间 单位一般是秒   </p>
 <p>更多详细介绍 <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Caching" target="_blank" rel="noopener">MDN HTTP cache </a></p>
 </li>
 </ul>
@@ -417,8 +417,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/js/45b9746d.html" rel="prev" title="节流和防抖">
-                节流和防抖 <i class="fa fa-chevron-right"></i>
+              <a href="/doc/21e89f78.html" rel="prev" title="http 强缓存 协商缓存">
+                http 强缓存 协商缓存 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -498,7 +498,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -520,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -583,7 +583,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

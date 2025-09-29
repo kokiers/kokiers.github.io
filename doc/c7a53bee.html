@@ -80,7 +80,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 Object() 构造函数或者使用 对象字面量 的方式创建">
 <meta property="og:locale" content="book">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.912Z">
+<meta property="og:updated_time" content="2024-09-21T09:05:47.717Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Object手册">
 <meta name="twitter:description" content="Object 是 JavaScript 的一种 数据类型 。它用于存储各种键值集合和更复杂的实体。Objects 可以通过 Object() 构造函数或者使用 对象字面量 的方式创建">
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2024-09-21T17:05:47+08:00">2024-09-21</time>
             
           </span>
 
@@ -396,6 +396,13 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Greeting</span>(<span class="params">name,age</span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(name,age)</span><br><span class="line">  <span class="keyword">this</span>.name = name;</span><br><span class="line">  <span class="keyword">this</span>.age = age || <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// new 的写法</span></span><br><span class="line"><span class="comment">// const instance = new Greeting('张三');</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// Reflect.construct 的写法</span></span><br><span class="line"><span class="keyword">const</span> instance = <span class="built_in">Reflect</span>.construct(Greeting, [<span class="string">'张三'</span>,<span class="number">10</span>]);</span><br></pre></td></tr></table></figure>
 
 <p>class static 方法不会被实例继承。可以被子类继承（也可以用super 调用）</p>
+<p>原型链</p>
+<ul>
+<li>原型对象，为构造函数的实例 共享属性+方法</li>
+<li>所有实例的原型都是同一个对象。</li>
+<li>使用<code>protoype</code>可以把方法挂在原型上。<br><strong>proto</strong> 实例对象中的属性，指向了构造函数的原型。</li>
+</ul>
+<p>所以原型链： 是一个实例对象再调用了属性和方法的时候，会依次从实例本身，构造函数原型，原型的原型上去查找。</p>
 
       
     </div>
@@ -511,7 +518,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -533,7 +540,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -596,7 +603,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

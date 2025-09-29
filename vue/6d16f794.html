@@ -80,7 +80,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="API 风格Vue 的组件可以按两种不同的风格书写：选项式 API 和组合式 API。">
 <meta property="og:locale" content="vue">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.933Z">
+<meta property="og:updated_time" content="2024-09-21T09:05:47.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue3 基础知识整理">
 <meta name="twitter:description" content="API 风格Vue 的组件可以按两种不同的风格书写：选项式 API 和组合式 API。">
@@ -301,7 +301,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2024-09-21T17:05:47+08:00">2024-09-21</time>
             
           </span>
 
@@ -489,16 +489,27 @@
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; ref, computed &#125; <span class="keyword">from</span> <span class="string">"vue"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> firstName = ref(<span class="string">"John"</span>);</span><br><span class="line"><span class="keyword">const</span> lastName = ref(<span class="string">"Doe"</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> fullName = computed(&#123;</span><br><span class="line">  <span class="comment">// getter</span></span><br><span class="line">  <span class="keyword">get</span>() &#123;</span><br><span class="line">    <span class="keyword">return</span> firstName.value + <span class="string">" "</span> + lastName.value;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// setter</span></span><br><span class="line">  <span class="keyword">set</span>(newValue) &#123;</span><br><span class="line">    <span class="comment">// 注意：我们这里使用的是解构赋值语法</span></span><br><span class="line">    [firstName.value, lastName.value] = newValue.split(<span class="string">" "</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 当fullname 重新赋值后，firstName lastName 同步更新，具有响应式。</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="vue2-与-vue3-区别"><a href="#vue2-与-vue3-区别" class="headerlink" title="vue2 与 vue3 区别"></a>vue2 与 vue3 区别</h3><ol>
-<li>响应式系统的重新配置，使用 proxy 替换 Object.defineProperty</li>
-<li>typescript 支持</li>
-<li>新增组合 API，更好的逻辑重用和代码组织</li>
-<li>v-if 和 v-for 的优先级</li>
-<li>静态元素提升</li>
-<li>虚拟节点静态标记</li>
-<li>生命周期变化</li>
-<li>打包体积优化</li>
-<li>ssr 渲染性能提升</li>
-<li>支持多个根节点</li>
+<li><p>响应式系统的重新配置，使用 proxy 替换 Object.defineProperty</p>
+</li>
+<li><p>typescript 支持</p>
+</li>
+<li><p>新增组合 API，更好的逻辑重用和代码组织</p>
+</li>
+<li><p>v-if 和 v-for 的优先级</p>
+</li>
+<li><p>静态元素提升</p>
+</li>
+<li><p>Diff算法优化 虚拟节点静态标记</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// patchFlags 字段类型列举</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> enum PatchFlags &#123; </span><br><span class="line">  TEXT = <span class="number">1</span>,   <span class="comment">// 动态文本内容</span></span><br><span class="line">  CLASS = <span class="number">1</span> &lt;&lt; <span class="number">1</span>,   <span class="comment">// 动态类名</span></span><br><span class="line">  STYLE = <span class="number">1</span> &lt;&lt; <span class="number">2</span>,   <span class="comment">// 动态样式</span></span><br><span class="line">  PROPS = <span class="number">1</span> &lt;&lt; <span class="number">3</span>,   <span class="comment">// 动态属性，不包含类名和样式</span></span><br><span class="line">  FULL_PROPS = <span class="number">1</span> &lt;&lt; <span class="number">4</span>,   <span class="comment">// 具有动态 key 属性，当 key 改变，需要进行完整的 diff 比较</span></span><br><span class="line">  HYDRATE_EVENTS = <span class="number">1</span> &lt;&lt; <span class="number">5</span>,   <span class="comment">// 带有监听事件的节点</span></span><br><span class="line">  STABLE_FRAGMENT = <span class="number">1</span> &lt;&lt; <span class="number">6</span>,   <span class="comment">// 不会改变子节点顺序的 fragment</span></span><br><span class="line">  KEYED_FRAGMENT = <span class="number">1</span> &lt;&lt; <span class="number">7</span>,   <span class="comment">// 带有 key 属性的 fragment 或部分子节点</span></span><br><span class="line">  UNKEYED_FRAGMENT = <span class="number">1</span> &lt;&lt; <span class="number">8</span>,   <span class="comment">// 子节点没有 key 的fragment</span></span><br><span class="line">  NEED_PATCH = <span class="number">1</span> &lt;&lt; <span class="number">9</span>,   <span class="comment">// 只会进行非 props 的比较</span></span><br><span class="line">  DYNAMIC_SLOTS = <span class="number">1</span> &lt;&lt; <span class="number">10</span>,   <span class="comment">// 动态的插槽</span></span><br><span class="line">  HOISTED = <span class="number">-1</span>,   <span class="comment">// 静态节点，diff阶段忽略其子节点</span></span><br><span class="line">  BAIL = <span class="number">-2</span>   <span class="comment">// 代表 diff 应该结束</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>生命周期变化</p>
+</li>
+<li><p>打包体积优化</p>
+</li>
+<li><p>ssr 渲染性能提升</p>
+</li>
+<li><p>支持多个根节点</p>
+</li>
 </ol>
 <p>从 React Hook 从实现的角度来看，React Hook 是基于 useState 的调用顺序来确定下一个 re 渲染时间状态从哪个 useState 开始，所以有以下几个限制</p>
 <ul>
@@ -628,7 +639,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -650,7 +661,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -713,7 +724,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

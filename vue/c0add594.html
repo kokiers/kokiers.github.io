@@ -81,7 +81,7 @@
 <meta property="og:site_name" content="kokiers">
 <meta property="og:description" content="vue 生命周期生命周期  beforeCreate created beforeMount">
 <meta property="og:locale" content="vue">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.933Z">
+<meta property="og:updated_time" content="2024-09-21T09:05:47.739Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue2 的知识">
 <meta name="twitter:description" content="vue 生命周期生命周期  beforeCreate created beforeMount">
@@ -302,7 +302,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2024-09-21T17:05:47+08:00">2024-09-21</time>
             
           </span>
 
@@ -420,15 +420,48 @@
 </li>
 <li><p>mutation：提交更新数据的方法，必须是同步的(如果需要异步使用action)。每个mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。回调函数就是我们实际进行状态更改的地方，并且它会接受 state 作为第一个参数，提交载荷作为第二个参数。</p>
 </li>
-<li><p>action：和mutation的功能大致相同，不同之处在于 ==》</p>
-</li>
-<li><p>Action 提交的是 mutation，而不是直接变更状态。 </p>
-</li>
-<li><p>Action 可以包含任意异步操作。</p>
-</li>
-<li><p>modules：模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。</p>
-</li>
 </ol>
+<p>分发mutation： this.$store.commit </p>
+<ol start="4">
+<li>action：和mutation的功能大致相同，不同之处在于 ==》</li>
+<li>Action 提交的是 mutation，而不是直接变更状态。 </li>
+<li>Action 可以包含任意异步操作。</li>
+</ol>
+<p>分发action： 组件中使用 this.$store.dispatch(‘xxx’) 分发 action，</p>
+<ol start="5">
+<li>modules：模块化vuex，可以让每一个模块拥有自己的state、mutation、action、getters,使得结构非常清晰，方便管理。</li>
+</ol>
+<h4 id="ref"><a href="#ref" class="headerlink" title="ref"></a>ref</h4><p>ref 的作用是被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。其特点是：</p>
+<ul>
+<li>如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素</li>
+<li>如果用在子组件上，引用就指向组件实例</li>
+</ul>
+<p>应用场景一般有：</p>
+<ul>
+<li>基本用法，本页面获取 DOM 元素</li>
+<li>获取子组件中的 data</li>
+<li>调用子组件中的方法</li>
+</ul>
+<h4 id="ref-1"><a href="#ref-1" class="headerlink" title="ref"></a>ref</h4><p>ref 的作用是被用来给元素或子组件注册引用信息。引用信息将会注册在父组件的 $refs 对象上。其特点是：</p>
+<ul>
+<li>如果在普通的 DOM 元素上使用，引用指向的就是 DOM 元素</li>
+<li>如果用在子组件上，引用就指向组件实例</li>
+</ul>
+<p>应用场景一般有：</p>
+<ul>
+<li>基本用法，本页面获取 DOM 元素</li>
+<li>获取子组件中的 data</li>
+<li>调用子组件中的方法</li>
+</ul>
+<p>vue 性能优化</p>
+<ul>
+<li>编码优化：</li>
+<li>加载优化： 按需加载，懒加载</li>
+<li>用户体验： 骨架屏</li>
+<li>SEO 优化： 预渲染 SSR</li>
+<li>打包优化： CDN 加载第三方，多线程打包 抽离公共文件</li>
+<li>缓存+压缩</li>
+</ul>
 
       
     </div>
@@ -550,7 +583,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -572,7 +605,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -615,7 +648,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-生命周期"><span class="nav-number">1.</span> <span class="nav-text">vue 生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-组件开发"><span class="nav-number">2.</span> <span class="nav-text">Vue 组件开发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-响应式"><span class="nav-number">3.</span> <span class="nav-text">Vue 响应式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-路由"><span class="nav-number">4.</span> <span class="nav-text">Vue 路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex"><span class="nav-number">5.</span> <span class="nav-text">vuex</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#vue-生命周期"><span class="nav-number">1.</span> <span class="nav-text">vue 生命周期</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-组件开发"><span class="nav-number">2.</span> <span class="nav-text">Vue 组件开发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-响应式"><span class="nav-number">3.</span> <span class="nav-text">Vue 响应式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Vue-路由"><span class="nav-number">4.</span> <span class="nav-text">Vue 路由</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#vuex"><span class="nav-number">5.</span> <span class="nav-text">vuex</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ref"><span class="nav-number">6.</span> <span class="nav-text">ref</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ref-1"><span class="nav-number">7.</span> <span class="nav-text">ref</span></a></li></ol></div>
             
 
           </div>
@@ -635,7 +668,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>

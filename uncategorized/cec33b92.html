@@ -81,7 +81,7 @@
 <meta property="og:description" content="起一个本地静态服务 npx http-server //默认 8080 npx http-server -p 8900 //指定端口号8900">
 <meta property="og:locale" content="tool">
 <meta property="og:image" content="https://kokiers.github.io/images/npm_20230313151233.png">
-<meta property="og:updated_time" content="2024-04-15T12:22:19.927Z">
+<meta property="og:updated_time" content="2025-04-12T02:51:37.763Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用命令行列表">
 <meta name="twitter:description" content="起一个本地静态服务 npx http-server //默认 8080 npx http-server -p 8900 //指定端口号8900">
@@ -303,7 +303,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2024-04-15T20:22:19+08:00">2024-04-15</time>
+              <time title="更新于" itemprop="dateModified" datetime="2025-04-12T10:51:37+08:00">2025-04-12</time>
             
           </span>
 
@@ -366,6 +366,16 @@
 <li>生成 patch 文件记录修改 ：yarn patch-package package-name</li>
 <li>提交生成的 patch文件夹，这样可以方便团队合作开发。</li>
 </ul>
+<h4 id="安装报错"><a href="#安装报错" class="headerlink" title="安装报错"></a>安装报错</h4><p><code>Could not resolve dependency:
+npm ERR! peer typescript@&quot;&gt;=3.4 &lt;4.0&quot; from ts-jest@25.5.1</code></p>
+<p>报错原因<br>在新版本的npm中 默认情况下npm install遇到冲突的peerDependencies时将失败。<br>解决办法<br>使用** –force *<em>或 *</em>–legacy-peer-deps **可解决这种情况。</p>
+<ul>
+<li>–force 会无视冲突并强制获取远端npm库资源当有资源冲突时覆盖掉原先的版本。</li>
+<li>–legacy-peer-deps安装时忽略所有peerDependencies忽视依赖冲突采用npm版本4到版本6的样式去安装依赖已有的依赖不会覆盖。<br>建议用–legacy-peer-deps 比较保险一点</li>
+</ul>
+<h4 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#查看5000端口占用</span></span><br><span class="line">netstat -ano | findstr :5000</span><br><span class="line"><span class="comment">#杀掉进程 1764</span></span><br><span class="line">taskkill /F /PID 1764</span><br><span class="line"><span class="comment">#停止所有nodejs</span></span><br><span class="line">Get-Process -Name node | Stop-Process -Force</span><br></pre></td></tr></table></figure>
+
+<p>dev: 通常使用style-loader，直接注入样式<br>pro: 使用MiniCssExtractPlugin提取CSS到单独文件</p>
 
       
     </div>
@@ -481,7 +491,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">66</span>
+                  <span class="site-state-item-count">70</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -503,7 +513,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">25</span>
+                  <span class="site-state-item-count">26</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -546,7 +556,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#起一个本地静态服务"><span class="nav-number">1.</span> <span class="nav-text">起一个本地静态服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#升级包"><span class="nav-number">2.</span> <span class="nav-text">升级包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-安装失败处理"><span class="nav-number">3.</span> <span class="nav-text">npm 安装失败处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-其他"><span class="nav-number">4.</span> <span class="nav-text">npm 其他</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BABEL-OUTPUT-is-not-a-recognised-commmand"><span class="nav-number">5.</span> <span class="nav-text">BABEL_OUTPUT is not a recognised commmand</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#patch-package"><span class="nav-number">6.</span> <span class="nav-text">patch-package</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#起一个本地静态服务"><span class="nav-number">1.</span> <span class="nav-text">起一个本地静态服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#升级包"><span class="nav-number">2.</span> <span class="nav-text">升级包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-安装失败处理"><span class="nav-number">3.</span> <span class="nav-text">npm 安装失败处理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#npm-其他"><span class="nav-number">4.</span> <span class="nav-text">npm 其他</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BABEL-OUTPUT-is-not-a-recognised-commmand"><span class="nav-number">5.</span> <span class="nav-text">BABEL_OUTPUT is not a recognised commmand</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#patch-package"><span class="nav-number">6.</span> <span class="nav-text">patch-package</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装报错"><span class="nav-number">7.</span> <span class="nav-text">安装报错</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他命令"><span class="nav-number">8.</span> <span class="nav-text">其他命令</span></a></li></ol></div>
             
 
           </div>
@@ -566,7 +576,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2024</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2025</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
