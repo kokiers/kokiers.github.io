@@ -148,3 +148,11 @@ function compile(a:any,b:any){
 
 ```
 
+#### 索引签名
+```
+interface SquareConfig {
+    color?: string;
+    width?: number;
+    [propName: string]: any; //索引签名
+}
+```

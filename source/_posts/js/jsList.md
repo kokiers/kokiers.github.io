@@ -337,3 +337,77 @@ function quickSort(arr) {
     return quickSort(left).concat(current,quickSort(right));
 }
 ```
+
+```
+export function debounce2(fn, delay = 1000, immediate = false) {
+  let timeId = null;
+  let isImmediateInvoke = false;
+
+  function _debounce(...args) {
+    return new Promise(
+      (resolve,
+      reject) => {
+        try {
+          if (timeId !== null) {
+            clearTimeout(timeId);
+          }
+
+          if (!isImmediateInvoke && immediate) {
+            const result = fn.apply(this, args);
+            isImmediateInvoke = true;
+            resolve(result);
+          }
+
+          timeId = setTimeout(() => {
+            isImmediateInvoke = false;
+            const result = fn.apply(this, args);
+            resolve(result);
+          }, delay);
+        } catch (e) {
+          reject();
+        }
+      })
+  }
+
+  return _debounce;
+}
+
+
+  function customDebounce(func, wait) {
+    let timeout;
+    let lastExecTime = 0;
+    let pendingExecution = false;
+    let lastArgs;
+    let lastThis;
+  
+    const later = () => {
+      const now = Date.now();
+      const timeSinceLastExec = now - lastExecTime;
+      
+      if (timeSinceLastExec >= wait) {
+        const result = func.apply(lastThis, lastArgs);
+        if (result !== false) {  // Only update lastExecTime if the function returns something other than false
+          lastExecTime = now;
+          pendingExecution = false;
+        } else {
+          // If function returns false, reschedule
+          pendingExecution = true;
+          timeout = setTimeout(later, wait - (now - lastExecTime));
+        }
+      } else {
+        // Still need to wait
+        timeout = setTimeout(later, wait - timeSinceLastExec);
+      }
+    };
+  
+    return function(...args) {
+      lastArgs = args;
+      lastThis = this;
+      
+      if (!pendingExecution) {
+        pendingExecution = true;
+        timeout = setTimeout(later, wait);
+      }
+    };
+  }
+```

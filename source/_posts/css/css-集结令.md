@@ -89,3 +89,200 @@ tags:
   }
 }
 ```
+```
+<template>
+  <button class="gradient-button">
+    渐变边框按钮
+  </button>
+</template>
+
+<style lang="scss" scoped>
+.gradient-button {
+  position: relative;
+  padding: 12px 24px;
+  background: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    padding: 2px;
+    background: linear-gradient(
+      45deg,
+      #12c2e9,
+      #c471ed,
+      #f64f59
+    );
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    transition: opacity 0.3s;
+  }
+  
+  &:hover::before {
+    opacity: 0.8;
+  }
+  
+  &:active::before {
+    opacity: 1;
+  }
+}
+</style>
+```
+
+```
+<template>
+  <div class="gradient-borders-demo">
+    <!-- 基础渐变边框 -->
+    <div class="box border-basic">
+      基础渐变边框
+    </div>
+
+    <!-- 动画渐变边框 -->
+    <div class="box border-animated">
+      动画渐变边框
+    </div>
+
+    <!-- 悬停效果边框 -->
+    <div class="box border-hover">
+      悬停渐变边框
+    </div>
+
+    <!-- 圆角渐变边框 -->
+    <div class="box border-rounded">
+      圆角渐变边框
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+.gradient-borders-demo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+
+  .box {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    color: #333;
+  }
+
+  // 基础渐变边框
+  .border-basic {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+
+  // 动画渐变边框
+  .border-animated {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      background: linear-gradient(
+        90deg,
+        #12c2e9 0%,
+        #c471ed 50%,
+        #f64f59 100%
+      );
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: rotate 3s linear infinite;
+    }
+  }
+
+  // 悬停效果边框
+  .border-hover {
+    position: relative;
+    transition: all 0.3s;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+
+  // 圆角渐变边框
+  .border-rounded {
+    position: relative;
+    border-radius: 10px;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      padding: 2px;
+      background: linear-gradient(45deg, #12c2e9, #c471ed, #f64f59);
+      border-radius: inherit;
+      -webkit-mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      mask: 
+        linear-gradient(#fff 0 0) content-box, 
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+    }
+  }
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+</style>
+```

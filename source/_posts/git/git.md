@@ -80,6 +80,7 @@ git remote add origin https://github.com/yourname/yourRepo.git
 git remote rm origin 
 git stash pop stash@{1}
 git stash drop不带参数 - 删除顶部存储 - 或存储引用，如下所示：stash@{n}指定n要删除哪个存储
+ git stash apply stash@{1}
 ```
 
 #### 分支 
@@ -96,6 +97,8 @@ git log：查看代码提交记录
 git reset --hard HEAD^  回退一个版本
 git reset --hard HEAD~100 回退100个版本
 git reset --hard 6fcfc89 回退到版本 6fcfc89
+
+git reset --soft HEAD^ //reset commit
 ```
 
 #### 撤销文件修改
@@ -115,6 +118,17 @@ git checkout -- readme.txt
 git pull origin branch_name --allow-unrelated-histories
 `
 
+#### 删除分支 
+```
+#【针对本地分支】
+git branch -D <branch name>
+git branch -d <branch name>
+
+#列举本地与远端的
+git remote prune origin --dry-run 
+#执行
+git remote prune origin  
+```
 
 
 ### 其他
